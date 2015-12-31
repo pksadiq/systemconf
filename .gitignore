@@ -3,3 +3,9 @@
 # Emacs temp. files
 *~
 \#*\#
+
+# C mode
+*.la
+*.lo
+*.o
+*.a
