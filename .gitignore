@@ -10,3 +10,7 @@
 *.o
 *.a
 *.so
+
+## backup files
+# aspell
+*.bak
