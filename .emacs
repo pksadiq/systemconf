@@ -6,6 +6,12 @@
  ;; Don't ask me to ask for help anymore
  '(inhibit-startup-screen t))
 
+;; Though I hate Ubuntu philosophically, Ubuntu fonts are
+;; good and free (both Libre and Gratis).
+;; Fonts should already be installed before you can use it.
+(set-default-font "Ubuntu Mono-16")
+(set-face-attribute 'default nil :height 150)
+
 ;; Hide space consuming things from screen
 (tool-bar-mode -1)
 (menu-bar-mode -1)
