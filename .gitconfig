@@ -1,0 +1,14 @@
+[user]
+        name = Mohammed Sadik
+        email = sadiq@sadiqpk.org
+[color]
+        ui = auto
+[core]
+        editor = emacs
+[format]
+        pretty = oneline
+[credential]
+        helper = cache
+[alias]
+        cm = checkout master
+        lo = log --oneline
