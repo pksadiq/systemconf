@@ -1,7 +1,13 @@
-Dotfiles
-========
+* *Dotfiles*
+  A small collection of my personal configuration files I frequently use.
 
+* Configuration files present
+  - git
+    - gitignore
+    - gitconfig
+    - ssh config
+  - GNU Emacs (basic configuration only)
 
-A small collection of dotfiles that I use myself.
-
-The files are made available as Public Domain.
+* License
+  These files are made available as Public Domain (CC0).
+  See =LICENSE= or visit [[https://creativecommons.org/publicdomain/zero/1.0/][here]].
