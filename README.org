@@ -1,5 +1,7 @@
 * *Dotfiles*
   A small collection of my personal configuration files I frequently use.
+  
+  These configurations shall work on any *recent* GNU/Linux.
 
 * Configuration files present
   - git
@@ -14,7 +16,7 @@
   
   To the extent possible under law, the author have dedicated all copyright
   and related and neighboring rights to this software to the public domain
-  worldwide. This software is distributed without any warranty.
+  worldwide. This software is distributed _without any warranty_.
   
   You should have received a copy of the CC0 Public Domain Dedication along
   with this software. If not, see
