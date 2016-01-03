@@ -24,5 +24,9 @@
 ;; Show battery info
 (display-battery-mode 1)
 
+;; auto close bracket (", [, (, {, etc.).
+;; Recommended Emacs version: 24.4+
+(electric-pair-mode 1)
+
 ;; Hide distracting info from `erc' IRC client
 (setq erc-hide-list '("JOIN" "PART" "QUIT"))
