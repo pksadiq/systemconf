@@ -28,5 +28,8 @@
 ;; Recommended Emacs version: 24.4+
 (electric-pair-mode 1)
 
+;; Show matching parenthesis
+(show-paren-mode 1)
+
 ;; Hide distracting info from `erc' IRC client
 (setq erc-hide-list '("JOIN" "PART" "QUIT"))
