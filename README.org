@@ -9,7 +9,8 @@
   - GNU Emacs (basic configuration only)
 
 * License
-    Written in 2015 by Mohammed Sadik <sadiq@sadiqpk.org>
+    Written by Mohammed Sadik <sadiq@sadiqpk.org>
+    Year: 2015 -- 2016
 
     To the extent possible under law, the author have dedicated all copyright
     and related and neighboring rights to this software to the public domain
