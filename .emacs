@@ -34,8 +34,8 @@
 ;; Highlight matching parenthesis
 (show-paren-mode 1)
 
-;; Show column number -- The number of characters from beginning
-;; of the line up to the cursor
+;; Show column number -- The number of characters from the beginning
+;; of the current line up to the cursor
 (column-number-mode 1)
 
 ;; Hide distracting info from `erc' IRC client
