@@ -40,3 +40,8 @@
 
 ;; Hide distracting info from `erc' IRC client
 (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+
+;;;;;; Set some shortcuts ;;;;;;
+
+;; Let Control-w kill a word back, as in shell.
+(global-set-key "\C-w" 'backward-kill-word)
