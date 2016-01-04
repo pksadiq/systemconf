@@ -31,7 +31,7 @@
 ;; Recommended Emacs version: 24.4+
 (electric-pair-mode 1)
 
-;; Show matching parenthesis
+;; Highlight matching parenthesis
 (show-paren-mode 1)
 
 ;; Show column number -- The number of characters from beginning
