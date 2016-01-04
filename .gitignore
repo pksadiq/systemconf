@@ -14,11 +14,11 @@
 *.a
 *.so
 
-## backup files
+## Backup files
 # aspell
 *.bak
 
-# avoid accidental inclusion of my secrete GnuPG, ssh keys.
+# Avoid accidental inclusion of my secrete GnuPG, ssh keys.
 # This may not happen, but if in case ...
 *.gpg
 *_rsa
