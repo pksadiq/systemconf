@@ -20,5 +20,5 @@
 
 # Avoid accidental inclusion of my secrete GnuPG, ssh keys.
 # This may not happen, but if in case ...
-secring.gpg
+*secring.gpg
 *_rsa
