@@ -24,14 +24,14 @@
 ;; Show battery info
 (display-battery-mode 1)
 
-;; auto close bracket (", [, (, {, etc.).
+;; Auto close bracket (", [, (, {, etc.).
 ;; Recommended Emacs version: 24.4+
 (electric-pair-mode 1)
 
 ;; Show matching parenthesis
 (show-paren-mode 1)
 
-;; show column number -- The number of characters from beginning
+;; Show column number -- The number of characters from beginning
 ;; of the line up to the cursor
 (column-number-mode 1)
 
