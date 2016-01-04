@@ -31,5 +31,9 @@
 ;; Show matching parenthesis
 (show-paren-mode 1)
 
+;; show column number -- The number of characters from beginning
+;; of the line up to the cursor
+(column-number-mode 1)
+
 ;; Hide distracting info from `erc' IRC client
 (setq erc-hide-list '("JOIN" "PART" "QUIT"))
