@@ -4,6 +4,9 @@
 *~
 \#*\#
 
+# Emacs lisp compiled files
+*.elc
+
 # C mode
 *.la
 *.lo
