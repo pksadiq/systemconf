@@ -1,6 +1,8 @@
 ;; -*- mode: emacs-lisp; -*-
 
 (custom-set-variables
+  ;; Always end a file with newline
+ '(require-final-newline t)
  ;; Dark theme is always preferred
  '(custom-enabled-themes (quote (manoj-dark)))
  ;; Don't ask me to ask for help anymore
