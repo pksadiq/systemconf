@@ -1,5 +1,9 @@
 ;; -*- mode: emacs-lisp; -*-
 
+;; Emacs can use this details at several places
+(setq user-full-name "Mohammed Sadik")
+(setq user-mail-address "sadiq@sadiqpk.org")
+
 (custom-set-variables
   ;; Always end a file with newline
  '(require-final-newline t)
