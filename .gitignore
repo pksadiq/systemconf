@@ -3,6 +3,7 @@
 # Emacs temp. files
 *~
 \#*\#
+.#*
 
 # Emacs lisp compiled files
 *.elc
