@@ -55,3 +55,5 @@
 
 ;; Let Control-w kill a word back, as in shell.
 (global-set-key "\C-w" 'backward-kill-word)
+;; Let Control-h kill a char back, as in shell.
+(global-set-key (kbd "C-h") 'delete-backward-char)
