@@ -8,6 +8,12 @@
 # Emacs lisp compiled files
 *.elc
 
+# [La]TeX mode
+*.aux
+*.out
+*.toc
+*.pdf
+
 # C mode
 *.la
 *.lo
