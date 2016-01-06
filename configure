@@ -12,3 +12,5 @@ then
    echo "Exiting.."
    exit 1
 fi
+
+. scripts/gsettings.sh
