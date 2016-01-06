@@ -9,3 +9,7 @@ then
     $gs ${settings}.interface gtk-key-theme "Emacs"
     echo "Desktop shortcuts set to Emacs style (almost)"
 fi
+
+$gs ${settings}.peripherals.touchpad tap-to-click "true"
+$gs ${settings}.peripherals.touchpad scroll-method "two-finger-scrolling"
+$gs ${settings}.peripherals.touchpad natural-scroll "true"
