@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Replace with your data
+EDITOR="emacs"
+NAME="Mohammed Sadik"
+EMAIL="sadiq@sadiqpk.org"
+
+
+if [ "$OSTYPE" != "linux-gnu" ]
+then
+   echo "Sorry, You require GNU/Linux OS to proceed"
+   echo "Exiting.."
+   exit 1
+fi
