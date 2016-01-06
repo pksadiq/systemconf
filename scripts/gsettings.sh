@@ -2,6 +2,10 @@
 
 gs="gsettings set"
 settings="org.gnome.desktop"
+error="Error: gsettings not found. Not Running GNOME?"
+
+# Return to the parent script, if `gsettings' not found
+gsettings --version > /dev/null 2>&1 || { echo "$error" ; return 1; }
 
 if [ "${EDITOR,,}" == "emacs" ]
 then
