@@ -21,8 +21,8 @@ fi
 
 $gs ${settings}.peripherals.touchpad tap-to-click "true"
 $gs ${settings}.peripherals.touchpad scroll-method "two-finger-scrolling"
-if [ "${NATURAL_SCROLL,,}" == "true" ]
-then
-    $gs ${settings}.peripherals.touchpad natural-scroll "true"
-    echo "Touch pad natural scrolling enabled"
-fi
+case "${NATURAL_SCROLL,,}" in
+    true | false)
+	$gs ${settings}.peripherals.touchpad natural-scroll "${NATURAL_SCROLL,,}"
+	echo "Natural Scrolling for touchpad state: ${NATURAL_SCROLL,,}"
+esac
