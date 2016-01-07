@@ -4,7 +4,8 @@
 EDITOR="emacs"
 NAME="Mohammed Sadik"
 EMAIL="sadiq@sadiqpk.org"
-# Scroll as its on touch screen, any value other than "true" is false
+# Scroll as its on touch screen, any value other than "true",
+# The old settings are untouched
 NATURAL_SCROLL="true"
 # Possible values: "Adwaita"
 GTK_THEME="Adwaita"
