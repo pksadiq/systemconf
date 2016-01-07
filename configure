@@ -4,6 +4,16 @@
 EDITOR="emacs"
 NAME="Mohammed Sadik"
 EMAIL="sadiq@sadiqpk.org"
+# Scroll as its on touch screen, any value other than "true" is false
+NATURAL_SCROLL="true"
+# Possible values: "Adwaita"
+GTK_THEME="Adwaita"
+# Possible values: "Adwaita"
+ICON_THEME="Adwaita"
+
+# Caps Lock acts as Control Key. If EDITOR is not "emacs",
+# This value is ignored, and won't be configured.
+CAPS_IS_CTRL="true"
 
 
 if [ "$OSTYPE" != "linux-gnu" ]
