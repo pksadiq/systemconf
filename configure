@@ -6,7 +6,7 @@ NAME="Mohammed Sadik"
 EMAIL="sadiq@sadiqpk.org"
 # Scroll as on touch screen, any value other than "true" or "false"
 # can be used to leave the current settings as such
-NATURAL_SCROLL="true"
+NATURAL_SCROLL="false"
 # Possible values: "Adwaita"
 GTK_THEME="Adwaita"
 # Possible values: "Adwaita"
