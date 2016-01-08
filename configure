@@ -19,6 +19,7 @@ ICON_THEME="Adwaita"
 
 # Caps Lock acts as Control Key. Any value other tahn "true" or "false"
 # can be used to leave the current settings as such.
+# Very helpful if you are an Emacs user.
 CAPS_IS_CTRL="true"
 
 
