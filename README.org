@@ -2,7 +2,8 @@
   A small collection of my personal configuration files I frequently use.
   
   These configurations shall work on any *recent* GNU/Linux.
-
+  - *Note:* This is a work in progress. This is _not yet ready_ to
+    be used on production systems.
 * Configuration files present
   - git
     - gitignore
