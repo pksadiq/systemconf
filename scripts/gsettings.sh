@@ -12,17 +12,16 @@ then
     # Set Emacs Key bindings for the complete desktop
     $gs ${settings}.interface gtk-key-theme "Emacs"
     echo "Desktop shortcuts set to Emacs style (almost)"
-
-    case "${CAPS_IS_CTRL,,}" in
-	true)
-	    $gs ${settings}.input-sources xkb-options "['caps:ctrl_modifier']"
-	    echo "Caps Lock will now act as Control"
-	    ;;
-	false)
-	    $gs ${settings}.input-sources xkb-options "['']"
-	    echo "Caps Lock will act as Caps Lock"
-    esac
 fi
+case "${CAPS_IS_CTRL,,}" in
+    true)
+	$gs ${settings}.input-sources xkb-options "['caps:ctrl_modifier']"
+	echo "Caps Lock will now act as Control"
+	;;
+    false)
+	$gs ${settings}.input-sources xkb-options "['']"
+	echo "Caps Lock will act as Caps Lock"
+esac
 
 $gs ${settings}.peripherals.touchpad tap-to-click "true"
 $gs ${settings}.peripherals.touchpad scroll-method "two-finger-scrolling"
