@@ -4,6 +4,22 @@
   These configurations shall work on any *recent* GNU/Linux.
   - *Note:* This is a work in progress. This is _not yet ready_ to
     be used on production systems.
+
+* Why do I need this?
+  
+  One of my role at work is system administration. I will have
+  to install Operating Systems (GNU/Linux based) on many client's
+  machines.
+
+  So I use this to automate the configuration of those systems,
+  which may later be used to automate the installations too.
+
+  Currently these are my focuses:
+  - Debian GNU/Linux
+  - GNOME Desktop Environment
+
+  Hopefully this shall be helpful for you too.
+
 * Configuration files present
   - git
     - gitignore
