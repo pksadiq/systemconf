@@ -28,10 +28,8 @@
   - Your system is configured.
 
 * Configuration files present
+  - GNOME Desktop Environment
   - git
-    - gitignore
-    - gitconfig
-    - ssh config
   - GNU Emacs (basic configuration only)
 
 * License
