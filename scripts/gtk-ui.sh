@@ -3,6 +3,7 @@
 # Elements like theme and fonts.
 
 $gs ${settings}.interface gtk-theme "${GTK_THEME}"
+$gs ${settings}.interface icon-theme "${ICON_THEME}"
 
 if is_true_false "${PREFER_DARK_TERM}"
 then
