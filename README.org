@@ -22,7 +22,7 @@
 
 * How to use these dotfiles?
 
-  - Edit the file =configure=
+  - Edit the file =settings.sh=
     - Set the variables with the configuration you wish
   - Now execute =./configure=
   - Your system is configured.
