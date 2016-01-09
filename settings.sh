@@ -26,3 +26,16 @@ PREFER_DARK_TERM="true" # Prefer dark theme for Terminal Emulator?
 # The main icons used
 # Possible values: "Adwaita"
 ICON_THEME="Adwaita"
+
+
+##### Fonts #####
+# Font on  title bar
+WINDOW_TITLE_FONT="Ubuntu"
+WINDOW_TITLE_FONT_SIZE="11"
+
+INTERFACE_FONT="Ubuntu"
+INTERFACE_FONT_SIZE="11"
+
+# Font user for codes, (Eg: in gedit)
+MONOSPACE_FONT="Ubuntu Mono"
+MONOSPACE_FONT_SIZE="11"
