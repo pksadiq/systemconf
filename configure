@@ -9,5 +9,6 @@ fi
 
 SCRIPT_DIR="$(pwd)"
 
+. "${SCRIPT_DIR}"/functions.sh
 . "${SCRIPT_DIR}"/settings.sh
 . "${SCRIPT_DIR}"/scripts/gsettings.sh
