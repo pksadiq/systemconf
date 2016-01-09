@@ -30,3 +30,14 @@ is_true_false ()
     esac
 }
 
+# detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
+is_debian_based ()
+{
+    grep "^ID.*=debian" 2>&1 >/dev/null /etc/os-release
+}
+
+# detect Fedora and derivatives like RHEL, CentOS, etc.
+is_fedora_based ()
+{
+    grep "^ID.*=.*fedora" 2>&1 >/dev/null /etc/os-release
+}
