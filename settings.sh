@@ -1,9 +1,11 @@
+# Replace with your data
 
 
+# TODO: Use this configuration
 NAME="Mohammed Sadik"
 EMAIL="sadiq@sadiqpk.org"
 
-# Replace with your data
+# TODO: Use this configuration
 OVERWRITE="true" # Do you wish to overwrite your current config files?
 
 EDITOR="emacs"
@@ -27,7 +29,7 @@ PREFER_DARK_TERM="true" # Prefer dark theme for Terminal Emulator?
 # Possible values: "Adwaita"
 ICON_THEME="Adwaita"
 
-
+# TODO: Use this configuration
 ##### Fonts #####
 # Font on  title bar
 WINDOW_TITLE_FONT="Ubuntu"
