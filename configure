@@ -17,10 +17,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, see <http://www.gnu.org/licenses/>.
 
-   
-if [ "$OSTYPE" != "linux-gnu" ]
+# Exit if the system is not GNU/Linux, or the release is too old
+if [ "$OSTYPE" != "linux-gnu" ] || [ ! -f /etc/os-release ]
 then
-   echo "Sorry, You require GNU/Linux OS to proceed"
+   echo "Sorry, You require a recent GNU/Linux OS to proceed"
    echo "Exiting.."
    exit 1
 fi
