@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, see <http://www.gnu.org/licenses/>.
 
+# NOTE: Wherever you can fill "true" or "false", you can use
+# some other value, to keep the current configuration as such.
 
 # TODO: Use this configuration
 NAME="Mohammed Sadik"
@@ -25,13 +27,11 @@ OVERWRITE="true" # Do you wish to overwrite your current config files?
 
 EDITOR="emacs"
 
-# Caps Lock acts as Control Key. Any value other tahn "true" or "false"
-# can be used to leave the current settings as such.
+# Caps Lock acts as Control Key.
 # Very helpful if you are an Emacs user.
 CAPS_IS_CTRL="true"
 
-# Scroll as on touch screen, any value other than "true" or "false"
-# can be used to leave the current settings as such
+# Scroll as on touch screen.
 NATURAL_SCROLL="false"
 
 ##### Theme settings #####
