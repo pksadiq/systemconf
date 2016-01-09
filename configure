@@ -7,7 +7,12 @@ then
    exit 1
 fi
 
+HOME_DIR="${HOME}"
 SCRIPT_DIR="$(pwd)"
+
+# Create user specific theme and icon paths
+mkdir -p "${HOME_DIR}/.local/share/themes"
+mkdir -p "${HOME_DIR}/.local/share/icons"
 
 # Common functions used throughout the script
 . "${SCRIPT_DIR}"/scripts/functions.sh
