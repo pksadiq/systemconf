@@ -11,4 +11,5 @@
         helper = cache
 [alias]
         cm = checkout master
+        mm = merge master
         lo = log --oneline
