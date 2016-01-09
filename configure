@@ -10,7 +10,7 @@ fi
 SCRIPT_DIR="$(pwd)"
 
 # Common functions used throughout the script
-. "${SCRIPT_DIR}"/functions.sh
+. "${SCRIPT_DIR}"/scripts/functions.sh
 
 # Settings that can be configured by the user
 . "${SCRIPT_DIR}"/settings.sh
