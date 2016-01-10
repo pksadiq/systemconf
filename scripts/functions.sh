@@ -30,6 +30,25 @@ is_true_false ()
     esac
 }
 
+# Extract and print each Comma Separated Value pairs on newline
+print_csv ()
+{
+    IFS_OLD="${IFS}"
+    IFS=','
+    
+    FONT_NAMES="${1%=*}"
+    STYLE_NAMES="${1#*=}"
+    
+    for FONT_NAME in ${FONT_NAMES}
+    do
+	for STYLE_NAME in ${STYLE_NAMES}
+	do
+	    echo "$FONT_NAME" "$STYLE_NAME"
+	done
+    done
+    IFS="${IFS_OLD}"
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
