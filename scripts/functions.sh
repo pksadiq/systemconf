@@ -41,3 +41,13 @@ is_fedora_based ()
 {
     grep "^ID.*=.*fedora" 2>&1 >/dev/null /etc/os-release
 }
+
+is_arch_based ()
+{
+    grep "^ID.*=arch" 2>&1 >/dev/null /etc/os-release
+}
+
+is_gentoo_based ()
+{
+    grep "^ID.*=gentoo" 2>&1 >/dev/null /etc/os-release
+}
