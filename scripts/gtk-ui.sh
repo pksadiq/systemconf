@@ -24,3 +24,17 @@ if is_true_false "${PREFER_DARK_TERM}"
 then
     $gs org.gnome.Terminal.Legacy.Settings dark-theme "${PREFER_DARK_TERM,,}"
 fi
+
+##### Set Fonts #####
+if is_font_present "${INTERFACE_FONT}"
+then
+    if is_number "${INTERFACE_FONT_SIZE}"
+    then
+	$gs ${settings}.interface font-name \
+	    "${INTERFACE_FONT} ${INTERFACE_FONT_SIZE}"
+    else
+	echo "Interface font size should be an integer greater than 4"
+    fi
+else
+    echo "\"${INTERFACE_FONT}\" Font seems not present."
+fi
