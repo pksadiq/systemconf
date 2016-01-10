@@ -32,9 +32,5 @@ then
     then
 	$gs ${settings}.interface font-name \
 	    "${INTERFACE_FONT} ${INTERFACE_FONT_SIZE}"
-    else
-	echo "Interface font size should be an integer greater than 4"
     fi
-else
-    echo "\"${INTERFACE_FONT}\" Font seems not present."
 fi
