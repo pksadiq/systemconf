@@ -51,8 +51,10 @@ print_font_name ()
 
 get_fonts ()
 {
+    # FIXME: Is there a better way to get the fonts, just with fc-list?
     fc-list | tr '=' ':' | cut -d ':' -f 2,4 | tr ':' '=' | while read FONT
     do
+	# TODO: avoid duplicate names. Save list to a file to avoid repeating
 	print_font_name "$FONT"
     done
 }
