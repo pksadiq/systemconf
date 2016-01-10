@@ -59,6 +59,12 @@ get_fonts ()
     done
 }
 
+is_number ()
+{
+    NUM_REGEX='^[0-9]+$'
+    egrep ${NUM_REGEX} <<< "$1" 2>&1 >/dev/null && test "$1" -ge 5
+}
+
 is_font_present ()
 {
     CHECK="$1"
