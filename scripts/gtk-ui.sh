@@ -34,3 +34,12 @@ then
 	    "${INTERFACE_FONT} ${INTERFACE_FONT_SIZE}"
     fi
 fi
+
+if is_font_present "${WINDOW_TITLE_FONT}"
+then
+    if is_number "${WINDOW_TITLE_FONT_SIZE}"
+    then
+	$gs ${settings}.wm.preferences titlebar-font \
+	    "${WINDOW_TITLE_FONT} ${WINDOW_TITLE_FONT_SIZE}"
+    fi
+fi
