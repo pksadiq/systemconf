@@ -33,12 +33,15 @@ is_true_false ()
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
+    # ID and ID_LIKE has to be matched, and nothing else begin with
+    # ID, or end with ID now.
     grep "^ID.*=debian" 2>&1 >/dev/null /etc/os-release
 }
 
 # detect Fedora and derivatives like RHEL, CentOS, etc.
 is_fedora_based ()
 {
+    # Also match "rhel fedora" present in CentOS
     grep "^ID.*=.*fedora" 2>&1 >/dev/null /etc/os-release
 }
 
