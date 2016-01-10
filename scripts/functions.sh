@@ -49,6 +49,14 @@ print_csv ()
     IFS="${IFS_OLD}"
 }
 
+get_fonts ()
+{
+    fc-list | tr '=' ':' | cut -d ':' -f 2,4 | tr ':' '=' | while read FONT
+    do
+	print_csv "$FONT"
+    done
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
