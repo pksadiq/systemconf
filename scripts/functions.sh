@@ -31,7 +31,7 @@ is_true_false ()
 }
 
 # Extract and print each Comma Separated Value pairs on newline
-print_csv ()
+print_font_name ()
 {
     IFS_OLD="${IFS}"
     IFS=','
@@ -53,7 +53,7 @@ get_fonts ()
 {
     fc-list | tr '=' ':' | cut -d ':' -f 2,4 | tr ':' '=' | while read FONT
     do
-	print_csv "$FONT"
+	print_font_name "$FONT"
     done
 }
 
