@@ -62,7 +62,7 @@ get_fonts ()
 is_font_present ()
 {
     CHECK="$1"
-    get_fonts | grep "${CHECK}" 2>&1 > /dev/null
+    get_fonts | grep "^${CHECK}$" 2>&1 > /dev/null
 }
 
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
