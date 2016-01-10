@@ -43,3 +43,12 @@ then
 	    "${WINDOW_TITLE_FONT} ${WINDOW_TITLE_FONT_SIZE}"
     fi
 fi
+
+if is_font_present "${MONOSPACE_FONT}"
+then
+    if is_number "${MONOSPACE_FONT_SIZE}"
+    then
+	$gs ${settings}.interface monospace-font-name \
+	    "${MONOSPACE_FONT_FONT} ${MONOSPACE_FONT_SIZE}"
+    fi
+fi
