@@ -62,13 +62,22 @@ get_fonts ()
 is_number ()
 {
     NUM_REGEX='^[0-9]+$'
-    egrep ${NUM_REGEX} <<< "$1" 2>&1 >/dev/null && test "$1" -ge 5
+    if ! $(egrep ${NUM_REGEX} <<< "$1" 2>&1 >/dev/null && test "$1" -ge 5)
+    then
+	echo "Interface font size should be an integer greater than 4"
+	return $(false)
+    fi
 }
 
 is_font_present ()
 {
     CHECK="$1"
-    get_fonts | grep "^${CHECK}$" 2>&1 > /dev/null
+    if ! $(get_fonts | grep "^${CHECK}$" 2>&1 > /dev/null)
+    then
+	echo "\"$1\" Font seems not present"
+	return $(false)
+    fi
+       
 }
 
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
