@@ -36,6 +36,8 @@
 ;; Auto close bracket (", [, (, {, etc.).
 ;; Recommended Emacs version: 24.4+
 (electric-pair-mode 1)
+;; Don't change '<<' to something else.
+(add-hook 'sh-mode-hook (lambda () (sh-electric-here-document-mode -1)))
 
 ;; Highlight matching parenthesis
 (show-paren-mode 1)
