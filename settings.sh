@@ -47,10 +47,10 @@ ICON_THEME="Adwaita"
 # TODO: Use this configuration
 ##### Fonts #####
 # Font on  title bar
-WINDOW_TITLE_FONT="Ubuntu"
+WINDOW_TITLE_FONT="Ubuntu Regular"
 WINDOW_TITLE_FONT_SIZE="11"
 
-INTERFACE_FONT="Ubuntu"
+INTERFACE_FONT="Ubuntu Regular"
 INTERFACE_FONT_SIZE="11"
 
 # Font user for codes, (Eg: in gedit)
