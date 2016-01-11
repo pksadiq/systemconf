@@ -38,7 +38,7 @@ NATURAL_SCROLL="false"
 # Icons, possible values: "Adwaita"
 GTK_THEME="Adwaita"
 PREFER_DARK="true"
-PREFER_DARK_TERM="true" # Prefer dark theme for Terminal Emulator?
+PREFER_DARK_TERM="true" # Prefer dark theme for GNOME Terminal?
 
 # The main icons used
 # Possible values: "Adwaita"
@@ -57,6 +57,6 @@ INTERFACE_FONT_SIZE="11"
 MONOSPACE_FONT="Ubuntu Mono"
 MONOSPACE_FONT_SIZE="11"
 
-# Font used for Emacs, Terminal Emulator, Gedit etc.
+# Font used for Emacs, GNOME Terminal, Gedit etc.
 EMACS_FONT="Ubuntu Mono"
 EMACS_FONT_SIZE="18"
