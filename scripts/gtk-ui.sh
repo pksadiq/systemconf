@@ -45,20 +45,20 @@ then
 fi
 
 # Set Gedit font
-if is_font_present "${MONOSPACE_FONT}"
+if is_font_present "${EMACS_FONT}"
 then
-    if is_number "${MONOSPACE_FONT_SIZE}"
+    if is_number "${EMACS_FONT_SIZE}"
     then
 	$gs org.gnome.gedit.preferences.editor editor-font \
 	    "${EMACS_FONT} ${EMACS_FONT_SIZE}"
     fi
 fi
 
-if is_font_present "${EMACS_FONT}"
+if is_font_present "${MONOSPACE_FONT}"
 then
-    if is_number "${EMACS_FONT_SIZE}"
+    if is_number "${MONOSPACE_FONT_SIZE}"
     then
 	$gs ${settings}.interface monospace-font-name \
-	    "${MONOSPACE_FONT_FONT} ${MONOSPACE_FONT_SIZE}"
+	    "${MONOSPACE_FONT} ${MONOSPACE_FONT_SIZE}"
     fi
 fi
