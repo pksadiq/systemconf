@@ -53,6 +53,6 @@ WINDOW_TITLE_FONT_SIZE="11"
 INTERFACE_FONT="Ubuntu Regular"
 INTERFACE_FONT_SIZE="11"
 
-# Font user for codes, (Eg: in gedit)
+# Font user for codes, (Eg: Devhelp)
 MONOSPACE_FONT="Ubuntu Mono"
 MONOSPACE_FONT_SIZE="11"
