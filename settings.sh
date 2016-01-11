@@ -54,9 +54,9 @@ INTERFACE_FONT="Ubuntu Regular"
 INTERFACE_FONT_SIZE="11"
 
 # Font user for codes, (Eg: Devhelp)
-MONOSPACE_FONT="Ubuntu Mono"
+MONOSPACE_FONT="Ubuntu Mono Regular"
 MONOSPACE_FONT_SIZE="11"
 
 # Font used for Emacs, GNOME Terminal, Gedit etc.
-EMACS_FONT="Ubuntu Mono"
+EMACS_FONT="Ubuntu Mono Regular"
 EMACS_FONT_SIZE="18"
