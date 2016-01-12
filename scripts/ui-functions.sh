@@ -69,11 +69,10 @@ get_themes ()
     then
        THEME_DIRS="${HOME_DIR}/.themes ${HOME_DIR}/.local/share/themes"
        THEME_DIRS="${THEME_DIRS} /usr/share/themes"
-    else if [ $1 = icon_theme ]
-	 then
-	     THEME_DIRS="${HOME_DIR}/.icons ${HOME_DIR}/.local/share/icons"
-	     THEME_DIRS="${THEME_DIRS} /usr/share/icons"
-	 fi
+    elif [ $1 = icon_theme ]
+    then
+	THEME_DIRS="${HOME_DIR}/.icons ${HOME_DIR}/.local/share/icons"
+	THEME_DIRS="${THEME_DIRS} /usr/share/icons"
     fi
     
     for THEME_DIR in ${THEME_DIRS}
