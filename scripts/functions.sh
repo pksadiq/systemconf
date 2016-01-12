@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+TEMP_FILE="${SCRIPT_DIR}/temp/temp.txt"
+FONT_FILE="${SCRIPT_DIR}/temp/fonts_available"
 
 # Returns "true" if the value is "true" or "false", and "false" otherwise
 is_true_false ()
