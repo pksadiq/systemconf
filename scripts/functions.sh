@@ -74,10 +74,10 @@ is_font_present ()
     CHECK="$1"
     if ! $(get_fonts | grep "^${CHECK}$" 2>&1 > /dev/null)
     then
-	echo "\"$1\" Font seems not present"
+	echo "\"${CHECK}\" Font seems not present"
 	return $(false)
     fi
-       
+    
 }
 
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
