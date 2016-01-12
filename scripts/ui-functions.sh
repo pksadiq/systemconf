@@ -45,6 +45,7 @@ get_fonts ()
     fc-list | tr '=' ':' | cut -d ':' -f 2,4 | tr ':' '=' | while read FONT
     do
 	# TODO: avoid duplicate names. Save list to a file to avoid repeating
+	# Required? Many people uses SSDs. Extensive writing to disk may be bad
 	print_font_name "$FONT"
     done
 }
