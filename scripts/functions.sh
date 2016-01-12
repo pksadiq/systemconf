@@ -59,6 +59,36 @@ get_fonts ()
     done
 }
 
+get_themes ()
+{
+    # Lets hope there won't be spaces in directory names
+    if [ $1 = gtk_theme ]
+    then
+       THEME_DIRS="${HOME_DIR}/.themes ${HOME_DIR}/.local/share/themes"
+       THEME_DIRS="${THEME_DIRS} /usr/share/themes"
+    else if [ $1 = icon_theme ]
+	 then
+	     THEME_DIRS="${HOME_DIR}/.icons ${HOME_DIR}/.local/share/icons"
+	     THEME_DIRS="${THEME_DIRS} /usr/share/icons"
+	 fi
+    fi
+    
+    for THEME_DIR in ${THEME_DIRS}
+    do
+	[ -d $THEME_DIR ] && for DIR in $THEME_DIR/*
+	do
+	    if [ -d $DIR ]
+	    then
+		cd $DIR
+		if [ -f index.theme ]
+		then
+		    grep "^Name=" index.theme | cut -d "=" -f 2
+		fi
+	    fi
+	done
+    done
+}
+
 is_number ()
 {
     NUM_REGEX='^[0-9]+$'
