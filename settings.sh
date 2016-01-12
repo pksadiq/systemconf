@@ -25,6 +25,10 @@ EMAIL="sadiq@sadiqpk.org"
 # TODO: Use this configuration
 OVERWRITE="true" # Do you wish to overwrite your current config files?
 
+# Use internet to download missing files or packages?
+# anything other than "true" is considered "false"
+USE_INTERNET="true"
+
 EDITOR="emacs"
 
 # Caps Lock acts as Control Key.
