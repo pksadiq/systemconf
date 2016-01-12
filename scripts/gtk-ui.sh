@@ -16,9 +16,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+if is_gtk_theme "${GTK_THEME}"
+then
+    $gs ${settings}.interface gtk-theme "${GTK_THEME}"
+fi
 
-$gs ${settings}.interface gtk-theme "${GTK_THEME}"
-$gs ${settings}.interface icon-theme "${ICON_THEME}"
+if is_icon_theme "${ICON_THEME}"
+then
+    $gs ${settings}.interface icon-theme "${ICON_THEME}"
+fi
 
 if is_true_false "${PREFER_DARK_TERM}"
 then
