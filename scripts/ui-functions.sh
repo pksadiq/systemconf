@@ -31,6 +31,10 @@ print_font_name ()
 	do
 	    echo "$FONT_NAME" "$STYLE_NAME"
 	done
+	# FIXME: Is this right? Seems to happen in gtk font chooser
+	echo "$FONT_NAME Bold"
+	echo "$FONT_NAME Italic"
+	echo "$FONT_NAME Bold Italic"
     done
     IFS="${IFS_OLD}"
 }
