@@ -18,3 +18,15 @@ PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # Colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Include the contents of `.bash_aliases'
+if [ -f ~/.bash_aliases ]
+then
+    . ~/.bash_aliases
+fi
+
+# My Personal aliases
+if [ -f ~/.bash/aliases ]
+then
+    . ~/.bash/aliases
+fi
