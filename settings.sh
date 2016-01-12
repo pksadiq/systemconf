@@ -44,7 +44,6 @@ PREFER_DARK_TERM="true" # Prefer dark theme for GNOME Terminal?
 # Possible values: "Adwaita"
 ICON_THEME="Adwaita"
 
-# TODO: Use this configuration
 ##### Fonts #####
 # Font on  title bar
 WINDOW_TITLE_FONT="Ubuntu Regular"
