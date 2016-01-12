@@ -72,9 +72,9 @@ is_number ()
 is_font_present ()
 {
     CHECK="$1"
-    if ! $(get_fonts | grep "^${CHECK}$" 2>&1 > /dev/null)
+    if ! $(get_fonts | grep "^${!CHECK}$" 2>&1 > /dev/null)
     then
-	echo "\"${CHECK}\" Font seems not present"
+	echo "\"${!CHECK}\" Font seems not present"
 	return $(false)
     fi
     

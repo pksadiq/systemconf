@@ -26,7 +26,7 @@ then
 fi
 
 ##### Set Fonts #####
-if is_font_present "${INTERFACE_FONT}"
+if is_font_present "INTERFACE_FONT"
 then
     if is_number "${INTERFACE_FONT_SIZE}"
     then
@@ -35,7 +35,7 @@ then
     fi
 fi
 
-if is_font_present "${WINDOW_TITLE_FONT}"
+if is_font_present "WINDOW_TITLE_FONT"
 then
     if is_number "${WINDOW_TITLE_FONT_SIZE}"
     then
@@ -45,7 +45,7 @@ then
 fi
 
 # Set Gedit font
-if is_font_present "${EMACS_FONT}"
+if is_font_present "EMACS_FONT"
 then
     if is_number "${EMACS_FONT_SIZE}"
     then
@@ -54,7 +54,7 @@ then
     fi
 fi
 
-if is_font_present "${MONOSPACE_FONT}"
+if is_font_present "MONOSPACE_FONT"
 then
     if is_number "${MONOSPACE_FONT_SIZE}"
     then
