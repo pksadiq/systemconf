@@ -29,7 +29,7 @@ if [ "${EDITOR,,}" == "emacs" ]
 then
     # Set Emacs Key bindings for the complete desktop
     $gs ${settings}.interface gtk-key-theme "Emacs"
-    echo "Desktop shortcuts set to Emacs style (almost)"
+    echo "Keyboard shortcuts set to use Emacs keybinding"
 fi
 case "${CAPS_IS_CTRL,,}" in
     true)
