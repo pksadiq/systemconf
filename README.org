@@ -29,7 +29,10 @@
 
 * Configuration files present
   - GNOME Desktop Environment
+    - Font
+    - Theme
   - git
+  - Bash
   - GNU Emacs (basic configuration only)
 
 * License
