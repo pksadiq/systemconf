@@ -32,3 +32,6 @@
 # This may not happen, but if in case ...
 *secring.gpg
 *_rsa
+
+## Project Specific
+temp/[a-zA-Z]*
