@@ -24,9 +24,12 @@
 
   - Edit the file =settings.sh=
     - Set the variables with the configuration you wish
-  - Now execute =./configure=
+  - Now execute =make=
+    - Alternatively, you may run =./configure= to be more verbose
+      or if GNU make is not available for you
   - Your system is configured.
 
+    
 * Configuration files present
   - GNOME Desktop Environment
     - Font
