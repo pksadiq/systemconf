@@ -72,12 +72,13 @@ is_number ()
 is_font_present ()
 {
     CHECK="$1"
+    CHECK_SIZE="$1_SIZE"
     if ! $(get_fonts | grep "^${!CHECK}$" 2>&1 > /dev/null)
     then
 	echo "\"${!CHECK}\" Font seems not present"
 	return $(false)
     fi
-    
+    is_number ${!CHECK_SIZE}
 }
 
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.

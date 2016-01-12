@@ -28,37 +28,25 @@ fi
 ##### Set Fonts #####
 if is_font_present "INTERFACE_FONT"
 then
-    if is_number "${INTERFACE_FONT_SIZE}"
-    then
 	$gs ${settings}.interface font-name \
 	    "${INTERFACE_FONT} ${INTERFACE_FONT_SIZE}"
-    fi
 fi
 
 if is_font_present "WINDOW_TITLE_FONT"
 then
-    if is_number "${WINDOW_TITLE_FONT_SIZE}"
-    then
 	$gs ${settings}.wm.preferences titlebar-font \
 	    "${WINDOW_TITLE_FONT} ${WINDOW_TITLE_FONT_SIZE}"
-    fi
 fi
 
 # Set Gedit font
 if is_font_present "EMACS_FONT"
 then
-    if is_number "${EMACS_FONT_SIZE}"
-    then
 	$gs org.gnome.gedit.preferences.editor editor-font \
 	    "${EMACS_FONT} ${EMACS_FONT_SIZE}"
-    fi
 fi
 
 if is_font_present "MONOSPACE_FONT"
 then
-    if is_number "${MONOSPACE_FONT_SIZE}"
-    then
 	$gs ${settings}.interface monospace-font-name \
 	    "${MONOSPACE_FONT} ${MONOSPACE_FONT_SIZE}"
-    fi
 fi
