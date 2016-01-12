@@ -1,8 +1,9 @@
 # -*- mode: shell-script; -*-
 
-# Common aliases to go back dirs
+# Common aliases to switch directories
 alias ..='cd ..'
 alias ...='cd ../..'
+alias -- -='cd -'
 
 alias ls='ls --color=auto -B'
 alias grep='grep --color=auto'
