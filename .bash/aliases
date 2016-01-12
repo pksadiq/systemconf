@@ -1,0 +1,7 @@
+# -*- mode: shell-script; -*-
+
+alias ls='ls --color=auto -B'
+alias grep='grep --color=auto'
+
+# Invoke the favorite editor
+alias e='emacsclient -c'
