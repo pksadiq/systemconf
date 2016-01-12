@@ -90,11 +90,13 @@ get_themes ()
 is_icon_theme ()
 {
     THEME_NAME="$1"
-    get_themes icon_theme | grep "$1" 2>&1 >/dev/null
+    get_themes icon_theme | grep "$1" 2>&1 >/dev/null ||
+	echo "Check Icon Theme name" && return $(false)
 }
 
 is_gtk_theme ()
 {
     THEME_NAME="$1"
-    get_themes gtk_theme | grep "$1" 2>&1 >/dev/null
+    get_themes gtk_theme | grep "$1" 2>&1 >/dev/null ||
+	echo "Check Gtk Theme name" && return $(false)
 }
