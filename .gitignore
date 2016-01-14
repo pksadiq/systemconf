@@ -35,3 +35,6 @@
 
 ## Project Specific
 temp/[a-zA-Z]*
+
+## Guile files
+*.go
