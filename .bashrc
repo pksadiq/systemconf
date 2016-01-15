@@ -43,3 +43,8 @@ if [ -f ~/.bash/aliases ]
 then
     . ~/.bash/aliases
 fi
+
+if [ -f ~/.bash/personal ]
+then
+    . ~/.bash/personal
+fi
