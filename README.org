@@ -11,8 +11,8 @@
   to install Operating Systems (GNU/Linux based) on many client's
   machines.
 
-  So I use this to automate the configuration of those systems,
-  which may later be used to automate the installations too.
+  So I'm planning to use this script to automate the configuration of those
+  systems, which may later be used to automate the installations too.
 
   Currently these are my focuses:
   - Debian GNU/Linux
