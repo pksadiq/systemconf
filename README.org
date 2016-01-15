@@ -28,7 +28,11 @@
     - Alternatively, you may run =./configure= to be more verbose
       or if GNU make is not available for you
   - Your system is configured.
-
+  
+** Notes
+   - After your system is configured, you can edit the file =~/.bash/personal=
+     to add your personal =.bashrc= scripts. This file won't ever be over
+     written even if =OVERWRITE= is set to `true' in =settings.sh=
     
 * Configuration files present
   - GNOME Desktop Environment
