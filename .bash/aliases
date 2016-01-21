@@ -10,3 +10,7 @@ alias grep='grep --color=auto'
 
 # Invoke the favorite editor
 alias e='emacsclient -c'
+
+# I use this when the path is irrelevent,
+# to save lines on shell
+alias eshell='export PS1="> "'
