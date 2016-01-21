@@ -8,6 +8,9 @@ alias -- -='cd -'
 alias ls='ls --color=auto -B'
 alias grep='grep --color=auto'
 
+# Preserve env. variables
+alias sudo='sudo -E'
+
 # Invoke the favorite editor
 alias e='emacsclient -c'
 
