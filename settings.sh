@@ -25,6 +25,12 @@ EMAIL="sadiq@sadiqpk.org"
 # TODO: Use this configuration
 OVERWRITE="true" # Do you wish to overwrite your current config files?
 
+# Install packages, themes, etc. as root? configure root settings?
+# If not set to "true", themes shall be installed on user specific dirs.
+# Packages may not be installed, and root specific settings won't be
+# configured.
+BE_ROOT="true"
+
 # Use internet to download missing files or packages?
 # anything other than "true" is considered "false"
 USE_INTERNET="true"
@@ -63,4 +69,3 @@ MONOSPACE_FONT_SIZE="11"
 # Font used for Emacs, GNOME Terminal, Gedit etc.
 EMACS_FONT="Inconsolata Medium"
 EMACS_FONT_SIZE="18"
-
