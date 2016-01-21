@@ -15,6 +15,21 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+if [ "${BE_ROOT,,}" = "true" ]
+then
+    if [ -z "$(which sudo 2>/dev/null)" ]
+    then
+	echo "Error: 'sudo' not found. Can't be root"
+	exit 1
+    fi
+
+    THEME_INSTALL_DIR="/usr/share/"
+    DO_SUDO="sudo"
+else
+    THEME_INSTALL_DIR="${HOME_DIR}/.local/share"
+    DO_SUDO=""
+fi
+
 # Returns "true" if the value is "true" or "false", and "false" otherwise
 is_true_false ()
 {
