@@ -14,6 +14,6 @@ alias sudo='sudo -E'
 # Invoke the favorite editor
 alias e='emacsclient -c'
 
-# I use this when the path is irrelevent,
+# I use this when the path is irrelevant,
 # to save lines on shell
 alias eshell="export PS1=\"${MY_PS1}\""
