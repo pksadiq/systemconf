@@ -14,6 +14,7 @@ HISTFILESIZE=10000
 shopt -s checkwinsize
 
 # Colored PS1
+# If user is `root' set color as red, else green
 if [ "$UID" -eq 0 ]
 then
     PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -44,6 +45,8 @@ then
     . ~/.bash/aliases
 fi
 
+# Include your personal scripts and confs here
+# This file won't be overwritten by the update script
 if [ -f ~/.bash/personal ]
 then
     . ~/.bash/personal
