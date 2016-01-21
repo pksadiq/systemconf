@@ -33,6 +33,13 @@ elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# Some more bashrc
+if [ -f ~/.bash/bashrc ]
+then
+    . ~/.bash/bashrc
+fi
+
+
 # Include the contents of `.bash_aliases'
 if [ -f ~/.bash_aliases ]
 then
