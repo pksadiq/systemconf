@@ -39,3 +39,6 @@ SCRIPT_DIR="$(pwd)"
 
 # Settings to set on GNOME 3 Desktop Environment
 . "${SCRIPT_DIR}"/scripts/gsettings.sh
+
+# Gtk/GNOME 3 UI related configurations
+. "${SCRIPT_DIR}"/scripts/gtk-ui.sh
