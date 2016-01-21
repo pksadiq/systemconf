@@ -37,8 +37,8 @@ SCRIPT_DIR="$(pwd)"
 # Common UI related functions used throughout the script
 . "${SCRIPT_DIR}"/scripts/ui-functions.sh
 
-# Settings to set on GNOME 3 Desktop Environment
+# GNOME 3 Desktop Environment configuration script
 . "${SCRIPT_DIR}"/scripts/gsettings.sh
 
-# Gtk/GNOME 3 UI related configurations
+# Gtk/GNOME 3 UI related configuration script
 . "${SCRIPT_DIR}"/scripts/gtk-ui.sh
