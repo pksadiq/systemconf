@@ -13,13 +13,19 @@ HISTFILESIZE=10000
 # Check width of term and adjust (if window size changes) after each command.
 shopt -s checkwinsize
 
+# Logged in via ssh?
+if [ -n "$SSH_CLIENT" ]
+then
+    REMOTE_PS1="(ssh)"
+fi
+
 # Colored PS1
 # If user is `root' set color as red, else green
 if [ "$UID" -eq 0 ]
 then
-    PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;31m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;32m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 
 
