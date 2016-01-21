@@ -66,5 +66,3 @@ is_gentoo_based ()
 {
     grep "^ID.*=gentoo" 2>&1 >/dev/null /etc/os-release
 }
-
-. "${SCRIPT_DIR}"/scripts/ui-functions.sh

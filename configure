@@ -34,5 +34,8 @@ SCRIPT_DIR="$(pwd)"
 # Common functions used throughout the script
 . "${SCRIPT_DIR}"/scripts/functions.sh
 
+# Common UI related functions used throughout the script
+. "${SCRIPT_DIR}"/scripts/ui-functions.sh
+
 # Settings to set on GNOME 3 Desktop Environment
 . "${SCRIPT_DIR}"/scripts/gsettings.sh
