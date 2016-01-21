@@ -42,6 +42,8 @@
   - Bash
   - GNU Emacs (basic configuration only)
 
+    Note: This script may be capable to configure Cinnamon and Mate DEs.
+
 * License
 
   Copyright (c) 2015, 2016 Mohammed Sadik <sadiq@sadiqpk.org>
