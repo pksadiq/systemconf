@@ -28,6 +28,14 @@ else
     PS1='\[\033[01;32m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 
+# Set Term title
+case "$TERM" in
+    xterm*|rxvt*)
+	PS1="\[\e]0;\u@\h${REMOTE_PS1}: \w\a\]$PS1"
+	;;
+    *)
+	;;
+esac
 
 # Colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
