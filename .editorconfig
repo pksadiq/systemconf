@@ -1,0 +1,36 @@
+# Editorconfig is an effort to standardize configuration of editors.
+# So that any editor can use ONE single configuration.
+# And here is the result: https://xkcd.com/927/
+
+# I don't use editorconfig. But this will be helpful
+# If I'm working with people that don't even know what
+# GNU Emacs is (People that uses IDEs and/or are inconsistently
+# consistent in proper line indentations).
+
+# See http://editorconfig.org for details
+
+# This is the root main config. Don't go to parent dir
+# and check for more config files.
+root = true
+
+# Rule for any file
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# File specific settings
+[*.{ui,xml,c,h,html,css,js}]
+indent_style = space
+indent_size = 2
+
+[Makefile*]
+indent_style = tab
+indent_size = 4
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{html,css,js,py}]
+charset = utf-8
