@@ -28,11 +28,11 @@ fi
 HOME_DIR="${HOME}"
 SCRIPT_DIR="$(pwd)"
 
-# Common functions used throughout the script
-. "${SCRIPT_DIR}"/scripts/functions.sh
-
 # Settings that can be configured by the user
 . "${SCRIPT_DIR}"/settings.sh
+
+# Common functions used throughout the script
+. "${SCRIPT_DIR}"/scripts/functions.sh
 
 # Settings to set on GNOME 3 Desktop Environment
 . "${SCRIPT_DIR}"/scripts/gsettings.sh
