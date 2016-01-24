@@ -60,4 +60,5 @@ fi
 # Show date in GNOME shell top bar. "true" is sane enough
 $gs ${settings}.interface clock-show-date true
 
-
+# Show All the three window control buttons.
+$gs ${settings}.wm.preferences button-layout 'appmenu:minimize,maximize,close'
