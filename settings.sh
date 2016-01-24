@@ -23,7 +23,7 @@ NAME="Mohammed Sadik"
 EMAIL="sadiq@sadiqpk.org"
 
 # TODO: Use this configuration
-OVERWRITE="true" # Do you wish to overwrite your current config files?
+OVERWRITE="false" # Do you wish to overwrite your current config files?
 
 # Install packages, themes, etc. as root? configure root settings?
 # If not set to "true", themes shall be installed on user specific dirs.
