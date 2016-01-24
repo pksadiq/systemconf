@@ -56,3 +56,8 @@ then
 	$gs ${settings}.interface monospace-font-name \
 	    "${MONOSPACE_FONT} ${MONOSPACE_FONT_SIZE}"
 fi
+
+# Show date in GNOME shell top bar. "true" is sane enough
+$gs ${settings}.interface clock-show-date true
+
+
