@@ -3,6 +3,9 @@
 # Common aliases to switch directories
 alias ..='cd ..'
 alias ...='cd ../..'
+# The command is `-'. `--' here means that arguments for `alias'
+# ends here. What follows `--' won't be taken as an argument for `alias'
+# and will be taken literally
 alias -- -='cd -'
 
 alias ls='ls --color=auto -B'
