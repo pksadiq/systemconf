@@ -31,6 +31,17 @@ then
     $gs org.gnome.Terminal.Legacy.Settings dark-theme "${PREFER_DARK_TERM,,}"
 fi
 
+if is_true_false "${PREFER_DARK_IDE}"
+then
+    $gs org.gnome.builder night-mode "${PREFER_DARK_IDE,,}"
+    if [ "${PREFER_DARK_IDE,,}" = "true" ]
+    then
+	$gs org.gnome.builder.editor style-scheme-name "builder-dark"
+    else
+	$gs org.gnome.builder.editor style-scheme-name "builder"
+fi
+
+
 ##### Set Fonts #####
 if is_font_present "INTERFACE_FONT"
 then
