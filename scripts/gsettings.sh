@@ -47,3 +47,9 @@ then
    $gs ${settings}.peripherals.touchpad natural-scroll "${NATURAL_SCROLL,,}"
    echo "Natural Scrolling for touchpad state: ${NATURAL_SCROLL,,}"
 fi
+
+if is_true_false "${AUTO_SOFTWARE_UPDATE}"
+then
+    $gs org.gnome.software download-updates "${AUTO_SOFTWARE_UPDATE,,}"
+    echo "Auto updates via GNOME Software is set to ${AUTO_SOFTWARE_UPDATE,,}"
+fi

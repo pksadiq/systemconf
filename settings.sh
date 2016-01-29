@@ -41,6 +41,10 @@ EDITOR="emacs"
 # Very helpful if you are an Emacs user.
 CAPS_IS_CTRL="true"
 
+# Auto update packages via Gnome software?
+# Set to "false" if you rely on `apt' or `dnf'
+AUTO_SOFTWARE_UPDATE="false"
+
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
 
