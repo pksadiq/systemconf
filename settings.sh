@@ -36,6 +36,9 @@ BE_ROOT="true"
 USE_INTERNET="true"
 
 EDITOR="emacs"
+# Set Emacs key bindings where every possible
+# This includes Desktop Environment, GNOME Builder, etc.
+MORE_EMACS="true"
 
 # Caps Lock acts as Control Key.
 # Very helpful if you are an Emacs user.
