@@ -37,10 +37,10 @@ then
     if [ "${PREFER_DARK_IDE,,}" = "true" ]
     then
 	$gs org.gnome.builder.editor style-scheme-name "builder-dark"
-	$gs org.gnome.gedit.preference.editor scheme "builder-dark"
+	$gs org.gnome.gedit.preferences.editor scheme "builder-dark"
     else
 	$gs org.gnome.builder.editor style-scheme-name "builder"
-	$gs org.gnome.gedit.preference.editor scheme "builder"
+	$gs org.gnome.gedit.preferences.editor scheme "builder"
     fi
 fi
 
