@@ -16,7 +16,7 @@
 
   Currently these are my focuses:
   - Debian GNU/Linux
-  - GNOME Desktop Environment
+  - GNOME Desktop Environment (3.18+)
 
   Hopefully this shall be helpful for you too.
 
@@ -24,11 +24,14 @@
 
   - Edit the file =settings.sh=
     - Set the variables with the configuration you wish
+  - Also, If you don't wish to mess your current settings please look
+    into the files =gsettings.sh= and =gtk-ui.sh= in the =scripts=
+    directory before you run =make=.
   - Now execute =make=
     - Alternatively, you may run =./configure= to be more verbose
       or if GNU make is not available for you
   - Your system is configured.
-  
+
 ** Notes
    - After your system is configured, you can edit the file =~/.bash/personal=
      to add your personal =.bashrc= scripts. This file won't ever be over
@@ -42,6 +45,7 @@
   - Bash
   - GNU Emacs (basic configuration only)
   - Editorconfig (ONE config for every editor)
+
     Note: This script may be capable to configure Cinnamon and Mate DEs.
 
 * License
