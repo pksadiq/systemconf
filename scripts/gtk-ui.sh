@@ -41,8 +41,8 @@ then
     else
 	$gs org.gnome.builder.editor style-scheme-name "builder"
 	$gs org.gnome.gedit.preference.editor scheme "builder"
+    fi
 fi
-
 
 ##### Set Fonts #####
 if is_font_present "INTERFACE_FONT"
