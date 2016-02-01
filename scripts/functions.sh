@@ -47,7 +47,7 @@ is_true_false ()
 is_number ()
 {
     NUM_REGEX='^[0-9]+$'
-    if ! $(egrep ${NUM_REGEX} <<< "$1" 2>&1 >/dev/null && test "$1" -ge 5)
+    if ! $(egrep ${NUM_REGEX} <<< "$1" >/dev/null 2>&1 && test "$1" -ge 5)
     then
 	echo "Interface font size should be an integer greater than 4"
 	return $(false)
@@ -59,22 +59,22 @@ is_debian_based ()
 {
     # ID and ID_LIKE has to be matched, and nothing else begin with
     # ID, or end with ID now.
-    grep "^ID.*=debian" 2>&1 >/dev/null /etc/os-release
+    grep "^ID.*=debian" >/dev/null 2>&1 /etc/os-release
 }
 
 # detect Fedora and derivatives like RHEL, CentOS, etc.
 is_fedora_based ()
 {
     # Also match "rhel fedora" present in CentOS
-    grep "^ID.*=.*fedora" 2>&1 >/dev/null /etc/os-release
+    grep "^ID.*=.*fedora" >/dev/null 2>&1 /etc/os-release
 }
 
 is_arch_based ()
 {
-    grep "^ID.*=arch" 2>&1 >/dev/null /etc/os-release
+    grep "^ID.*=arch" >/dev/null 2>&1 /etc/os-release
 }
 
 is_gentoo_based ()
 {
-    grep "^ID.*=gentoo" 2>&1 >/dev/null /etc/os-release
+    grep "^ID.*=gentoo" >/dev/null 2>&1 /etc/os-release
 }

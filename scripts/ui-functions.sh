@@ -54,7 +54,7 @@ is_font_present ()
 {
     CHECK="$1"
     CHECK_SIZE="$1_SIZE"
-    if ! $(get_fonts | grep "^${!CHECK}$" 2>&1 > /dev/null)
+    if ! $(get_fonts | grep "^${!CHECK}$" >/dev/null 2>&1)
     then
 	echo "\"${!CHECK}\" Font seems not present"
 	return $(false)
@@ -94,14 +94,14 @@ get_themes ()
 is_icon_theme ()
 {
     THEME_NAME="$1"
-    get_themes icon_theme | grep "$1" 2>&1 >/dev/null ||
+    get_themes icon_theme | grep "$1" >/dev/null 2>&1 ||
 	(echo "Check Icon Theme name" && return $(false))
 }
 
 is_gtk_theme ()
 {
     THEME_NAME="$1"
-    get_themes gtk_theme | grep "$1" 2>&1 >/dev/null ||
+    get_themes gtk_theme | grep "$1" >/dev/null 2>&1 ||
 	(echo "Check Gtk Theme name" && return $(false))
 }
 
