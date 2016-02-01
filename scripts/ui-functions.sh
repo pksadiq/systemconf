@@ -104,3 +104,15 @@ is_gtk_theme ()
     get_themes gtk_theme | grep "$1" 2>&1 >/dev/null ||
 	(echo "Check Gtk Theme name" && return $(false))
 }
+
+set_font ()
+{
+    FONT="$1"
+    FONT_SIZE="$1_SIZE"
+    SCHEMA="$2"
+    KEY="$3"
+    if is_font_present "${FONT}"
+    then
+	gsettings set "${SCHEMA}" "${KEY}" "${!FONT} ${!FONT_SIZE}"
+    fi
+}
