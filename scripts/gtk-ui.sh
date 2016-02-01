@@ -45,30 +45,12 @@ then
 fi
 
 ##### Set Fonts #####
-if is_font_present "INTERFACE_FONT"
-then
-	$gs ${settings}.interface font-name \
-	    "${INTERFACE_FONT} ${INTERFACE_FONT_SIZE}"
-fi
-
-if is_font_present "WINDOW_TITLE_FONT"
-then
-	$gs ${settings}.wm.preferences titlebar-font \
-	    "${WINDOW_TITLE_FONT} ${WINDOW_TITLE_FONT_SIZE}"
-fi
+set_font "INTERFACE_FONT" ${settings}.interface font-name 
+set_font "WINDOW_TITLE_FONT" ${settings}.wm.preferences titlebar-font
 
 # Set Gedit font
-if is_font_present "EMACS_FONT"
-then
-	$gs org.gnome.gedit.preferences.editor editor-font \
-	    "${EMACS_FONT} ${EMACS_FONT_SIZE}"
-fi
-
-if is_font_present "MONOSPACE_FONT"
-then
-	$gs ${settings}.interface monospace-font-name \
-	    "${MONOSPACE_FONT} ${MONOSPACE_FONT_SIZE}"
-fi
+set_font "EMACS_FONT" org.gnome.gedit.preferences.editor editor-font 
+set_font "MONOSPACE_FONT" ${settings}.interface monospace-font-name 
 
 # Show date in GNOME shell top bar. "true" is sane enough
 $gs ${settings}.interface clock-show-date true
