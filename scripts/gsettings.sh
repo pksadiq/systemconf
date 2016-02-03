@@ -56,9 +56,15 @@ fi
 
 if [ "${CUSTOM_SHORTCUTS,,}" = "true" ]
 then
-    # FIXME: This replaces all other custom shortcuts
-    $gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
-    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ name 'GNOME Terminal'
-    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ command 'gnome-terminal'
-    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ binding '<Primary><Alt>t'
+    # Get the current list of shortcuts
+    CUR=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
+    CUR=${CUR%\]}
+    # Check if already added
+    if [[ ! "${CUR}" = */custom100/* ]]
+    then
+	$gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "${CUR}, '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
+	$gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ name 'GNOME Terminal'
+	$gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ command 'gnome-terminal'
+	$gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ binding '<Primary><Alt>t'
+    fi
 fi
