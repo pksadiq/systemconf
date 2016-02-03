@@ -11,4 +11,4 @@ fi
 # Don't modify as it may be modified again
 export EDITOR=emacs
 export VISUAL=emacs
-
+export LESS="-XF"
