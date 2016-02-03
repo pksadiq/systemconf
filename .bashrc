@@ -10,6 +10,9 @@ HISTSIZE=5000
 # Maximum number of lines to save
 HISTFILESIZE=10000
 
+# Autocorrect cd typos
+shopt -s cdspell
+
 # Check width of term and adjust (if window size changes) after each command.
 shopt -s checkwinsize
 
