@@ -7,7 +7,7 @@ else
     MY_PS1='\[\033[01;35m\]${REMOTE_PS1}\[\033[01;34m\]\W\[\033[01;32m\]\$\[\033[00m\] '
 fi
 
-#### Some nice to have exports
+#### Some nice to have variables
 export LESS="-XFR"
 
 # Following configurations are modified via script
