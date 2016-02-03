@@ -44,6 +44,11 @@ MORE_EMACS="true"
 # Very helpful if you are an Emacs user.
 CAPS_IS_CTRL="true"
 
+# Currently the following are configured:
+# Alt+Ctrl+T = gnome-terminal
+# FIXME: This replaces the first custom shortcut
+CUSTOM_SHORTCUTS="true"
+
 # Auto update packages via Gnome software?
 # Set to "false" if you rely on `apt' or `dnf'
 AUTO_SOFTWARE_UPDATE="false"
