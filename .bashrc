@@ -1,14 +1,8 @@
-# Ignore command starting with space and duplicate commands
-HISTCONTROL=ignoreboth
-
-# Append to history file
-shopt -s histappend
-
-# Maximum commands to save in history file
-HISTSIZE=5000
-
-# Maximum number of lines to save
-HISTFILESIZE=10000
+## History related settings
+shopt -s histappend # Append to history file
+HISTCONTROL=ignoreboth # Ignore ones that begin with space & duplicate commands
+HISTSIZE=5000 # Maximum commands to save in history file
+HISTFILESIZE=10000 # Maximum number of lines to save
 
 # Autocorrect cd typos
 shopt -s cdspell
