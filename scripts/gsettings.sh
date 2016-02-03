@@ -56,6 +56,7 @@ fi
 
 if [ "${CUSTOM_SHORTCUTS,,}" = "true" ]
 then
+    # FIXME: This replaces all other custom shortcuts
     $gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
     $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ name 'GNOME Terminal'
     $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ command 'gnome-terminal'
