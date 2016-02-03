@@ -9,7 +9,7 @@ fi
 
 #### Some nice to have variables
 export LESS="-XFR"
-export MAKEFLAGS="-j $(nproc)" # set nproc + 1 if it suites you
+export MAKEFLAGS="-j $(($(nproc)+1))" # set nproc if it suites you
 
 # Following configurations are modified via script
 # Don't modify as it may be modified again
