@@ -46,7 +46,6 @@ CAPS_IS_CTRL="true"
 
 # Currently the following are configured:
 # Alt+Ctrl+T = gnome-terminal
-# FIXME: This replaces the first custom shortcut
 CUSTOM_SHORTCUTS="true"
 
 # Auto update packages via Gnome software?
