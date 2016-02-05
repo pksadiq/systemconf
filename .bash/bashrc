@@ -13,6 +13,6 @@ export MAKEFLAGS="-j $(($(nproc)+1))" # set nproc if it suites you
 
 # Following configurations are modified via script
 # Don't modify as it may be modified again
-export EDITOR=emacs
-export VISUAL=emacs
+export EDITOR=vi
+export VISUAL=gedit
 
