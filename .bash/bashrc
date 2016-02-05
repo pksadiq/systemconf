@@ -9,10 +9,10 @@ fi
 
 #### Some nice to have variables
 export LESS="-XFR"
-export MAKEFLAGS="-j $(($(nproc)+1))" # set nproc if it suites you
+export MAKEFLAGS="-j $(($(nproc)+1))" # set as "-j $(nproc)" if it suites you
 
 # Following configurations are modified via script
-# Don't modify as it may be modified again
+# Don't modify by hand as it may be overwritten
 export EDITOR=vi
 export VISUAL=gedit
 
