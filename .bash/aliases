@@ -12,7 +12,10 @@ alias ls='ls --color=auto -B'
 alias grep='grep --color=auto'
 
 # Preserve env. variables
-alias su='sudo -E'
+if [ -n "$(which sudo 2>/dev/null)" ]
+then
+    alias su='sudo -iE'
+fi
 
 # Invoke the favorite editor
 alias e='emacsclient -c'
