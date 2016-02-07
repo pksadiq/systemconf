@@ -12,11 +12,8 @@ alias ls='ls --color=auto -B'
 alias grep='grep --color=auto'
 
 # Preserve env. variables
-if [ -n "$(which sudo 2>/dev/null)" ]
-then
-    # This will be useful when logging in as root on ssh
-    alias sudo='sudo SSH_CLIENT="${SSH_CLIENT}"'
-fi
+# This will be useful when logging in as root on ssh
+alias sudo='sudo SSH_CLIENT="${SSH_CLIENT}"'
 
 # Invoke the favorite editor
 alias e='emacsclient -c'
