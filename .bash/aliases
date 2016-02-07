@@ -15,7 +15,7 @@ alias grep='grep --color=auto'
 if [ -n "$(which sudo 2>/dev/null)" ]
 then
     # This will be useful when logging in as root on ssh
-    alias su='sudo -iE'
+    alias sudo='sudo SSH_CLIENT="${SSH_CLIENT}"'
 fi
 
 # Invoke the favorite editor
