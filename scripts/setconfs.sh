@@ -28,4 +28,14 @@ then
     cd .bash
     cp "${CP_FLAG}" bashrc "${HOME}/.bash/"
     cp "${CP_FLAG}" aliases "${HOME}/.bash/"
-fi    
+    cd "${SCRIPT_DIR}" # Go back to root dir
+fi
+
+cp "${CP_FLAG}" .bashrc "${HOME}"
+cp "${CP_FLAG}" .emacs "${HOME}"
+cp "${CP_FLAG}" .guile "${HOME}"
+cp "${CP_FLAG}" .gitconfig "${HOME}"
+cp "${CP_FLAG}" .gitignore "${HOME}"
+cp "${CP_FLAG}" .wgetrc "${HOME}"
+cp "${CP_FLAG}" .Xmodmap "${HOME}"
+
