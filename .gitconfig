@@ -1,16 +1,21 @@
 [user]
-        name = Mohammed Sadik
-        email = sadiq@sadiqpk.org
+    name = Mohammed Sadik
+    email = sadiq@sadiqpk.org
+
 [color]
-        ui = auto
+    ui = auto
+
 [core]
-        editor = emacs
-        excludesfile = ~/.gitignore
+    editor = emacs
+    excludesfile = ~/.gitignore
+
 [format]
-        pretty = oneline
+    pretty = oneline
+
 [credential]
-        helper = cache
+    helper = cache
+
 [alias]
-        cm = checkout master
-        mm = merge master
-        lo = log --oneline
+    cm = checkout master
+    mm = merge master
+    lo = log --oneline
