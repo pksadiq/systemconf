@@ -16,6 +16,6 @@
 cd "${SCRIPT_DIR}/.bash"
 
 sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
-sed -i "s/^export VISUAL=.*/export EDITOR=${VISUAL}/" bashrc
-sed -i "s/^export VISUAL=.*/export EMAIL=${EMAIL}/" bashrc
+sed -i "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
+sed -i "s/^export EMAIL=.*/export EMAIL=${EMAIL}/" bashrc
 
