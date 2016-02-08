@@ -16,12 +16,8 @@
 cd "${SCRIPT_DIR}/.bash"
 
 sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
-
-if [ ${EDITOR} = "emacs" ]
-then
-    sed -i "s/^export VISUAL=.*/export VISUAL=${EDITOR}/" bashrc
-else
-    sed -i "s/^export VISUAL=.*/export VISUAL=gedit/" bashrc
-fi
+# Set VISUAL editor to EDITOR, if emacs. Else use gedit
+[ ${EDITOR} = "emacs" ] && VISUAL="emacs" || VISUAL="gedit"
+sed -i "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
 sed -i "s/^export EMAIL=.*/export EMAIL=${EMAIL}/" bashrc
 
