@@ -19,5 +19,5 @@ sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
 # Set VISUAL editor to EDITOR, if emacs. Else use gedit
 [ ${EDITOR} = "emacs" ] && VISUAL="emacs" || VISUAL="gedit"
 sed -i "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
-sed -i "s/^export EMAIL=.*/export EMAIL=${EMAIL}/" bashrc
+sed -i "s/^export EMAIL=.*/export EMAIL=\"${EMAIL}\"/" bashrc
 
