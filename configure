@@ -41,6 +41,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 . "${SCRIPT_DIR}"/scripts/ui-functions.sh
 
 # Configure basic configurations
+. "${SCRIPT_DIR}"/scripts/setconfs.sh
+
+# Configure basic configurations
 . "${SCRIPT_DIR}"/scripts/copyconfs.sh
 
 # GNOME 3 Desktop Environment configuration script
