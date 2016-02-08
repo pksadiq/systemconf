@@ -31,6 +31,9 @@ then
     cd "${SCRIPT_DIR}" # Go back to root dir
 fi
 
+# TODO: Make a loop to copy files. But explicit file copying below
+# informs the user about the files copied
+
 cp "${CP_FLAG}" .bashrc "${HOME}"
 cp "${CP_FLAG}" .emacs "${HOME}"
 cp "${CP_FLAG}" .guile "${HOME}"
@@ -38,4 +41,3 @@ cp "${CP_FLAG}" .gitconfig "${HOME}"
 cp "${CP_FLAG}" .gitignore "${HOME}"
 cp "${CP_FLAG}" .wgetrc "${HOME}"
 cp "${CP_FLAG}" .Xmodmap "${HOME}"
-
