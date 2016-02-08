@@ -15,4 +15,5 @@ export MAKEFLAGS="-j $(($(nproc)+1))" # set as "-j $(nproc)" if it suites you
 # Don't modify by hand as it may be overwritten
 export EDITOR=vi
 export VISUAL=gedit
+export EMAIL="email@hostname"
 
