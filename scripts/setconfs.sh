@@ -22,4 +22,9 @@ sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
 sed -i "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
 sed -i "s/^export EMAIL=.*/export EMAIL=\"${EMAIL}\"/" bashrc
 
+cd "${SCRIPT_DIR}"
 
+### gitconfig Configuration ###
+sed -i "s/^ *name *=.*/    name = $NAME/" .gitconfig
+sed -i "s/^ *email *=.*/    email = $EMAIL/" .gitconfig
+sed -i "s/^ *editor *=.*/    editor = $EDITOR/" .gitconfig
