@@ -23,6 +23,6 @@ alias e='emacsclient -c'
 # to save lines on shell
 alias eshell="export PS1=\"${MY_PS1}\""
 
-alias free="free -h"
-alias df="df -h"
-alias du="du -hc"
+alias free='free -h'
+alias df='df -h'
+alias du='du -hc'
