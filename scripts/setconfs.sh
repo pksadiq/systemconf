@@ -24,5 +24,8 @@ fi
 
 if [ -n $(mkdir -p "${HOME}/.bash") 2>/dev/null ]
 then
-    touch "${HOME}/.bash/personal"    
+    touch "${HOME}/.bash/personal"
+    cd .bash
+    cp "${CP_FLAG}" bashrc "${HOME}/.bash/"
+    cp "${CP_FLAG}" aliases "${HOME}/.bash/"
 fi    
