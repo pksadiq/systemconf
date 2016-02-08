@@ -36,6 +36,7 @@ fi
 
 cp "${CP_FLAG}" .bashrc "${HOME}"
 cp "${CP_FLAG}" .emacs "${HOME}"
+cp "${CP_FLAG}" .editorconfig "${HOME}"
 cp "${CP_FLAG}" .guile "${HOME}"
 cp "${CP_FLAG}" .gitconfig "${HOME}"
 cp "${CP_FLAG}" .gitignore "${HOME}"
