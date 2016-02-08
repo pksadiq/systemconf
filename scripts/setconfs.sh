@@ -12,3 +12,17 @@
 
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+cd "${SCRIPT_DIR}"
+
+if [ "$OVERWRITE" = "true" ]
+then
+    CP_FLAG=""
+else
+    CP_FLAG="-n"  # '-n' flag of 'cp' prevents from overwriting files
+fi
+
+if [ -n $(mkdir -p "${HOME}/.bash") 2>/dev/null ]
+then
+    touch "${HOME}/.bash/personal"    
+fi    
