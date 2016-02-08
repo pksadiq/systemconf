@@ -8,7 +8,7 @@ alias ...='cd ../..'
 # and will be taken literally
 alias -- -='cd -'
 
-alias ls='ls --color=auto -Bh'
+alias ls='ls --color=auto -BhGF'
 alias grep='grep --color=auto'
 
 # Preserve env. variables
