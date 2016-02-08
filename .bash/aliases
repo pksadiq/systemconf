@@ -8,7 +8,7 @@ alias ...='cd ../..'
 # and will be taken literally
 alias -- -='cd -'
 
-alias ls='ls --color=auto -B'
+alias ls='ls --color=auto -Bh'
 alias grep='grep --color=auto'
 
 # Preserve env. variables
@@ -21,3 +21,7 @@ alias e='emacsclient -c'
 # I use this when the path is irrelevant,
 # to save lines on shell
 alias eshell="export PS1=\"${MY_PS1}\""
+
+alias free="free -h"
+alias df="df -h"
+alias du="du -hc"
