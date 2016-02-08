@@ -43,7 +43,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Configure basic configurations
 . "${SCRIPT_DIR}"/scripts/setconfs.sh
 
-# Configure basic configurations
+# Copy configured files to appropriate directories
 . "${SCRIPT_DIR}"/scripts/copyconfs.sh
 
 # GNOME 3 Desktop Environment configuration script
