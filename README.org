@@ -28,6 +28,7 @@
     into the files =gsettings.sh= and =gtk-ui.sh= in the =scripts=
     directory before you run =make=.
   - Now execute =make=
+    - You may also try =silent= or =verbose= with =make= (Eg.: =make verbose=)
     - Alternatively, you may run =./configure= to be more verbose
       or if GNU make is not available for you
   - Your system is configured.
