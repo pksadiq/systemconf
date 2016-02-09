@@ -28,6 +28,7 @@ then
     cd .bash
     cp "${CP_FLAG}" bashrc "${HOME}/.bash/"
     cp "${CP_FLAG}" aliases "${HOME}/.bash/"
+    cp "${CP_FLAG}" functions "${HOME}/.bash/"    
     cd "${SCRIPT_DIR}" # Go back to root dir
 fi
 
