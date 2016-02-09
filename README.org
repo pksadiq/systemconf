@@ -1,5 +1,5 @@
 * *Dotfiles*
-  A small collection of my personal configuration files I frequently use.
+  A small collection of my personal configuration files I plan to use frequently.
   
   These configurations shall work on any *recent* GNU/Linux.
   - *Note:* This is a work in progress. This is _not yet ready_ to
@@ -20,7 +20,7 @@
 
   Hopefully this shall be helpful for you too.
 
-* How to use these dotfiles?
+* How to Configure my system with these dotfiles?
 
   - Edit the file =settings.sh=
     - Set the variables with the configuration you wish
