@@ -14,3 +14,10 @@ mynetip ()
     # IP used to not rely on local DNS resolution
     dig +short myip.opendns.com @208.67.222.222
 }
+
+# Print machine IPs that are not host specific (ie, not 127.0.... or ::1...)
+myip ()
+{
+    IP_LIST="$(ip addr show scope global)"
+    awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}"
+}
