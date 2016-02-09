@@ -22,6 +22,7 @@ myip ()
     awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}"
 }
 
+# Print IP routes, ie, the Gateways to reach other networks
 mygateway ()
 {
     IP_LIST="$(ip route show)"
