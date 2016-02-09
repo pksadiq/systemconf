@@ -33,3 +33,8 @@ alias du='du -hc'
 alias myip=myip
 alias mygateway=mygateway
 alias mynetip=mynetip
+
+if [ ! -z "$(which colordiff 2>/dev/null)" ]
+then
+    alias diff=colordiff
+fi
