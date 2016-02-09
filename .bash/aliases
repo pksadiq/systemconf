@@ -24,7 +24,7 @@ alias e='emacsclient -c'
 alias eshell="export PS1=\"${MY_PS1}\""
 
 alias free='free -h'
-alias df='df -h'
+alias df='df -hT'
 alias du='du -hc'
 
 # Alias to functions defined in ~/.bash/functions
