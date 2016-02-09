@@ -2,5 +2,12 @@
 
 mynetip ()
 {
-    dig +short myip.opendns.com @208.67.222.222
+    ROUTES="$(ip route show 2>/dev/null)"
+
+    if [ ! -z "${ROUTES}" ]
+    then
+	dig +short myip.opendns.com @208.67.222.222
+    fi
+
+
 }
