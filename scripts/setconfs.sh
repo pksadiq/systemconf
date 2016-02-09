@@ -32,3 +32,4 @@ sed -i "s/^[[:blank:]]*editor *=.*/    editor = $EDITOR/" .gitconfig
 ### .emacs Configuration ###
 sed -i "s/user-full-name *\".*\"/user-full-name \"${NAME}\"/" .emacs
 sed -i "s/user-mail-address *\".*\"/user-mail-address \"${EMAIL}\"/" .emacs
+sed -i "s/set-default-font *\".*\"/set-default-font \"${EMACS_FONT}-${EMACS_FONT_SIZE}\"/" .emacs
