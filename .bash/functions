@@ -21,3 +21,9 @@ myip ()
     IP_LIST="$(ip addr show scope global)"
     awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}"
 }
+
+mygateway ()
+{
+    IP_LIST="$(ip route show)"
+    awk -F' ' '!/^default/ {print $1}'  <<< "${IP_LIST}"
+}
