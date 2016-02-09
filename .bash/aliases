@@ -27,3 +27,7 @@ alias free='free -h'
 alias df='df -h'
 alias du='du -hc'
 
+# Alias to functions defined in ~/.bash/functions
+alias myip=myip
+alias mygateway=mygateway
+alias mynetip=mynetip
