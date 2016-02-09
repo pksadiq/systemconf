@@ -10,5 +10,5 @@ mynetip ()
 	exit 1
     fi
     
-    dig +short myip.opendns.com @208.67.222.22
+    dig +short myip.opendns.com @208.67.222.222
 }
