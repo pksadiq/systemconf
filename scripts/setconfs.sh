@@ -28,3 +28,7 @@ cd "${SCRIPT_DIR}"
 sed -i "s/^[[:blank:]]*name *=.*/    name = $NAME/" .gitconfig
 sed -i "s/^[[:blank:]]*email *=.*/    email = $EMAIL/" .gitconfig
 sed -i "s/^[[:blank:]]*editor *=.*/    editor = $EDITOR/" .gitconfig
+
+### .emacs Configuration ###
+sed -i "s/user-full-name *\".*\"/user-full-name \"${NAME}\"/" .emacs
+sed -i "s/user-mail-address *\".*\"/user-mail-address \"${EMAIL}\"/" .emacs
