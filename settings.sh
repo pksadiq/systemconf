@@ -18,7 +18,6 @@
 # NOTE: Wherever you can fill "true" or "false", you can use
 # some other value, to keep the current configuration as such.
 
-# TODO: Use this configuration
 NAME="Mohammed Sadik"
 EMAIL="sadiq@sadiqpk.org"
 
