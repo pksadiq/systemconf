@@ -57,6 +57,12 @@ then
     . ~/.bash_aliases
 fi
 
+# Include custom bash functions
+if [ -f ~/.bash/functions ]
+then
+    . ~/.bash/functions
+fi
+
 # My Personal aliases
 if [ -f ~/.bash/aliases ]
 then
