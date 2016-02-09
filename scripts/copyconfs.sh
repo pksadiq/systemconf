@@ -29,7 +29,7 @@ then
     cp "${CP_FLAG}" bashrc "${HOME}/.bash/"
     cp "${CP_FLAG}" aliases "${HOME}/.bash/"
     cp "${CP_FLAG}" functions "${HOME}/.bash/"    
-    cd "${SCRIPT_DIR}" # Go back to root dir
+    cd "${SCRIPT_DIR}" # Go back to script dir
 fi
 
 # TODO: Make a loop to copy files. But explicit file copying below
