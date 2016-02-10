@@ -24,6 +24,11 @@ EMAIL="sadiq@sadiqpk.org"
 # Do you wish to overwrite your current config files?
 OVERWRITE="false"
 
+# Overwrite the file if the file is the default one that came
+# with your distribution (Eg.: .bashrc, .emacs)
+# TODO: Use this
+OVERWRITE_DEFAULTS="true"
+
 # Install packages, themes, etc. as root? configure root settings?
 # If not set to "true", themes shall be installed on user specific dirs.
 # Packages may not be installed, and root specific settings won't be
