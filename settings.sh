@@ -72,6 +72,9 @@ PREFER_DARK_IDE="true" # Prefer dark theme for GNOME Builder? Gedit?
 # Possible values: "Adwaita"
 ICON_THEME="Adwaita"
 
+# TODO: Use this
+LOGO_TEXT="www.sadiqpk.org"
+
 ##### Fonts #####
 # Font on  title bar
 WINDOW_TITLE_FONT="Ubuntu Regular"
