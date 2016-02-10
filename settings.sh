@@ -1,4 +1,4 @@
-# Replace with your data
+# Configuration file to be set by the user
 
 # Copyright (c) 2015, 2016 Mohammed Sadik <sadiq@sadiqpk.org>
 
