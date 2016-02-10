@@ -33,10 +33,12 @@ OVERWRITE_DEFAULTS="true"
 # If not set to "true", themes shall be installed on user specific dirs.
 # Packages may not be installed, and root specific settings won't be
 # configured.
+# TODO: Use this
 BE_ROOT="true"
 
 # Use internet to download missing files or packages?
 # anything other than "true" is considered "false"
+# TODO: Use this
 USE_INTERNET="true"
 
 EDITOR="emacs"
