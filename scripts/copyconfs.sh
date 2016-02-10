@@ -43,3 +43,9 @@ cp "${CP_FLAG}" .gitconfig "${HOME}"
 cp "${CP_FLAG}" .gitignore "${HOME}"
 cp "${CP_FLAG}" .wgetrc "${HOME}"
 cp "${CP_FLAG}" .Xmodmap "${HOME}"
+
+
+if [ -n $(mkdir -p "${HOME}/Templates") 2>/dev/null ]
+then
+    touch "${HOME}/Templates/New Text"
+fi
