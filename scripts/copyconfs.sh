@@ -49,6 +49,6 @@ if [ -n $(mkdir -p "${HOME}/Templates") 2>/dev/null ]
 then
     touch "${HOME}/Templates/New Text.txt"
     cd "${SCRIPT_DIR}/Templates/"
-    cp "${CP_FLAG}" "New document.odt" "${HOME}/Templates/"
+    cp "${CP_FLAG}" "New Document.odt" "${HOME}/Templates/"
     cd "${SCRIPT_DIR}" # Go back to script dir
 fi
