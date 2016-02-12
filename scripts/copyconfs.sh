@@ -44,11 +44,14 @@ cp "${CP_FLAG}" .gitignore "${HOME}"
 cp "${CP_FLAG}" .wgetrc "${HOME}"
 cp "${CP_FLAG}" .Xmodmap "${HOME}"
 
-
-if [ -n $(mkdir -p "${HOME}/Templates") 2>/dev/null ]
+# Copy Templates only if xdg is present
+DIR="$(xdg-user-dir TEMPLATES 2>/dev/null)"
+if [ "${DIR}" != "${HOME}" ] || DIR="${HOME}/Templates" && [ -n "${DIR}" ]
 then
-    touch "${HOME}/Templates/Text.txt"
-    cd "${SCRIPT_DIR}/Templates/"
-    cp "${CP_FLAG}" "Document.odt" "${HOME}/Templates/"
+    mkdir -p "${DIR}"
+    xdg-user-dirs-update --set TEMPLATES "${DIR}"
+    cd "${DIR}"
+    touch "Text.txt"
+    cp "${CP_FLAG}" "${SCRIPT_DIR}/Templates/Document.odt" "${DIR}"
     cd "${SCRIPT_DIR}" # Go back to script dir
 fi
