@@ -23,7 +23,7 @@ alias g='git'
 
 # I use this when the path is irrelevant,
 # to save lines on shell
-alias eshell="export PS1=\"${MY_PS1}\""
+alias eshell="export PS1=\"${MY_PS1}\"; set_title"
 
 alias free='free -h'
 alias df='df -hT'
