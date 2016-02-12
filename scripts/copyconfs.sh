@@ -46,7 +46,7 @@ cp "${CP_FLAG}" .Xmodmap "${HOME}"
 
 # Copy Templates only if xdg is present
 DIR="$(xdg-user-dir TEMPLATES 2>/dev/null)"
-if [ "${DIR}" != "${HOME}" ] || DIR="${HOME}/Templates" && [ -n "${DIR}" ]
+if [ "${DIR}" != "${HOME}/" ] || DIR="${HOME}/Templates" && [ -n "${DIR}" ]
 then
     mkdir -p "${DIR}"
     xdg-user-dirs-update --set TEMPLATES "${DIR}"
