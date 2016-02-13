@@ -49,6 +49,10 @@
 (setq tab-width 2
       indent-tabs-mode nil)
 
+;; Set space to 2 in `shell-script-mode'
+(setq sh-basic-offset 2
+      sh-indentation 2)
+
 ;; Hide distracting info from `erc' IRC client
 (setq erc-hide-list '("JOIN" "PART" "QUIT"))
 
