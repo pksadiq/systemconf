@@ -78,7 +78,7 @@ is_battery_present ()
   BAT=$(sed 's/type/capacity/' <<< "$BAT")
 }
 
-get_battery_percent ()
+get_battery_percent_to_file ()
 {
   is_battery_present || return $(false)
 
