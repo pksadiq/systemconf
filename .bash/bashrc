@@ -1,5 +1,8 @@
 # -*- mode: shell-script; -*-
 
+# Get battery status asynchronously
+get_battery_percent_to_file &
+
 #### Some nice to have variables
 export LESS="-XFR"
 export MAKEFLAGS="-j $(($(nproc)+1))" # set as "-j $(nproc)" if it suites you
