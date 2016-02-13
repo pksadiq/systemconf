@@ -20,9 +20,9 @@
 # Exit if the system is not GNU/Linux, or the release is too old
 if [ "$OSTYPE" != "linux-gnu" ] || [ ! -f /etc/os-release ]
 then
-   echo "Sorry. You require a recent GNU/Linux OS to proceed"
-   echo "Exiting.."
-   exit 1
+  echo "Sorry. You require a recent GNU/Linux OS to proceed"
+  echo "Exiting.."
+  exit 1
 fi
 
 HOME_DIR="${HOME}"

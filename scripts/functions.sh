@@ -17,64 +17,64 @@
 
 if [ "${BE_ROOT,,}" = "true" ]
 then
-    if [ -z "$(which sudo 2>/dev/null)" ]
-    then
-	echo "Error: 'sudo' not found. Can't be root"
-	exit 1
-    fi
+  if [ -z "$(which sudo 2>/dev/null)" ]
+  then
+    echo "Error: 'sudo' not found. Can't be root"
+    exit 1
+  fi
 
-    THEME_INSTALL_DIR="/usr/share/"
-    DO_SUDO="sudo"
+  THEME_INSTALL_DIR="/usr/share/"
+  DO_SUDO="sudo"
 else
-    THEME_INSTALL_DIR="${HOME_DIR}/.local/share"
-    DO_SUDO=""
+  THEME_INSTALL_DIR="${HOME_DIR}/.local/share"
+  DO_SUDO=""
 fi
 
 # Returns "true" if the value is "true" or "false", and "false" otherwise
 is_true_false ()
 {
-    CHECK="$1"
+  CHECK="$1"
 
-    case "${CHECK,,}" in
-	true | false)
-	    return $(true)
-	    ;;
-	*)
-	    return $(false)
-    esac
+  case "${CHECK,,}" in
+    true | false)
+      return $(true)
+      ;;
+    *)
+      return $(false)
+  esac
 }
 
 is_number ()
 {
-    NUM_REGEX='^[0-9]+$'
-    if ! $(egrep ${NUM_REGEX} <<< "$1" >/dev/null 2>&1 && test "$1" -ge 5)
-    then
-	echo "Interface font size should be an integer greater than 4"
-	return $(false)
-    fi
+  NUM_REGEX='^[0-9]+$'
+  if ! $(egrep ${NUM_REGEX} <<< "$1" >/dev/null 2>&1 && test "$1" -ge 5)
+  then
+    echo "Interface font size should be an integer greater than 4"
+    return $(false)
+  fi
 }
 
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
-    # ID and ID_LIKE has to be matched, and nothing else begin with
-    # ID, or end with ID now.
-    grep "^ID.*=debian" >/dev/null 2>&1 /etc/os-release
+  # ID and ID_LIKE has to be matched, and nothing else begin with
+  # ID, or end with ID now.
+  grep "^ID.*=debian" >/dev/null 2>&1 /etc/os-release
 }
 
 # detect Fedora and derivatives like RHEL, CentOS, etc.
 is_fedora_based ()
 {
-    # Also match "rhel fedora" present in CentOS
-    grep "^ID.*=.*fedora" >/dev/null 2>&1 /etc/os-release
+  # Also match "rhel fedora" present in CentOS
+  grep "^ID.*=.*fedora" >/dev/null 2>&1 /etc/os-release
 }
 
 is_arch_based ()
 {
-    grep "^ID.*=arch" >/dev/null 2>&1 /etc/os-release
+  grep "^ID.*=arch" >/dev/null 2>&1 /etc/os-release
 }
 
 is_gentoo_based ()
 {
-    grep "^ID.*=gentoo" >/dev/null 2>&1 /etc/os-release
+  grep "^ID.*=gentoo" >/dev/null 2>&1 /etc/os-release
 }

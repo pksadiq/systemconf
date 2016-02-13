@@ -19,100 +19,100 @@
 # Extract and print each Comma Separated Value pairs on newline
 print_font_name ()
 {
-    IFS_OLD="${IFS}"
-    IFS=','
-    
-    FONT_NAMES="${1%=*}"
-    STYLE_NAMES="${1#*=}"
-    
-    for FONT_NAME in ${FONT_NAMES}
+  IFS_OLD="${IFS}"
+  IFS=','
+  
+  FONT_NAMES="${1%=*}"
+  STYLE_NAMES="${1#*=}"
+  
+  for FONT_NAME in ${FONT_NAMES}
+  do
+    for STYLE_NAME in ${STYLE_NAMES}
     do
-	for STYLE_NAME in ${STYLE_NAMES}
-	do
-	    echo "$FONT_NAME" "$STYLE_NAME"
-	done
-	# FIXME: Is this right? Seems to happen in gtk font chooser
-	echo "$FONT_NAME Bold"
-	echo "$FONT_NAME Italic"
-	echo "$FONT_NAME Bold Italic"
+      echo "$FONT_NAME" "$STYLE_NAME"
     done
-    IFS="${IFS_OLD}"
+    # FIXME: Is this right? Seems to happen in gtk font chooser
+    echo "$FONT_NAME Bold"
+    echo "$FONT_NAME Italic"
+    echo "$FONT_NAME Bold Italic"
+  done
+  IFS="${IFS_OLD}"
 }
 
 get_fonts ()
 {
-    # FIXME: Is there a better way to get the fonts, just with fc-list?
-    fc-list | tr '=' ':' | cut -d ':' -f 2,4 | tr ':' '=' | while read FONT
-    do
-	# TODO: avoid duplicate names. Save list to a file to avoid repeating
-	# Required? Many people uses SSDs. Extensive writing to disk may be bad
-	print_font_name "$FONT"
-    done
+  # FIXME: Is there a better way to get the fonts, just with fc-list?
+  fc-list | tr '=' ':' | cut -d ':' -f 2,4 | tr ':' '=' | while read FONT
+  do
+    # TODO: avoid duplicate names. Save list to a file to avoid repeating
+    # Required? Many people uses SSDs. Extensive writing to disk may be bad
+    print_font_name "$FONT"
+  done
 }
 
 is_font_present ()
 {
-    CHECK="$1"
-    CHECK_SIZE="$1_SIZE"
-    if ! $(get_fonts | grep "^${!CHECK}$" >/dev/null 2>&1)
-    then
-	echo "\"${!CHECK}\" Font seems not present"
-	return $(false)
-    fi
-    is_number ${!CHECK_SIZE}
+  CHECK="$1"
+  CHECK_SIZE="$1_SIZE"
+  if ! $(get_fonts | grep "^${!CHECK}$" >/dev/null 2>&1)
+  then
+    echo "\"${!CHECK}\" Font seems not present"
+    return $(false)
+  fi
+  is_number ${!CHECK_SIZE}
 }
 
 get_themes ()
 {
-    # Lets hope there won't be spaces in directory names
-    if [ $1 = gtk_theme ]
-    then
-       THEME_DIRS="${HOME_DIR}/.themes ${HOME_DIR}/.local/share/themes"
-       THEME_DIRS="${THEME_DIRS} /usr/share/themes"
-    elif [ $1 = icon_theme ]
-    then
-	THEME_DIRS="${HOME_DIR}/.icons ${HOME_DIR}/.local/share/icons"
-	THEME_DIRS="${THEME_DIRS} /usr/share/icons"
-    fi
-    
-    for THEME_DIR in ${THEME_DIRS}
+  # Lets hope there won't be spaces in directory names
+  if [ $1 = gtk_theme ]
+  then
+    THEME_DIRS="${HOME_DIR}/.themes ${HOME_DIR}/.local/share/themes"
+    THEME_DIRS="${THEME_DIRS} /usr/share/themes"
+  elif [ $1 = icon_theme ]
+  then
+    THEME_DIRS="${HOME_DIR}/.icons ${HOME_DIR}/.local/share/icons"
+    THEME_DIRS="${THEME_DIRS} /usr/share/icons"
+  fi
+  
+  for THEME_DIR in ${THEME_DIRS}
+  do
+    [ -d $THEME_DIR ] && for DIR in $THEME_DIR/*
     do
-	[ -d $THEME_DIR ] && for DIR in $THEME_DIR/*
-	do
-	    if [ -d $DIR ]
-	    then
-		cd $DIR
-		if [ -f index.theme ]
-		then
-		    grep "^Name=" index.theme | cut -d "=" -f 2
-		fi
-	    fi
-	done
+      if [ -d $DIR ]
+      then
+	cd $DIR
+	if [ -f index.theme ]
+	then
+	  grep "^Name=" index.theme | cut -d "=" -f 2
+	fi
+      fi
     done
+  done
 }
 
 is_icon_theme ()
 {
-    THEME_NAME="$1"
-    get_themes icon_theme | grep "$1" >/dev/null 2>&1 ||
-	(echo "Check Icon Theme name" && return $(false))
+  THEME_NAME="$1"
+  get_themes icon_theme | grep "$1" >/dev/null 2>&1 ||
+    (echo "Check Icon Theme name" && return $(false))
 }
 
 is_gtk_theme ()
 {
-    THEME_NAME="$1"
-    get_themes gtk_theme | grep "$1" >/dev/null 2>&1 ||
-	(echo "Check Gtk Theme name" && return $(false))
+  THEME_NAME="$1"
+  get_themes gtk_theme | grep "$1" >/dev/null 2>&1 ||
+    (echo "Check Gtk Theme name" && return $(false))
 }
 
 set_font ()
 {
-    FONT="$1"
-    FONT_SIZE="$1_SIZE"
-    SCHEMA="$2"
-    KEY="$3"
-    if is_font_present "${FONT}"
-    then
-	gsettings set "${SCHEMA}" "${KEY}" "${!FONT} ${!FONT_SIZE}"
-    fi
+  FONT="$1"
+  FONT_SIZE="$1_SIZE"
+  SCHEMA="$2"
+  KEY="$3"
+  if is_font_present "${FONT}"
+  then
+    gsettings set "${SCHEMA}" "${KEY}" "${!FONT} ${!FONT_SIZE}"
+  fi
 }

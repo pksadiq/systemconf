@@ -38,5 +38,5 @@ alias mynetip=mynetip
 
 if [ ! -z "$(which colordiff 2>/dev/null)" ]
 then
-    alias diff=colordiff
+  alias diff=colordiff
 fi

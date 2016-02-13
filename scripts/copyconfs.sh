@@ -17,19 +17,19 @@ cd "${SCRIPT_DIR}"
 
 if [ "$OVERWRITE" = "true" ]
 then
-    CP_FLAG=""
+  CP_FLAG=""
 else
-    CP_FLAG="-n"  # '-n' flag of 'cp' prevents from overwriting files
+  CP_FLAG="-n"  # '-n' flag of 'cp' prevents from overwriting files
 fi
 
 if [ -n $(mkdir -p "${HOME}/.bash") 2>/dev/null ]
 then
-    touch "${HOME}/.bash/personal"
-    cd .bash
-    cp "${CP_FLAG}" bashrc "${HOME}/.bash/"
-    cp "${CP_FLAG}" aliases "${HOME}/.bash/"
-    cp "${CP_FLAG}" functions "${HOME}/.bash/"    
-    cd "${SCRIPT_DIR}" # Go back to script dir
+  touch "${HOME}/.bash/personal"
+  cd .bash
+  cp "${CP_FLAG}" bashrc "${HOME}/.bash/"
+  cp "${CP_FLAG}" aliases "${HOME}/.bash/"
+  cp "${CP_FLAG}" functions "${HOME}/.bash/"    
+  cd "${SCRIPT_DIR}" # Go back to script dir
 fi
 
 # TODO: Make a loop to copy files. But explicit file copying below
@@ -48,10 +48,10 @@ cp "${CP_FLAG}" .Xmodmap "${HOME}"
 DIR="$(xdg-user-dir TEMPLATES 2>/dev/null)"
 if [ "${DIR}" != "${HOME}/" ] || DIR="${HOME}/Templates" && [ -n "${DIR}" ]
 then
-    mkdir -p "${DIR}"
-    xdg-user-dirs-update --set TEMPLATES "${DIR}"
-    cd "${DIR}"
-    touch "Text.txt"
-    cp "${CP_FLAG}" "${SCRIPT_DIR}/Templates/Document.odt" "${DIR}"
-    cd "${SCRIPT_DIR}" # Go back to script dir
+  mkdir -p "${DIR}"
+  xdg-user-dirs-update --set TEMPLATES "${DIR}"
+  cd "${DIR}"
+  touch "Text.txt"
+  cp "${CP_FLAG}" "${SCRIPT_DIR}/Templates/Document.odt" "${DIR}"
+  cd "${SCRIPT_DIR}" # Go back to script dir
 fi

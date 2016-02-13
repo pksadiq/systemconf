@@ -25,18 +25,18 @@ gsettings --version > /dev/null 2>&1 || { echo "$error" ; return 1; }
 
 if [ "${EDITOR,,}" == "emacs" ]
 then
-    # Set Emacs Key bindings for the complete desktop
-    $gs ${settings}.interface gtk-key-theme "Emacs"
-    echo "Keyboard shortcuts set to use Emacs keybinding"
+  # Set Emacs Key bindings for the complete desktop
+  $gs ${settings}.interface gtk-key-theme "Emacs"
+  echo "Keyboard shortcuts set to use Emacs keybinding"
 fi
 case "${CAPS_IS_CTRL,,}" in
-    true)
-	$gs ${settings}.input-sources xkb-options "['caps:ctrl_modifier']"
-	echo "Caps Lock will now act as Control"
-	;;
-    false)
-	$gs ${settings}.input-sources xkb-options "['']"
-	echo "Caps Lock will act as Caps Lock"
+  true)
+    $gs ${settings}.input-sources xkb-options "['caps:ctrl_modifier']"
+    echo "Caps Lock will now act as Control"
+    ;;
+  false)
+    $gs ${settings}.input-sources xkb-options "['']"
+    echo "Caps Lock will act as Caps Lock"
 esac
 
 $gs ${settings}.peripherals.touchpad tap-to-click "true"
@@ -44,27 +44,27 @@ $gs ${settings}.peripherals.touchpad scroll-method "two-finger-scrolling"
 
 if is_true_false "${NATURAL_SCROLL}"
 then
-   $gs ${settings}.peripherals.touchpad natural-scroll "${NATURAL_SCROLL,,}"
-   echo "Natural Scrolling for touchpad state: ${NATURAL_SCROLL,,}"
+  $gs ${settings}.peripherals.touchpad natural-scroll "${NATURAL_SCROLL,,}"
+  echo "Natural Scrolling for touchpad state: ${NATURAL_SCROLL,,}"
 fi
 
 if is_true_false "${AUTO_SOFTWARE_UPDATE}"
 then
-    $gs org.gnome.software download-updates "${AUTO_SOFTWARE_UPDATE,,}"
-    echo "Auto updates via GNOME Software is set to ${AUTO_SOFTWARE_UPDATE,,}"
+  $gs org.gnome.software download-updates "${AUTO_SOFTWARE_UPDATE,,}"
+  echo "Auto updates via GNOME Software is set to ${AUTO_SOFTWARE_UPDATE,,}"
 fi
 
 if [ "${CUSTOM_SHORTCUTS,,}" = "true" ]
 then
-    # Get the current list of shortcuts
-    CUR=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
-    CUR=${CUR%\]}
-    # Check if already added
-    if [[ ! "${CUR}" = */custom100/* ]]
-    then
-	$gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "${CUR}, '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
-	$gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ name 'GNOME Terminal'
-	$gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ command 'gnome-terminal'
-	$gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ binding '<Primary><Alt>t'
-    fi
+  # Get the current list of shortcuts
+  CUR=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
+  CUR=${CUR%\]}
+  # Check if already added
+  if [[ ! "${CUR}" = */custom100/* ]]
+  then
+    $gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "${CUR}, '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
+    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ name 'GNOME Terminal'
+    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ command 'gnome-terminal'
+    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ binding '<Primary><Alt>t'
+  fi
 fi

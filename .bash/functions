@@ -2,70 +2,70 @@
 
 mynetip ()
 {
-    ROUTES="$(ip route show 2>/dev/null)"
+  ROUTES="$(ip route show 2>/dev/null)"
 
-    if [ -z "${ROUTES}" ]
-    then
-	echo "No Route found"
-	return 1
-    fi
+  if [ -z "${ROUTES}" ]
+  then
+    echo "No Route found"
+    return 1
+  fi
 
-    # Get public IP address. 208.67.222.222 is IP of "resolver1.opendns.com"
-    # IP used to not rely on local DNS resolution
-    dig +short myip.opendns.com @208.67.222.222
+  # Get public IP address. 208.67.222.222 is IP of "resolver1.opendns.com"
+  # IP used to not rely on local DNS resolution
+  dig +short myip.opendns.com @208.67.222.222
 }
 
 # Print machine IPs that are not host specific (ie, not 127.0.... or ::1...)
 mylocalip ()
 {
-    IP_LIST="$(ip addr show scope global)"
-    awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}"
+  IP_LIST="$(ip addr show scope global)"
+  awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}"
 }
 
 # Print IP routes, ie, the Gateways to reach other networks
 mygateway ()
 {
-    IP_LIST="$(ip route show)"
-    awk -F' ' '!/^default/ {print $1}'  <<< "${IP_LIST}"
+  IP_LIST="$(ip route show)"
+  awk -F' ' '!/^default/ {print $1}'  <<< "${IP_LIST}"
 }
 
 set_ps1 ()
 {
-    # Colored PS1
-    # If user is `root' set color as red, else green
-    if [ "$UID" -eq 0 ]
-    then
-	PS1='\[\033[01;31m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    else
-	PS1='\[\033[01;32m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    fi
+  # Colored PS1
+  # If user is `root' set color as red, else green
+  if [ "$UID" -eq 0 ]
+  then
+    PS1='\[\033[01;31m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  else
+    PS1='\[\033[01;32m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  fi
 
-    MY_PS_SET=""
+  MY_PS_SET=""
 }
 
 set_my_ps1 ()
 {
-    # Reset to old PS1 if my_ps1 is set already, and return
-    [ -n "${MY_PS_SET}" ] && set_ps1 && return
-    
-    if [ "$UID" -eq 0 ]
-    then
-	PS1='\[\033[01;35m\]${REMOTE_PS1}\[\033[01;34m\]\W\[\033[01;31m\]#\[\033[00m\] '
-    else
-	PS1='\[\033[01;35m\]${REMOTE_PS1}\[\033[01;34m\]\W\[\033[01;32m\]\$\[\033[00m\] '
-    fi
+  # Reset to old PS1 if my_ps1 is set already, and return
+  [ -n "${MY_PS_SET}" ] && set_ps1 && return
+  
+  if [ "$UID" -eq 0 ]
+  then
+    PS1='\[\033[01;35m\]${REMOTE_PS1}\[\033[01;34m\]\W\[\033[01;31m\]#\[\033[00m\] '
+  else
+    PS1='\[\033[01;35m\]${REMOTE_PS1}\[\033[01;34m\]\W\[\033[01;32m\]\$\[\033[00m\] '
+  fi
 
-    MY_PS_SET="true"
+  MY_PS_SET="true"
 }
 
 # Set Term title in Titlebar
 set_term_title ()
 {
-    case "$TERM" in
-	xterm*|rxvt*)
-	    PS1="\[\e]0;\u@\h${REMOTE_PS1}: \w\a\]$PS1"
-	    ;;
-	*)
-	    ;;
-    esac
+  case "$TERM" in
+    xterm*|rxvt*)
+      PS1="\[\e]0;\u@\h${REMOTE_PS1}: \w\a\]$PS1"
+      ;;
+    *)
+      ;;
+  esac
 }

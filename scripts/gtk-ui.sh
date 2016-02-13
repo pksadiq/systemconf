@@ -18,30 +18,30 @@
 
 if is_gtk_theme "${GTK_THEME}"
 then
-    $gs ${settings}.interface gtk-theme "${GTK_THEME}"
+  $gs ${settings}.interface gtk-theme "${GTK_THEME}"
 fi
 
 if is_icon_theme "${ICON_THEME}"
 then
-    $gs ${settings}.interface icon-theme "${ICON_THEME}"
+  $gs ${settings}.interface icon-theme "${ICON_THEME}"
 fi
 
 if is_true_false "${PREFER_DARK_TERM}"
 then
-    $gs org.gnome.Terminal.Legacy.Settings dark-theme "${PREFER_DARK_TERM,,}"
+  $gs org.gnome.Terminal.Legacy.Settings dark-theme "${PREFER_DARK_TERM,,}"
 fi
 
 if is_true_false "${PREFER_DARK_IDE}"
 then
-    $gs org.gnome.builder night-mode "${PREFER_DARK_IDE,,}"
-    if [ "${PREFER_DARK_IDE,,}" = "true" ]
-    then
-	$gs org.gnome.builder.editor style-scheme-name "builder-dark"
-	$gs org.gnome.gedit.preferences.editor scheme "builder-dark"
-    else
-	$gs org.gnome.builder.editor style-scheme-name "builder"
-	$gs org.gnome.gedit.preferences.editor scheme "builder"
-    fi
+  $gs org.gnome.builder night-mode "${PREFER_DARK_IDE,,}"
+  if [ "${PREFER_DARK_IDE,,}" = "true" ]
+  then
+    $gs org.gnome.builder.editor style-scheme-name "builder-dark"
+    $gs org.gnome.gedit.preferences.editor scheme "builder-dark"
+  else
+    $gs org.gnome.builder.editor style-scheme-name "builder"
+    $gs org.gnome.gedit.preferences.editor scheme "builder"
+  fi
 fi
 
 ##### Set Fonts #####
