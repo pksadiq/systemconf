@@ -16,7 +16,7 @@ mynetip ()
 }
 
 # Print machine IPs that are not host specific (ie, not 127.0.... or ::1...)
-myip ()
+mylocalip ()
 {
     IP_LIST="$(ip addr show scope global)"
     awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}"

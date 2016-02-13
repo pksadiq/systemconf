@@ -31,7 +31,7 @@ alias df='df -hT'
 alias du='du -hc'
 
 # Alias to functions defined in ~/.bash/functions
-alias myip=myip
+alias mylocalip=mylocalip
 alias myroute=mygateway
 alias mygateway=mygateway
 alias mynetip=mynetip
