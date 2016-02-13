@@ -26,7 +26,7 @@ mylocalip ()
 mygateway ()
 {
   IP_LIST="$(ip route show)"
-  awk -F' ' '!/^default/ {print $1}'  <<< "${IP_LIST}"
+  awk '!/default dev|\//{ gsub("default via",""); print $1 }' <<< "${IP_LIST}"
 }
 
 set_ps1 ()
