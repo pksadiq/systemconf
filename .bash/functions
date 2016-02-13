@@ -41,7 +41,7 @@ set_ps1 ()
     fi
 }
 
-# Set Term title
+# Set Term title in Titlebar
 set_term_title ()
 {
     case "$TERM" in
