@@ -16,14 +16,19 @@ then
     REMOTE_PS1="(ssh)"
 fi
 
-# Colored PS1
-# If user is `root' set color as red, else green
-if [ "$UID" -eq 0 ]
-then
-    PS1='\[\033[01;31m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='\[\033[01;32m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-fi
+set_ps1 ()
+{
+    # Colored PS1
+    # If user is `root' set color as red, else green
+    if [ "$UID" -eq 0 ]
+    then
+	PS1='\[\033[01;31m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    else
+	PS1='\[\033[01;32m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    fi
+}
+
+set_ps1
 
 # Set Term title
 set_title ()
