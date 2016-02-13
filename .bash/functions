@@ -69,3 +69,20 @@ set_term_title ()
       ;;
   esac
 }
+
+is_battery_present ()
+{
+  [ -n "$(upower -v 2>/dev/null)" ] || return $(false)
+
+  upower -e | grep "battery" >/dev/null
+}
+
+get_battery_percent ()
+{
+  is_battery_present || return $(false)
+
+  # TODO: Support more than one battery
+  BATTERIES="$(upower -e | grep 'battery' | head -n 1)"
+  PERCENT="$(upower -i ${BATTERIES} | grep -i 'percent')"
+  PERCENT="$(echo ${PERCENT} | tr -d ':a-zA-Z %')"
+}
