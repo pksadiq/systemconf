@@ -46,7 +46,7 @@ then
 fi
 
 set_ps1
-set_title
+set_term_title
 
 # My Personal aliases
 if [ -f ~/.bash/aliases ]

@@ -42,7 +42,7 @@ set_ps1 ()
 }
 
 # Set Term title
-set_title ()
+set_term_title ()
 {
     case "$TERM" in
 	xterm*|rxvt*)
