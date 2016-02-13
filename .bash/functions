@@ -97,3 +97,20 @@ get_battery_percent_to_file ()
     fi
   done
 }
+
+set_battery_ps1 ()
+{
+  WARNING="\[\033[01;33m\]"'!'
+  DANGER="\[\033[01;31m\]"'!'
+  STATUS_FILE="/dev/shm/bat-status"
+  [ -f "$STATUS_FILE" ] || return 1
+
+  PERCENT=$(cat "$STATUS_FILE")
+  if [ $PERCENT -le 10 ]
+  then
+    PS1="$DANGER${PS1#*\!}"
+  elif [ $PERCENT -le 20 ]
+  then
+    PS1="$WARNING${PS1#*\!}"
+  fi
+}
