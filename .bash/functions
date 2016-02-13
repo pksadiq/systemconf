@@ -72,17 +72,28 @@ set_term_title ()
 
 is_battery_present ()
 {
-  [ -n "$(upower -v 2>/dev/null)" ] || return $(false)
+  BAT="$(grep -il 'battery' /sys/class/power_supply/*/type 2>/dev/null)" ||
+    return $(false)
 
-  upower -e | grep "battery" >/dev/null
+  BAT=$(sed 's/type/capacity/' <<< "$BAT")
 }
 
 get_battery_percent ()
 {
   is_battery_present || return $(false)
 
-  # TODO: Support more than one battery
-  BATTERIES="$(upower -e | grep 'battery' | head -n 1)"
-  PERCENT="$(upower -i ${BATTERIES} | grep -i 'percent')"
-  PERCENT="$(echo ${PERCENT} | tr -d ':a-zA-Z %')"
+  STATUS_FILE="/dev/shm/bat-status"
+  [ -f "$STATUS_FILE" ] || touch "$STATUS_FILE"
+
+  # Update battery status every 20 seconds
+  while sleep 20
+  do
+    NEW="$(find /dev/shm -mtime -20s -maxdepth 1 -name $STATUS_FILE)"
+    # Mutex can be used in shell scripts too!
+    if flock -n "$STATUS_FILE" true && [ -z $NEW ]
+    then
+      PERCENT="$(grep -h "[0-9]" $BAT | tr '\n' '+')"
+      flock "$STATUS_FILE" bc <<< "${PERCENT%+}" > "$STATUS_FILE"
+    fi
+  done
 }
