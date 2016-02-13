@@ -88,7 +88,7 @@ get_battery_percent_to_file ()
   # Update battery status every 20 seconds
   while sleep 20
   do
-    NEW="$(find /dev/shm -maxdepth 1 -mmin 0.3 -name $STATUS_FILE)"
+    NEW="$(find /dev/shm -maxdepth 1 -mmin 0.3 -name bat-status)"
     # Mutex can be used in shell scripts too!
     if flock -n "$STATUS_FILE" true && [ -z $NEW ]
     then
