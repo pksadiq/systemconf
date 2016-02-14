@@ -35,9 +35,9 @@ set_ps1 ()
   # If user is `root' set color as red, else green
   if [ "$UID" -eq 0 ]
   then
-    PS1='\[\033[01;31m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\e[01;31m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
   else
-    PS1='\[\033[01;32m\]\u@\h\[\033[01;35m\]${REMOTE_PS1}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\e[01;32m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
   fi
 
   set_battery_ps1
@@ -51,9 +51,9 @@ set_my_ps1 ()
   
   if [ "$UID" -eq 0 ]
   then
-    PS1='\[\033[01;35m\]${REMOTE_PS1}\[\033[01;34m\]\W\[\033[01;31m\]#\[\033[00m\] '
+    PS1='\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;31m\]#\[\e[0m\] '
   else
-    PS1='\[\033[01;35m\]${REMOTE_PS1}\[\033[01;34m\]\W\[\033[01;32m\]\$\[\033[00m\] '
+    PS1='\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;32m\]\$\[\e[0m\] '
   fi
 
   set_battery_ps1
@@ -103,8 +103,8 @@ get_battery_percent_to_file ()
 
 set_battery_ps1 ()
 {
-  WARNING="\[\033[01;33m\]"'!'
-  DANGER="\[\033[01;31m\]"'!'
+  WARNING="\[\e[01;33m\]"'!'
+  DANGER="\[\e[01;31m\]"'!'
   STATUS_FILE="/dev/shm/bat-status"
   [ -f "$STATUS_FILE" ] || return 1
 
