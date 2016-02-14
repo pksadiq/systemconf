@@ -83,7 +83,7 @@ get_battery_percent_to_file ()
   is_battery_present || return $(false)
 
   STATUS_FILE="/dev/shm/bat-status"
-  [ -f "$STATUS_FILE" ] || touch "$STATUS_FILE"
+  [ -f "$STATUS_FILE" ] || touch "$STATUS_FILE" || return 1
 
   # Update battery status every 20 seconds
   while sleep 20
