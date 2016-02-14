@@ -37,6 +37,9 @@
    - After your system is configured, you can edit the file =~/.bash/personal=
      to add your personal =.bashrc= scripts. This file won't ever be over
      written even if =OVERWRITE= is set to `true' in =settings.sh=
+   - Don't copy the dot files as such. This will make your computer well
+     suitable for me, not for you. Always run =make= after settings
+     =settings.sh=
     
 * Configuration files present
   - GNOME Desktop Environment
