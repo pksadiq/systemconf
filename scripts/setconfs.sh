@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-cd "${SCRIPT_DIR}/.bash"
+cd "${HOME_DIR}/bash"
 
 ### GNU Bash Configuration ###
 sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
@@ -22,7 +22,7 @@ sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
 sed -i "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
 sed -i "s/^export EMAIL=.*/export EMAIL=\"${EMAIL}\"/" bashrc
 
-cd "${SCRIPT_DIR}"
+cd "${HOME_DIR}"
 
 ### gitconfig Configuration ###
 sed -i "s/^[[:blank:]]*name *=.*/    name = $NAME/" .gitconfig

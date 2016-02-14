@@ -40,11 +40,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Common UI related functions used throughout the script
 . "${SCRIPT_DIR}"/scripts/ui-functions.sh
 
-# Configure basic configurations
-. "${SCRIPT_DIR}"/scripts/setconfs.sh
-
 # Copy configured files to appropriate directories
 . "${SCRIPT_DIR}"/scripts/copyconfs.sh
+
+# Configure basic configurations
+. "${SCRIPT_DIR}"/scripts/setconfs.sh
 
 # GNOME 3 Desktop Environment configuration script
 . "${SCRIPT_DIR}"/scripts/gsettings.sh
