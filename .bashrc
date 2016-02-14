@@ -50,6 +50,7 @@ set_term_title
 
 # Get battery status asynchronously
 get_battery_percent_to_file &
+disown "%get_battery_percent_to_file"
 
 # My Personal aliases
 if [ -f ~/.bash/aliases ]
