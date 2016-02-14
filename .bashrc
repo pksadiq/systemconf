@@ -48,6 +48,9 @@ fi
 set_ps1
 set_term_title
 
+# Get battery status asynchronously
+get_battery_percent_to_file &
+
 # My Personal aliases
 if [ -f ~/.bash/aliases ]
 then
