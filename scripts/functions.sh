@@ -54,6 +54,14 @@ is_number ()
   fi
 }
 
+is_battery_present ()
+{
+  BAT="$(grep -il 'battery' /sys/class/power_supply/*/type 2>/dev/null)" ||
+    return $(false)
+
+  BAT=$(sed 's/type/capacity/' <<< "$BAT")
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
