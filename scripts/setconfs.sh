@@ -20,8 +20,9 @@ sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
 [ ${EDITOR} = "emacs" ] && VISUAL="emacs" || VISUAL="gedit"
 sed -i "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
 sed -i "s/^export EMAIL=.*/export EMAIL=\"${EMAIL}\"/" bashrc
-
+is_battery_present || sed -i '/  set_battery_ps1/d' functions
 cd "${HOME_DIR}"
+is_battery_present || sed -i '/ *get_battery_per/d' .bashrc
 
 ### gitconfig Configuration ###
 sed -i "s/^[[:blank:]]*name *=.*/    name = $NAME/" .gitconfig
