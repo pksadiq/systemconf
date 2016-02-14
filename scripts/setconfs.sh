@@ -13,9 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-cd "${HOME_DIR}/.bash"
-
 ### GNU Bash Configuration ###
+cd "${HOME_DIR}/.bash"
 sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
 # Set VISUAL editor to EDITOR, if emacs. Else use gedit
 [ ${EDITOR} = "emacs" ] && VISUAL="emacs" || VISUAL="gedit"
