@@ -58,7 +58,11 @@ USE_INTERNET="true"
 # Set to "false" if you rely on `apt' or `dnf'
 AUTO_SOFTWARE_UPDATE="false"
 
-
+# URL and IP for ping test.
+# Using IPs like Google's one shall reveal Google that
+# you are connected to internet.
+PING_IP="8.8.8.8"
+PING_URL="www.google.com"
 
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
