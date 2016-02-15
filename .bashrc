@@ -26,23 +26,22 @@ elif [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
 
+# Include custom bash functions
+if [ -f ~/.bash/functions ]
+then
+  . ~/.bash/functions
+fi
+
 # Some more bashrc
 if [ -f ~/.bash/bashrc ]
 then
   . ~/.bash/bashrc
 fi
 
-
 # Include the contents of `.bash_aliases'
 if [ -f ~/.bash_aliases ]
 then
   . ~/.bash_aliases
-fi
-
-# Include custom bash functions
-if [ -f ~/.bash/functions ]
-then
-  . ~/.bash/functions
 fi
 
 set_ps1
