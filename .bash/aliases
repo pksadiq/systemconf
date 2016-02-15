@@ -35,6 +35,9 @@ alias mylocalip=mylocalip
 alias myroute=mygateway
 alias mygateway=mygateway
 alias mynetip=mynetip
+alias mypingip=mypingip
+alias mypingnet=mypingnet
+alias mynettest=mynettest
 
 if [ ! -z "$(which colordiff 2>/dev/null)" ]
 then
