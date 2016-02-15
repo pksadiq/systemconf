@@ -61,7 +61,6 @@ AUTO_SOFTWARE_UPDATE="false"
 # URL and IP for ping test.
 # Using IPs like Google's one shall reveal Google that
 # you are connected to internet.
-# TODO: Use this settings
 PING_IP="8.8.8.8"
 PING_URL="www.google.com"
 
