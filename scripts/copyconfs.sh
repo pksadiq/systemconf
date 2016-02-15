@@ -44,6 +44,11 @@ cp "${CP_FLAG}" .gitignore "${HOME}"
 cp "${CP_FLAG}" .wgetrc "${HOME}"
 cp "${CP_FLAG}" .Xmodmap "${HOME}"
 
+# .config Settings
+mkdir -p "${HOME_DIR}/.config/gtk-3.0"
+cd "${SCRIPT_DIR}/.config/gtk-3.0"
+cp "${CP_FLAG}" settings.ini "${HOME_DIR}/.config/gtk-3.0"
+
 # Copy Templates only if xdg is present
 DIR="$(xdg-user-dir TEMPLATES 2>/dev/null)"
 if [ "${DIR}" != "${HOME}/" ] || DIR="${HOME}/Templates" && [ -n "${DIR}" ]
