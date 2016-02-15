@@ -1,5 +1,22 @@
 # -*- mode: shell-script; -*-
 
+PING_IP="8.8.8.8"
+PING_URL="www.google.com"
+
+mypingip ()
+{
+  echo -n "Ping IP: "
+  ping -W 6 -c 1 "${PING_IP}" >/dev/null 2>&1 && echo "OK" && return 0
+  echo "Fail" && return 1
+}
+
+mypingnet ()
+{
+  echo -n "Ping URL: "
+  ping -W 6 -c 1 "${PING_URL}"  >/dev/null 2>&1  && echo "OK" && return 0
+  echo "Fail" && return 1
+}
+
 mynetip ()
 {
   ROUTES="$(ip route show 2>/dev/null)"
