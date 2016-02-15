@@ -21,6 +21,8 @@ sed -i "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
 sed -i "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
 sed -i "s/^export EMAIL=.*/export EMAIL=\"${EMAIL}\"/" bashrc
 is_battery_present || sed -i "s/set_battery_ps1//" bashrc
+sed -i "s/^PING_IP=.*/export PING_IP=\"${PING_IP}\"/" functions
+sed -i "s/^PING_URL=.*/export PING_URL=\"${PING_URL}\"/" functions
 cd "${HOME_DIR}"
 is_battery_present || sed -i '/ *get_battery_per/d' .bashrc
 
