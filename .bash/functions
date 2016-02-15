@@ -40,7 +40,6 @@ set_ps1 ()
     PS1='$(echo -e $STAT)\[\e[01;32m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
   fi
 
-  set_battery_ps1
   MY_PS_SET=""
 }
 
@@ -56,7 +55,6 @@ set_my_ps1 ()
     PS1='$(echo -e $STAT)\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;32m\]\$\[\e[0m\] '
   fi
 
-  set_battery_ps1
   MY_PS_SET="true"
 }
 
