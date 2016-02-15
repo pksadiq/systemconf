@@ -36,11 +36,6 @@ OVERWRITE_DEFAULTS="true"
 # TODO: Use this
 BE_ROOT="true"
 
-# Use internet to download missing files or packages?
-# anything other than "true" is considered "false"
-# TODO: Use this
-USE_INTERNET="true"
-
 EDITOR="emacs"
 # Set Emacs key bindings where every possible
 # This includes Desktop Environment, GNOME Builder, etc.
@@ -54,9 +49,16 @@ CAPS_IS_CTRL="true"
 # Alt+Ctrl+T = gnome-terminal
 CUSTOM_SHORTCUTS="true"
 
+# Use internet to download missing files or packages?
+# anything other than "true" is considered "false"
+# TODO: Use this
+USE_INTERNET="true"
+
 # Auto update packages via Gnome software?
 # Set to "false" if you rely on `apt' or `dnf'
 AUTO_SOFTWARE_UPDATE="false"
+
+
 
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
