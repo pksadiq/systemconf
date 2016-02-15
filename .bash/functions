@@ -132,3 +132,25 @@ set_battery_ps1 ()
     STAT="$WARNING"
   fi
 }
+
+
+mynettest ()
+{
+  ROUTE="$(ip route show)"
+  [ -z "$ROUTE" ] && echo "No Route found" && return 1
+
+  echo -n "Gateway: "
+  mygateway
+
+  echo -n "Local IP: "
+  mylocalip
+
+  echo -n "Nameserver: "
+  grep "^nameserver" /etc/resolv.conf | cut -d ' ' -f 2-
+
+  echo -n "Net IP: "
+  mynetip
+
+  mypingip
+  mypingnet
+}
