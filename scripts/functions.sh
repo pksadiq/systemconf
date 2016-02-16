@@ -48,7 +48,7 @@ get_true_false ()
 {
   CHECK="$1"
 
-  is_true_false || return 1
+  is_true_false "${CHECK}" || return 1
   
   case "${CHECK,,}" in
     true)
