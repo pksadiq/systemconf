@@ -29,14 +29,14 @@ mypingip ()
 {
   echo -n "Ping IP: "
   ping -W 10 -c 1 "${PING_IP}" >/dev/null 2>&1 && say ok "OK" && return 0
-  say fail "Fail" && return 1
+  say fail "Failed" && return 1
 }
 
 mypingnet ()
 {
   echo -n "Ping URL: "
   ping -W 10 -c 1 "${PING_URL}"  >/dev/null 2>&1  && say ok "OK" && return 0
-  say fail "Fail" && return 1
+  say fail "Failed" && return 1
 }
 
 mynetip ()
@@ -174,7 +174,7 @@ mynettest ()
 
   echo -n "Nameserver: "
   NAMESERVER=$(grep "^nameserver" /etc/resolv.conf | cut -d ' ' -f 2-)
-  [ -z "${NAMESERVER}" ] && say fail "Fail" || echo "${NAMESERVER}"
+  [ -z "${NAMESERVER}" ] && say fail "Failed" || echo "${NAMESERVER}"
 
   echo -n "Net IP: "
   mynetip
