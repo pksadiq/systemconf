@@ -6,6 +6,7 @@ PING_URL="www.google.com"
 # ANSI colors
 RED="\e[01;31m"
 GREEN="\e[01;32m"
+YELLOW="\e[01;33m"
 RESET="\e[0m"
 
 say ()
