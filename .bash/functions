@@ -51,7 +51,8 @@ mynetip ()
 
   # Get public IP address. 208.67.222.222 is IP of "resolver1.opendns.com"
   # IP used to not rely on local DNS resolution
-  dig +short myip.opendns.com @208.67.222.222 2>/dev/null || say fail "Failed"
+  dig +short myip.opendns.com @208.67.222.222 | grep -v "timed out" ||
+    say fail "Failed"
 }
 
 # Print machine IPs that are not host specific (ie, not 127.0.... or ::1...)
