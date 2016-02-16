@@ -26,15 +26,15 @@ say ()
 mypingip ()
 {
   echo -n "Ping IP: "
-  ping -W 10 -c 1 "${PING_IP}" >/dev/null 2>&1 && echo "OK" && return 0
-  echo "Fail" && return 1
+  ping -W 10 -c 1 "${PING_IP}" >/dev/null 2>&1 && say ok "OK" && return 0
+  say fail "Fail" && return 1
 }
 
 mypingnet ()
 {
   echo -n "Ping URL: "
-  ping -W 10 -c 1 "${PING_URL}"  >/dev/null 2>&1  && echo "OK" && return 0
-  echo "Fail" && return 1
+  ping -W 10 -c 1 "${PING_URL}"  >/dev/null 2>&1  && say ok "OK" && return 0
+  say fail "Fail" && return 1
 }
 
 mynetip ()
@@ -43,7 +43,7 @@ mynetip ()
 
   if [ -z "${ROUTES}" ]
   then
-    echo "No Route found"
+    say fail "No Route found"
     return 1
   fi
 
@@ -157,7 +157,7 @@ set_battery_ps1 ()
 mynettest ()
 {
   ROUTE="$(ip route show)"
-  [ -z "$ROUTE" ] && echo "No Route found" && return 1
+  [ -z "$ROUTE" ] && say fail "No Route found" && return 1
 
   echo -n "Gateway: "
   mygateway
