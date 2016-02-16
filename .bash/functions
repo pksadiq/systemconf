@@ -56,6 +56,7 @@ mynetip ()
 mylocalip ()
 {
   IP_LIST="$(ip addr show scope global)"
+  [ "${IP_LIST}" ] || say fail "No local ip set" && return 1
   awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}"
 }
 
@@ -63,6 +64,7 @@ mylocalip ()
 mygateway ()
 {
   IP_LIST="$(ip route show)"
+  [ "${IP_LIST}" ] || say fail "No local route set" && return 1
   awk '!/default dev|\//{ gsub("default via",""); print $1 }' <<< "${IP_LIST}"
 }
 
