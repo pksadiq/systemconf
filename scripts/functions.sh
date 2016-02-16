@@ -48,15 +48,17 @@ get_true_false ()
 {
   CHECK="$1"
 
+  is_true_false || return 1
+  
   case "${CHECK,,}" in
     true)
       echo "0"
-      return $(true)
       ;;
     false)
       echo "1"
-      return $(false)
-  esac  
+  esac
+  
+  return $(true)
 }
 
 is_number ()
