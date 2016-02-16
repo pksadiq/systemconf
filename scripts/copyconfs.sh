@@ -15,7 +15,7 @@
 
 cd "${SCRIPT_DIR}"
 
-if [ "$OVERWRITE" = "true" ]
+if [ "${OVERWRITE,,}" = "true" ]
 then
   CP_FLAG=
 else
