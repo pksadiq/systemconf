@@ -44,6 +44,21 @@ is_true_false ()
   esac
 }
 
+get_true_false ()
+{
+  CHECK="$1"
+
+  case "${CHECK,,}" in
+    true)
+      echo "0"
+      return $(true)
+      ;;
+    false)
+      echo "1"
+      return $(false)
+  esac  
+}
+
 is_number ()
 {
   NUM_REGEX='^[0-9]+$'
