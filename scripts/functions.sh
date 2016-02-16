@@ -52,10 +52,10 @@ get_true_false ()
   
   case "${CHECK,,}" in
     true)
-      echo "0"
+      echo "1"
       ;;
     false)
-      echo "1"
+      echo "0"
   esac
   
   return $(true)
