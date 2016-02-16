@@ -3,13 +3,14 @@
 PING_IP="8.8.8.8"
 PING_URL="www.google.com"
 
+# ANSI colors
+RED="\e[01;31m"
+GREEN="\e[01;32m"
+
 say ()
 {
   LEVEL="$1"
   MESSAGE="$2"
-
-  RED="\e[01;31m"
-  GREEN="\e[01;32m"
 
   case "${LEVEL,,}" in
     ok)
