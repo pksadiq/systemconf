@@ -35,3 +35,9 @@ sed -i "s/^[[:blank:]]*editor *=.*/    editor = $EDITOR/" .gitconfig
 sed -i "s/user-full-name *\".*\"/user-full-name \"${NAME}\"/" .emacs
 sed -i "s/user-mail-address *\".*\"/user-mail-address \"${EMAIL}\"/" .emacs
 sed -i "s/set-default-font *\".*\"/set-default-font \"${EMACS_FONT%* Medium}-${EMACS_FONT_SIZE}\"/" .emacs
+
+### Gtk3/GNOME Configuration ###
+GTK3_CONF="${HOME_DIR}/.config/gtk-3.0/settings.ini"
+IS_DARK=$(get_true_false "$PREFER_DARK")
+[ "${IS_DARK}" ] &&
+  sed -i "s/^gtk.*prefer-dark-theme.*/gtk-application-prefer-dark-theme=${IS_DARK}/" "${GTK3_CONF}"
