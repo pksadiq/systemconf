@@ -172,7 +172,8 @@ mynettest ()
   mylocalip
 
   echo -n "Nameserver: "
-  grep "^nameserver" /etc/resolv.conf | cut -d ' ' -f 2-
+  NAMESERVER=$(grep "^nameserver" /etc/resolv.conf | cut -d ' ' -f 2-)
+  [ -z "${NAMESERVER}" ] && say fail "Fail" || echo "${NAMESERVER}"
 
   echo -n "Net IP: "
   mynetip
