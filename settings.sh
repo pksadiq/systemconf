@@ -37,7 +37,7 @@ OVERWRITE_DEFAULTS="true"
 BE_ROOT="true"
 
 EDITOR="emacs"
-# Set Emacs key bindings where every possible
+# Set Emacs key bindings where ever possible
 # This includes Desktop Environment, GNOME Builder, etc.
 MORE_EMACS="true"
 
