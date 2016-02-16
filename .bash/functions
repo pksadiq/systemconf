@@ -6,6 +6,7 @@ PING_URL="www.google.com"
 # ANSI colors
 RED="\e[01;31m"
 GREEN="\e[01;32m"
+RESET="\e[0m"
 
 say ()
 {
@@ -21,7 +22,7 @@ say ()
       ;;
   esac
   
-  echo -e "$COLOR""${MESSAGE}"
+  echo -e "$COLOR""${MESSAGE}" "${RESET}"
 }
 
 mypingip ()
