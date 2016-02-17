@@ -61,7 +61,7 @@ mylocalip ()
 {
   IP_LIST="$(ip addr show scope global)"
   IP_LIST=$(awk -F' ' '/inet/ {print $2}'  <<< "${IP_LIST}")
-  [ ${IP_LIST} ] && echo ${IP_LIST} && return 0
+  [ "${IP_LIST}" ] && echo "${IP_LIST}" && return 0
   say fail "Failed" && return 1
 }
 
@@ -70,7 +70,7 @@ mygateway ()
 {
   IP_LIST="$(ip route show)"
   IP_LIST=$(awk '!/default dev|\//{ gsub("default via",""); print $1 }' <<< "${IP_LIST}")
-  [ ${IP_LIST} ] && echo ${IP_LIST} && return 0
+  [ "${IP_LIST}" ] && echo "${IP_LIST}" && return 0
   say fail "Failed" && return 1
 }
 
