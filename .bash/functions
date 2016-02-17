@@ -150,6 +150,7 @@ set_battery_ps1 ()
   [ -f "$STATUS_FILE" ] || return 1
 
   PERCENT=$(cat "$STATUS_FILE")
+  [ "${PERCENT}" ] || return 1
   if [ $PERCENT -le 10 ]
   then
     STAT="$RED"'!'
