@@ -127,6 +127,19 @@ unpack_file ()
   esac
 }
 
+install_file ()
+{
+  TYPE="${1,,}s"
+  DIR="${2}"
+
+  cd "${SCRIPT_DIR}"
+  ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
+  echo -n "Installing ${TYPE}: "
+  ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" || say fail "Failed" &&
+    return $(false)
+  say ok "OK"
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
