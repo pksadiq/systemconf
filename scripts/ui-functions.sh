@@ -62,7 +62,7 @@ is_font_present ()
   is_number ${!CHECK_SIZE}
 }
 
-get_themes ()
+list_themes ()
 {
   # Lets hope there won't be spaces in directory names
   if [ $1 = gtk_theme ]
@@ -94,14 +94,14 @@ get_themes ()
 is_icon_theme ()
 {
   THEME_NAME="$1"
-  get_themes icon_theme | grep "$1" >/dev/null 2>&1 ||
+  list_themes icon_theme | grep "$1" >/dev/null 2>&1 ||
     (echo "Check Icon Theme name" && return $(false))
 }
 
 is_gtk_theme ()
 {
   THEME_NAME="$1"
-  get_themes gtk_theme | grep "$1" >/dev/null 2>&1 ||
+  list_themes gtk_theme | grep "$1" >/dev/null 2>&1 ||
     (echo "Check Gtk Theme name" && return $(false))
 }
 
