@@ -104,6 +104,29 @@ get_file ()
   wget "${URL}" -O "${SCRIPT_DIR}/temp/${FILE}" || return $(false)
 }
 
+unpack_file ()
+{
+  FILE="${2}"
+  FILE="${SCRIPT_DIR}/temp/${FILE}"
+  
+  cd "${SCRIPT_DIR}/temp/"
+
+  case "${FILE}" in
+    *.zip)
+      unzip "${FILE}"
+      ;;
+    *.tar.gz | *.tar.bz2 | *.tar.xz)
+      tar xf "${FILE}"
+      ;;
+    *.gz)
+      gunzip "${FILE}"
+      ;;
+    *)
+      echo "Unpack: Archive format not supported" && return $(false)
+      ;;
+  esac
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
