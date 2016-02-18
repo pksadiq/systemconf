@@ -29,14 +29,14 @@ say ()
 mypingip ()
 {
   echo -n "Ping IP: "
-  ping -W 10 -c 1 "${PING_IP}" >/dev/null 2>&1 && say ok "OK" && return 0
+  ping -W 10 -c 3 "${PING_IP}" >/dev/null 2>&1 && say ok "OK" && return 0
   say fail "Failed" && return 1
 }
 
 mypingnet ()
 {
   echo -n "Ping URL: "
-  ping -W 10 -c 1 "${PING_URL}"  >/dev/null 2>&1  && say ok "OK" && return 0
+  ping -W 10 -c 3 "${PING_URL}"  >/dev/null 2>&1  && say ok "OK" && return 0
   say fail "Failed" && return 1
 }
 
