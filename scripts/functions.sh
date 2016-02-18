@@ -91,6 +91,19 @@ checksum ()
   return $(false)
 }
 
+get_file ()
+{
+  URL="${1}"
+  FILE="${2}"
+  CHECKSUM="${3}"
+
+  # Return if file already downloaded
+  checksum "${SCRIPT_DIR}/temp/${FILE}" "$CHECKSUM" && return $(true)
+  [ "${USE_INTERNET,,}" = "true" ] || return $(false)
+
+  wget "${URL}" -O "${SCRIPT_DIR}/temp/${FILE}" || return $(false)
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
