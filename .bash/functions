@@ -127,6 +127,10 @@ get_battery_percent_to_file ()
 {
   is_battery_present || return $(false)
 
+  CHECKS=$(ps aux | grep 'sleep 20.0314159' | wc -l)
+  # Don't run too much instances of this function
+  [ "${CHECKS}" -ge 4 ] && return 0
+  
   # /tmp is not guaranteed to be on tempfs, so using shm for a while
   STATUS_FILE="/dev/shm/bat-status"
   [ -f "$STATUS_FILE" ] || touch "$STATUS_FILE" || return 1
