@@ -79,6 +79,18 @@ is_battery_present ()
   BAT=$(sed 's/type/capacity/' <<< "$BAT")
 }
 
+# Calculate sha1sum
+checksum ()
+{
+  FILE="${1}"
+  CHECKSUM="${2}"
+
+  [ ! -f "${FILE}" ] && return $(false)
+  SHASUM=$(sha1sum "${FILE}" | cut -d ' ' -f 1)
+  [ "${CHECKSUM}" = "${SHASUM}" ] && return $(true)
+  return $(false)
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
