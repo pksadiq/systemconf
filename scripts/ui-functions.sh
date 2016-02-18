@@ -50,7 +50,7 @@ get_fonts ()
   done
 }
 
-is_font_present ()
+is_font ()
 {
   CHECK="$1"
   CHECK_SIZE="$1_SIZE"
@@ -111,7 +111,7 @@ set_font ()
   FONT_SIZE="$1_SIZE"
   SCHEMA="$2"
   KEY="$3"
-  if is_font_present "${FONT}"
+  if is_font "${FONT}"
   then
     gsettings set "${SCHEMA}" "${KEY}" "${!FONT} ${!FONT_SIZE}"
   fi
