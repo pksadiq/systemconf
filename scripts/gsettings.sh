@@ -23,7 +23,7 @@ error="Error: gsettings not found. Not Running GNOME 3?"
 # Return to the parent script, if `gsettings' not found
 gsettings --version > /dev/null 2>&1 || { echo "$error" ; return 1; }
 
-if [ "${EDITOR,,}" == "emacs" ]
+if [ "${MORE_EMACS,,}" = "true" ]
 then
   # Set Emacs Key bindings for the complete desktop
   $gs ${settings}.interface gtk-key-theme "Emacs"
