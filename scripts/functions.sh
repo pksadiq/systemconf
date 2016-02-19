@@ -133,7 +133,7 @@ get_file ()
 
 unpack_file ()
 {
-  FILE="${2}"
+  FILE="${1}"
   
   cd "${SCRIPT_DIR}/temp/"
   [ ! -f "${FILE}" ] && return $(false)
