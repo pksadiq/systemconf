@@ -157,36 +157,37 @@ unpack_file ()
 install_file ()
 {
   TYPE="${1,,}s"
-  DIR="${2}"
-
+  NAME=$(echo -n "${2}" | tr ' ' '_')
+  
   cd "${SCRIPT_DIR}/temp"
+  
+  ARRAY="$(declare -p ${NAME^^}_${TYPE^^} 2>/dev/null)" ||
+    (say fail "Installation source not found"; return $(false))
+  eval "declare -A ARRAY=${ARRAY#*=}"
+  
+  URL="${ARRAY[url]}"
+  FILE="${NAME}.${ARRAY[type]}"
+  CHECKSUM="${ARRAY[sha1]}"
+  DIR="${ARRAY[dir]}"
+
+  get_file "$URL" "$FILE" "$CHECKSUM"
+  unpack_file  "$FILE"
+  
   cd "${DIR}"
   cd ..
   DIR=$(basename "${DIR}")
+
   ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
   echo -n "Installing ${TYPE}: "
-  ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" ||
-    (say fail "Failed"; return $(false))
+   cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" ||
+    (say fail "Failed" && return $(false))
   say ok "OK"
 }
 
 install_icons ()
 {
   is_icon_theme "${1}" && return $(true)
-
-  ICON=$(echo -n "${1}" | tr ' ' '_')
-
-  ARRAY="$(declare -p ${ICON^^}_ICON 2>/dev/null)" ||
-    (say fail "Installation source not found"; return $(false))
-  eval "declare -A ARRAY=${ARRAY#*=}"
-
-  URL="${ARRAY[url]}"
-  FILE="${ICON}.${ARRAY[type]}"
-  CHECKSUM="${ARRAY[sha1]}"
-  DIR="${ARRAY[dir]}"
-  get_file "$URL" "$FILE" "$CHECKSUM"
-  unpack_file  "$FILE"
-  install_file icon "$DIR"
+  install_file icon "${1}"
 }
 
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
