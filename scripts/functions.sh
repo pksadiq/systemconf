@@ -108,6 +108,8 @@ checksum ()
   FILE="${1}"
   CHECKSUM="${2}"
 
+  cd "${SCRIPT_DIR}/temp"
+  
   [ ! -f "${FILE}" ] && return $(false)
   SHASUM=$(sha1sum "${FILE}" | cut -d ' ' -f 1)
   [ "${CHECKSUM}" = "${SHASUM}" ] && return $(true)
@@ -119,18 +121,19 @@ get_file ()
   URL="${1}"
   FILE="${2}"
   CHECKSUM="${3}"
-
+  
+  cd "${SCRIPT_DIR}/temp"
+  
   # Return if file already downloaded
-  checksum "${SCRIPT_DIR}/temp/${FILE}" "$CHECKSUM" && return $(true)
+  checksum "${FILE}" "$CHECKSUM" && return $(true)
   [ "${USE_INTERNET,,}" = "true" ] || return $(false)
 
-  wget "${URL}" -O "${SCRIPT_DIR}/temp/${FILE}" || return $(false)
+  wget "${URL}" -O "${FILE}" || return $(false)
 }
 
 unpack_file ()
 {
   FILE="${2}"
-  FILE="${SCRIPT_DIR}/temp/${FILE}"
   
   cd "${SCRIPT_DIR}/temp/"
 
