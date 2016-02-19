@@ -21,7 +21,7 @@ then
   $gs ${settings}.interface gtk-theme "${GTK_THEME}"
 fi
 
-if is_icon_theme "${ICON_THEME}"
+if install_icons "${ICON_THEME}"
 then
   $gs ${settings}.interface icon-theme "${ICON_THEME}"
 fi
