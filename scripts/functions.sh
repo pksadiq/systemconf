@@ -187,7 +187,7 @@ install_file ()
     say fail "Failed"
     return $(false)
   fi
-  say ok "OK"
+  say ok "Done"
 }
 
 install_icons ()
