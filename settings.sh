@@ -76,8 +76,8 @@ PREFER_DARK_TERM="true" # Prefer dark theme for GNOME Terminal?
 PREFER_DARK_IDE="true" # Prefer dark theme for GNOME Builder? Gedit?
 
 # The main icons used
-# Possible values: "Adwaita"
-ICON_THEME="Adwaita"
+# Possible values: "Adwaita", "Moka"
+ICON_THEME="Moka"
 
 # TODO: Use this
 LOGO_TEXT="www.sadiqpk.org"
