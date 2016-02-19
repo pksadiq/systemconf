@@ -162,6 +162,8 @@ set_battery_ps1 ()
   elif [ $PERCENT -le 20 ]
   then
     STAT="$YELLOW"'!'
+  else
+    STAT=""
   fi
 }
 
