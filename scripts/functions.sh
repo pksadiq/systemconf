@@ -165,8 +165,8 @@ install_file ()
   DIR=$(basename "${DIR}")
   ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
   echo -n "Installing ${TYPE}: "
-  ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" || say fail "Failed" &&
-    return $(false)
+  ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" ||
+    (say fail "Failed"; return $(false))
   say ok "OK"
 }
 
@@ -177,7 +177,7 @@ install_icons ()
   ICON=$(echo -n "${1}" | tr ' ' '_')
 
   ARRAY="$(declare -p ${ICON^^}_ICON 2>/dev/null)" ||
-    (say fail "Installation source not found" && return $(false))
+    (say fail "Installation source not found"; return $(false))
   eval "declare -A ARRAY=${ARRAY#*=}"
 
   URL="${ARRAY[url]}"
