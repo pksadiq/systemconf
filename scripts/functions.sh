@@ -170,6 +170,25 @@ install_file ()
   say ok "OK"
 }
 
+install_icons ()
+{
+  is_icon_theme "${1}" && return $(true)
+
+  ICON=$(echo -n "${1}" | tr ' ' '_')
+
+  ARRAY="$(declare -p ${ICON^^}_ICON 2>/dev/null)" ||
+    (say fail "Installation source not found" && return $(false))
+  eval "declare -A ARRAY=${ARRAY#*=}"
+
+  URL="${ARRAY[url]}"
+  FILE="${ICON}.${ARRAY[type]}"
+  CHECKSUM="${ARRAY[sha1]}"
+  DIR="${ARRAY[dir]}"
+  get_file "$URL" "$FILE" "$CHECKSUM"
+  unpack_file  "$FILE"
+  install_file icon "$DIR"
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
