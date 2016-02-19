@@ -46,7 +46,7 @@ then
     exit 1
   fi
 
-  INSTALL_DIR="/usr/share/"
+  INSTALL_DIR="/usr/share"
   DO_SUDO="sudo"
 else
   INSTALL_DIR="${HOME_DIR}/.local/share"
