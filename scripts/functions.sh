@@ -136,7 +136,8 @@ unpack_file ()
   FILE="${2}"
   
   cd "${SCRIPT_DIR}/temp/"
-
+  [ ! -f "${FILE}" ] && return $(false)
+  
   case "${FILE}" in
     *.zip)
       unzip "${FILE}"
