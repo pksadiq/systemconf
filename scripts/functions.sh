@@ -159,7 +159,10 @@ install_file ()
   TYPE="${1,,}s"
   DIR="${2}"
 
-  cd "${SCRIPT_DIR}"
+  cd "${SCRIPT_DIR}/temp"
+  cd "${DIR}"
+  cd ..
+  DIR=$(basename "${DIR}")
   ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
   echo -n "Installing ${TYPE}: "
   ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" || say fail "Failed" &&
