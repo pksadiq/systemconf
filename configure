@@ -37,6 +37,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Common UI related functions used throughout the script
 . "${SCRIPT_DIR}"/scripts/ui-functions.sh
 
+# Data about themes, fonts, icons, etc
+. "${SCRIPT_DIR}"/scripts/files.sh
+
 # Copy configured files to appropriate directories
 . "${SCRIPT_DIR}"/scripts/copyconfs.sh
 
