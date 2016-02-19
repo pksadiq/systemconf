@@ -174,7 +174,7 @@ install_file ()
   DIR="${ARRAY[dir]}"
 
   get_file "$URL" "$FILE" "$CHECKSUM"
-  unpack_file  "$FILE"
+  unpack_file  "$FILE" || return $(false)
   
   cd "${DIR}"
   cd ..
@@ -193,7 +193,7 @@ install_file ()
 install_icons ()
 {
   is_icon_theme "${1}" && return $(true)
-  install_file icon "${1}"
+  install_file icon "${1}" || return $(false)
 }
 
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
