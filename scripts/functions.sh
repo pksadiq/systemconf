@@ -140,13 +140,13 @@ unpack_file ()
   
   case "${FILE}" in
     *.zip)
-      unzip "${FILE}"
+      unzip -n "${FILE}"
       ;;
     *.tar.gz | *.tar.bz2 | *.tar.xz)
-      tar xf "${FILE}"
+      tar xf --skip-old-files "${FILE}"
       ;;
     *.gz)
-      gunzip "${FILE}"
+      gunzip -k "${FILE}"
       ;;
     *)
       echo "Unpack: Archive format not supported" && return $(false)
