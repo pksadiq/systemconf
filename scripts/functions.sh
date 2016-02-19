@@ -161,8 +161,11 @@ install_file ()
   
   cd "${SCRIPT_DIR}/temp"
   
-  ARRAY="$(declare -p ${NAME^^}_${TYPE^^} 2>/dev/null)" ||
-    (say fail "Installation source not found"; return $(false))
+  if ! ARRAY="$(declare -p ${NAME^^}_${TYPE^^} 2>/dev/null)"
+  then
+    say fail "Installation source not found"
+    return $(false)
+  fi
   eval "declare -A ARRAY=${ARRAY#*=}"
   
   URL="${ARRAY[url]}"
@@ -179,8 +182,11 @@ install_file ()
 
   ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
   echo -n "Installing ${TYPE}: "
-   cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" ||
-    (say fail "Failed" && return $(false))
+  if ! ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" 2>/dev/null
+  then
+    say fail "Failed"
+    return $(false)
+  fi
   say ok "OK"
 }
 
