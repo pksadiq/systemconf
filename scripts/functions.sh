@@ -15,6 +15,29 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# ANSI colors
+RED="\e[01;31m"
+GREEN="\e[01;32m"
+YELLOW="\e[01;33m"
+RESET="\e[0m"
+
+say ()
+{
+  LEVEL="$1"
+  MESSAGE="$2"
+
+  case "${LEVEL,,}" in
+    ok)
+      COLOR="$GREEN"
+      ;;
+    fail)
+      COLOR="$RED"
+      ;;
+  esac
+  
+  echo -e "$COLOR""${MESSAGE}" "${RESET}"
+}
+
 if [ "${BE_ROOT,,}" = "true" ]
 then
   if [ -z "$(which sudo 2>/dev/null)" ]
