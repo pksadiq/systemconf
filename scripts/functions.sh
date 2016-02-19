@@ -143,7 +143,7 @@ unpack_file ()
       unzip -n "${FILE}"
       ;;
     *.tar.gz | *.tar.bz2 | *.tar.xz)
-      tar xf --skip-old-files "${FILE}"
+      tar xf "${FILE}" --skip-old-files
       ;;
     *.gz)
       gunzip -k "${FILE}"
