@@ -69,7 +69,7 @@ PING_URL="www.google.com"
 NATURAL_SCROLL="false"
 
 ##### Theme settings #####
-# Icons, possible values: "Adwaita"
+# Themes, possible values: "Adwaita"
 GTK_THEME="Adwaita"
 PREFER_DARK="true"
 PREFER_DARK_TERM="true" # Prefer dark theme for GNOME Terminal?
