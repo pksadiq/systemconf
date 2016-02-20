@@ -51,7 +51,22 @@
   - Editorconfig (ONE config for every editor)
 
     Note: This script may be capable to configure Cinnamon and Mate DEs.
-
+** GNOME Terminal configurations
+   - Show =(ssh)= when you are over ssh session. (To achieve this, the server
+     you are logged into, should have this same =.bashrc=)
+   - Show colored =!= (exclamation mark) if battery level is low
+     - If less than 20%, the color shown is yellow
+     - If less than 10%, the color shown in red
+   - Several aliases and functions to check network related issues
+     - =mynettest= - Test your internet (running many commands below)
+     - =mylocalip= - Get the list of local IPs
+     - =mynetip= - Get your IP exposed to internet
+     - =myroute= - Print the routing table IPs
+     - =mypingip= - Test internet by pinging to IP (DNS not checked)
+     - =mypingnet= - Test internet by pinging to domain (DNS is checked)
+     - ...
+   - See =.bash/aliases= to see the list of possible aliases
+     
 * License
 
   Copyright (c) 2015, 2016 Mohammed Sadik <sadiq@sadiqpk.org>
