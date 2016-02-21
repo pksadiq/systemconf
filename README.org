@@ -4,7 +4,9 @@
   These configurations shall work on any *recent* GNU/Linux.
   - *Note:* This is a work in progress. This is _not yet ready_ to
     be used on production systems.
-
+  - *Note:* This script is currently extremely unstable. This may
+    overwrite your files and configurations without warning. You
+    have been warned! Thanks for understanding. :-)
 * Why do I need this?
   
   One of my role at work is system administration. I will have
