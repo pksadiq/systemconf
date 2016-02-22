@@ -59,6 +59,7 @@
    - Show colored =!= (exclamation mark) if battery level is low
      - If less than 20%, the color shown is yellow
      - If less than 10%, the color shown in red
+   - Show the count of remote logged in users (via ssh), if any.
    - Several aliases and functions to check network related issues
      - =mynettest= - Test your internet (running many commands below)
      - =mylocalip= - Get the list of local IPs
