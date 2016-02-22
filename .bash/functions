@@ -80,9 +80,9 @@ set_ps1 ()
   # If user is `root' set color as red, else green
   if [ "$UID" -eq 0 ]
   then
-    PS1='$(echo -e $STAT)\[\e[01;31m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
+    PS1='$(echo -e $STAT)$(echo -e $SSH_COUNT)\[\e[01;31m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
   else
-    PS1='$(echo -e $STAT)\[\e[01;32m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
+    PS1='$(echo -e $STAT)$(echo -e $SSH_COUNT)\[\e[01;32m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
   fi
 
   MY_PS_SET=""
@@ -95,9 +95,9 @@ set_my_ps1 ()
   
   if [ "$UID" -eq 0 ]
   then
-    PS1='$(echo -e $STAT)\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;31m\]#\[\e[0m\] '
+    PS1='$(echo -e $STAT)$(echo -e $SSH_COUNT)\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;31m\]#\[\e[0m\] '
   else
-    PS1='$(echo -e $STAT)\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;32m\]\$\[\e[0m\] '
+    PS1='$(echo -e $STAT)$(echo -e $SSH_COUNT)\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;32m\]\$\[\e[0m\] '
   fi
 
   MY_PS_SET="true"
@@ -167,6 +167,16 @@ set_battery_ps1 ()
   fi
 }
 
+set_ssh_count_ps1 ()
+{
+  NUM=$(who | egrep " \(([0-9]*\.){3}[0-9]*\)| \(.*:.*:.*\)" | wc -l)
+  if [ "${NUM}" -ge 1 ]
+  then
+      SSH_COUNT="${RED}[${NUM}]"
+  else
+      SSH_COUNT=""
+  fi
+}
 
 mynettest ()
 {
