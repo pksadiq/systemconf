@@ -1,6 +1,6 @@
 # -*- mode: shell-script; -*-
 
-PROMPT_COMMAND="set_battery_ps1"
+PROMPT_COMMAND="set_battery_ps1; set_ssh_count_ps1"
 #### Some nice to have variables
 export LESS="-XFR"
 export MAKEFLAGS="-j $(($(nproc)+1))" # set as "-j $(nproc)" if it suites you
