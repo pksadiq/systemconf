@@ -172,9 +172,9 @@ set_ssh_count_ps1 ()
   NUM=$(who | egrep " \(([0-9]*\.){3}[0-9]*\)| \(.*:.*:.*\)" | wc -l)
   if [ "${NUM}" -ge 1 ]
   then
-      SSH_COUNT="${RED}[${NUM}]"
+    SSH_COUNT="${RED}[${NUM}]"
   else
-      SSH_COUNT=""
+    SSH_COUNT=""
   fi
 }
 
