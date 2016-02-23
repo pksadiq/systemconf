@@ -62,7 +62,8 @@ then
   # Check if already added
   if [[ ! "${CUR}" = */custom100/* ]]
   then
-    $gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "${CUR}, '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
+    [ "${CUR}" != "@as [" ] && CUR="${CUR},"
+    $gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "${CUR} '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
     $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ name 'GNOME Terminal'
     $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ command 'gnome-terminal'
     $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ binding '<Primary><Alt>t'
