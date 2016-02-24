@@ -77,7 +77,7 @@ PREFER_DARK_IDE="true" # Prefer dark theme for GNOME Builder? Gedit?
 
 # The main icons used
 # Possible values:
-# "Adwaita", "Moka", "Numix-Circles"
+# "Adwaita", "Moka", "Numix-Circles", "Paper"
 ICON_THEME="Moka"
 
 # TODO: Use this
