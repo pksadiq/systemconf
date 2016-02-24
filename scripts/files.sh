@@ -23,4 +23,11 @@ MOKA_ICONS[sha1]="23525de99afbbe7eea299642cd792d02db576791"
 MOKA_ICONS[name]="Moka"
 MOKA_ICONS[dir1]="moka-icon-theme-5.0.11/Moka"
 
-
+declare -A NUMIX_ICONS
+NUMIX_ICONS[url]="https://github.com/numixproject/numix-icon-theme-circle/archive/6cccdbcc685fe5a8318a499f3fdd12db431f8973.tar.gz"
+NUMIX_ICONS[type]="tar.gz"
+NUMIX_ICONS[size]="1.6 MiB"
+NUMIX_ICONS[sha1]="87f764d5ce0c93d5547b4c6f3e9ca20f7ac73ea4"
+NUMIX_ICONS[name]="Numix"
+NUMIX_ICONS[dir1]=""
+NUMIX_ICONS[dir2]=
