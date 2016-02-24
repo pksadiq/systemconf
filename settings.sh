@@ -39,11 +39,11 @@ BE_ROOT="true"
 EDITOR="emacs"
 # Set Emacs key bindings where ever possible
 # This includes Desktop Environment, GNOME Builder, etc.
-MORE_EMACS="true"
+MORE_EMACS="false"
 
 # Caps Lock acts as Control Key.
 # Very helpful if you are an Emacs user.
-CAPS_IS_CTRL="true"
+CAPS_IS_CTRL="false"
 
 # Currently the following are configured:
 # Alt+Ctrl+T = gnome-terminal
