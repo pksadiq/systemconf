@@ -172,7 +172,7 @@ install_file ()
   URL="${ARRAY[url]}"
   FILE="${NAME}.${ARRAY[type]}"
   CHECKSUM="${ARRAY[sha1]}"
-  DIR="${ARRAY[dir]}"
+  DIR="${ARRAY[dir1]}"
 
   get_file "$URL" "$FILE" "$CHECKSUM"
   unpack_file  "$FILE" || return $(false)

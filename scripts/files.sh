@@ -22,6 +22,6 @@ MOKA_ICONS[size]="18 MiB"
 # TODO: Verify checksum
 MOKA_ICONS[sha1]="0febfbc18bf24f5115a3cdceff0a5f824fe300ae"
 MOKA_ICONS[name]="Moka"
-MOKA_ICONS[dir]="moka-icon-theme-5.0/Moka"
+MOKA_ICONS[dir1]="moka-icon-theme-5.0/Moka"
 
 
