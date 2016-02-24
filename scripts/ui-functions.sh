@@ -104,7 +104,7 @@ is_icon_theme ()
 is_gtk_theme ()
 {
   THEME_NAME="$1"
-  list_themes gtk_theme | grep "$1" >/dev/null 2>&1 ||
+  list_themes gtk_theme | grep "^${1}$" >/dev/null 2>&1 ||
     return $(false)
 }
 
