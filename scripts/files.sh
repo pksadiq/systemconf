@@ -16,6 +16,7 @@
 # Icon Theme listing
 declare -A ICONS
 ICONS["Moka"]=MOKA
+ICONS["Paper"]=PAPER
 ICONS["Numix"]=NUMIX
 ICONS["Numix-Light"]=NUMIX
 ICONS["Numix-Circle"]=NUMIX_CIRCLE
@@ -50,3 +51,12 @@ NUMIX_CIRCLE_ICONS[sha1]="87f764d5ce0c93d5547b4c6f3e9ca20f7ac73ea4"
 NUMIX_CIRCLE_ICONS[name]="Numix-Circle"
 NUMIX_CIRCLE_ICONS[dir1]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle-Light"
 NUMIX_CIRCLE_ICONS[dir2]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle"
+
+# Paper Icon theme
+declare -A PAPER_ICONS
+PAPER_ICONS[url]="https://github.com/snwh/paper-icon-theme/archive/ae82c98cc8c4248d940fdd27870f146c70cdf228.tar.gz"
+PAPER_ICONS[type]="tar.gz"
+PAPER_ICONS[size]="18.9 MiB"
+PAPER_ICONS[sha1]="962eafb8dfaf95786d34beab099f5192000e1f1b"
+PAPER_ICONS[name]="Paper"
+PAPER_ICONS[dir1]="paper-icon-theme-ae82c98cc8c4248d940fdd27870f146c70cdf228/Paper"
