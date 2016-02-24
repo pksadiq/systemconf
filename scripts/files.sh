@@ -38,3 +38,12 @@ NUMIX_CIRCLE_ICONS[sha1]="87f764d5ce0c93d5547b4c6f3e9ca20f7ac73ea4"
 NUMIX_CIRCLE_ICONS[name]="Numix"
 NUMIX_CIRCLE_ICONS[dir1]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle-Light"
 NUMIX_CIRCLE_ICONS[dir2]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle"
+
+declare -A NUMIX_ICONS
+NUMIX_ICONS[url]="https://github.com/numixproject/numix-icon-theme/archive/e35fff81da202dc65c3e9db7b4c342272e30f9e6.tar.gz"
+NUMIX_ICONS[type]="tar.gz"
+NUMIX_ICONS[size]="1.6 MiB"
+NUMIX_ICONS[sha1]="1b8b91f3dc8d78ff1c20e0fe3fd0fb7f2633dbe4"
+NUMIX_ICONS[name]="Numix1"
+NUMIX_ICONS[dir1]="numix-icon-theme-e35fff81da202dc65c3e9db7b4c342272e30f9e6/Numix"
+NUMIX_ICONS[dir2]="numix-icon-theme-e35fff81da202dc65c3e9db7b4c342272e30f9e6/Numix-Light"
