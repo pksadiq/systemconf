@@ -83,7 +83,7 @@ list_themes ()
     do
       if [ -d "$DIR" ]
       then
-	cd $DIR
+	cd "$DIR"
 	if [ -f index.theme ]
 	then
 	  grep "^Name=" index.theme | cut -d "=" -f 2
