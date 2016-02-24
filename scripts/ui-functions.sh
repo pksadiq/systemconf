@@ -97,7 +97,7 @@ list_themes ()
 is_icon_theme ()
 {
   THEME_NAME="$1"
-  list_themes icon_theme | grep "$1" >/dev/null 2>&1 ||
+  list_themes icon_theme | grep "^${1}$" >/dev/null 2>&1 ||
     return $(false)
 }
 
