@@ -64,7 +64,6 @@ is_font ()
 
 list_themes ()
 {
-  # Lets hope there won't be spaces in directory names
   if [ $1 = gtk_theme ]
   then
     THEME_DIRS="${HOME_DIR}/.themes ${HOME_DIR}/.local/share/themes"
@@ -74,12 +73,15 @@ list_themes ()
     THEME_DIRS="${HOME_DIR}/.icons ${HOME_DIR}/.local/share/icons"
     THEME_DIRS="${THEME_DIRS} /usr/share/icons"
   fi
+
+  OLD_IFS="${IFS}"
+  IFS=","
   
   for THEME_DIR in ${THEME_DIRS}
   do
-    [ -d $THEME_DIR ] && for DIR in $THEME_DIR/*
+    [ -d "$THEME_DIR" ] && for DIR in $THEME_DIR/*
     do
-      if [ -d $DIR ]
+      if [ -d "$DIR" ]
       then
 	cd $DIR
 	if [ -f index.theme ]
@@ -89,6 +91,7 @@ list_themes ()
       fi
     done
   done
+  IFS="${OLD_IFS}"
 }
 
 is_icon_theme ()
