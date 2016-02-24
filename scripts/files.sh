@@ -18,10 +18,9 @@
 declare -A MOKA_ICONS
 MOKA_ICONS[url]="https://github.com/moka-project/moka-icon-theme/archive/v5.0.11.tar.gz"
 MOKA_ICONS[type]="tar.gz"
-MOKA_ICONS[size]="18 MiB"
-# TODO: Verify checksum
-MOKA_ICONS[sha1]="0febfbc18bf24f5115a3cdceff0a5f824fe300ae"
+MOKA_ICONS[size]="31 MiB"
+MOKA_ICONS[sha1]="23525de99afbbe7eea299642cd792d02db576791"
 MOKA_ICONS[name]="Moka"
-MOKA_ICONS[dir1]="moka-icon-theme-5.0/Moka"
+MOKA_ICONS[dir1]="moka-icon-theme-5.0.11/Moka"
 
 
