@@ -160,7 +160,8 @@ install_file ()
   NAME=$(echo -n "${2}" | tr ' ' '_')
   
   cd "${SCRIPT_DIR}/temp"
-  
+
+  # Fail if icon/font/theme not defined as array in scripts/files.sh
   if ! ARRAY="$(declare -p ${NAME^^}_${TYPE^^} 2>/dev/null)"
   then
     say fail "Installation source not found"
