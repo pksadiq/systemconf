@@ -176,13 +176,13 @@ install_file ()
 
   get_file "$URL" "$FILE" "$CHECKSUM"
   unpack_file  "$FILE" || return $(false)
+  ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
+  echo -n "Installing ${TYPE}: "
   
   cd "${DIR}"
   cd ..
   DIR=$(basename "${DIR}")
 
-  ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
-  echo -n "Installing ${TYPE}: "
   if ! ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" 2>/dev/null
   then
     say fail "Failed"
