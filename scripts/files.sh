@@ -36,5 +36,5 @@ NUMIX_CIRCLE_ICONS[type]="tar.gz"
 NUMIX_CIRCLE_ICONS[size]="1.6 MiB"
 NUMIX_CIRCLE_ICONS[sha1]="87f764d5ce0c93d5547b4c6f3e9ca20f7ac73ea4"
 NUMIX_CIRCLE_ICONS[name]="Numix"
-NUMIX_CIRCLE_ICONS[dir1]=""
-NUMIX_CIRCLE_ICONS[dir2]=
+NUMIX_CIRCLE_ICONS[dir1]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle-Light"
+NUMIX_CIRCLE_ICONS[dir2]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle"
