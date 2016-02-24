@@ -172,22 +172,28 @@ install_file ()
   URL="${ARRAY[url]}"
   FILE="${NAME}.${ARRAY[type]}"
   CHECKSUM="${ARRAY[sha1]}"
-  DIR="${ARRAY[dir1]}"
 
   get_file "$URL" "$FILE" "$CHECKSUM"
   unpack_file  "$FILE" || return $(false)
   ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
   echo -n "Installing ${TYPE}: "
-  
-  cd "${DIR}"
-  cd ..
-  DIR=$(basename "${DIR}")
 
-  if ! ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" 2>/dev/null
-  then
-    say fail "Failed"
-    return $(false)
-  fi
+  for i in $(seq 1 5)
+  do
+    DIR="${ARRAY[dir${i}]}"
+    [ "${DIR}" ] || break
+    cd "${SCRIPT_DIR}"
+    cd temp
+    cd "${DIR}"
+    cd ..
+    DIR=$(basename "${DIR}")
+
+    if ! ${DO_SUDO} cp -r "${DIR}" "${INSTALL_DIR}/${TYPE}" 2>/dev/null
+    then
+      say fail "Failed"
+      return $(false)
+    fi
+  done
   say ok "Done"
 }
 
