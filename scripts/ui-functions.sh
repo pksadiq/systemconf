@@ -86,7 +86,7 @@ list_themes ()
 	cd "$DIR"
 	if [ -f index.theme ]
 	then
-	  grep "^Name=" index.theme | cut -d "=" -f 2
+	  echo "$(basename ${DIR})"
 	fi
       fi
     done
