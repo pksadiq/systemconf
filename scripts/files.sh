@@ -13,6 +13,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# Icon Theme listing
+declare -A ICONS
+ICONS["Moka"]=MOKA
+ICONS["Numix-Circle"]=NUMIX_CIRCLE
+ICONS["Numix-Circle-Light"]=NUMIX_CIRCLE
+
+
 ### Icon themes ###
 # Moka Icon theme
 declare -A MOKA_ICONS
