@@ -16,9 +16,10 @@
 # Icon Theme listing
 declare -A ICONS
 ICONS["Moka"]=MOKA
+ICONS["Numix"]=NUMIX
+ICONS["Numix-Light"]=NUMIX
 ICONS["Numix-Circle"]=NUMIX_CIRCLE
 ICONS["Numix-Circle-Light"]=NUMIX_CIRCLE
-
 
 ### Icon themes ###
 # Moka Icon theme
