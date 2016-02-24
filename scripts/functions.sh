@@ -170,7 +170,7 @@ install_file ()
   eval "declare -A ARRAY=${ARRAY#*=}"
   
   URL="${ARRAY[url]}"
-  FILE="${NAME}.${ARRAY[type]}"
+  FILE="${ARRAY[name]}.${ARRAY[type]}"
   CHECKSUM="${ARRAY[sha1]}"
 
   get_file "$URL" "$FILE" "$CHECKSUM"
