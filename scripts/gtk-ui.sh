@@ -52,6 +52,7 @@ set_font "WINDOW_TITLE_FONT" ${settings}.wm.preferences titlebar-font
 set_font "EMACS_FONT" org.gnome.gedit.preferences.editor editor-font
 # Set GNOME Builder font
 set_font "EMACS_FONT" org.gnome.builder.editor font-name
+# Set Global Monospace font (eg: in Devhelp, etc.)
 set_font "MONOSPACE_FONT" ${settings}.interface monospace-font-name
 
 # Show date in GNOME shell top bar. "true" is sane enough
