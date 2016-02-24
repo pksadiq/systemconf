@@ -31,6 +31,7 @@ MOKA_ICONS[sha1]="23525de99afbbe7eea299642cd792d02db576791"
 MOKA_ICONS[name]="Moka"
 MOKA_ICONS[dir1]="moka-icon-theme-5.0.11/Moka"
 
+# Numix Circle Icon theme
 declare -A NUMIX_CIRCLE_ICONS
 NUMIX_CIRCLE_ICONS[url]="https://github.com/numixproject/numix-icon-theme-circle/archive/6cccdbcc685fe5a8318a499f3fdd12db431f8973.tar.gz"
 NUMIX_CIRCLE_ICONS[type]="tar.gz"
@@ -40,6 +41,7 @@ NUMIX_CIRCLE_ICONS[name]="Numix-Circle"
 NUMIX_CIRCLE_ICONS[dir1]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle-Light"
 NUMIX_CIRCLE_ICONS[dir2]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle"
 
+# Numix Icon theme
 declare -A NUMIX_ICONS
 NUMIX_ICONS[url]="https://github.com/numixproject/numix-icon-theme/archive/e35fff81da202dc65c3e9db7b4c342272e30f9e6.tar.gz"
 NUMIX_ICONS[type]="tar.gz"
