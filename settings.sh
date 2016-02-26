@@ -70,6 +70,10 @@ declare -A CD
 CD[d]="/run/media/sadiq/Temp/sadiq/Test_1/Projects"
 CD[ds]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
 
+# Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
+# above CD
+declare -a BOOKMARKS
+BOOKMARKS=('d' 'ds')
 
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
