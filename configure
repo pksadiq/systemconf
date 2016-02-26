@@ -27,6 +27,7 @@ fi
 
 HOME_DIR="${HOME}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+declare -a UPDATE_FILE # Array to track new files
 
 # Settings that can be configured by the user
 . "${SCRIPT_DIR}"/settings.sh
