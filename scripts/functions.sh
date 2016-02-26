@@ -239,6 +239,17 @@ is_new_file ()
   return $(false)
 }
 
+set_file ()
+{
+  CHANGE="${1}"
+  FILE="${2}"
+
+  if [ "${OVERWRITE,,}" = "true" ] || is_new_file "${FILE}"
+  then
+    sed -i "${CHANGE}" "${FILE}"
+  fi
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
