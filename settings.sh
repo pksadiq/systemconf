@@ -63,6 +63,12 @@ AUTO_SOFTWARE_UPDATE="false"
 PING_IP="8.8.8.8"
 PING_URL="www.google.com"
 
+### cd aliases ###
+declare -A CD
+CD[d]="/run/media/sadiq/Temp/sadiq/Test_1/Projects"
+CD[ds]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
+
+
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
 
