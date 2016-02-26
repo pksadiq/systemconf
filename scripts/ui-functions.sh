@@ -115,6 +115,13 @@ is_gtk_theme ()
     return $(false)
 }
 
+install_themes ()
+{
+  is_gtk_theme "${1}" && return $(true)
+  THEME="${THEMES[${1}]}"
+  install_file theme "${THEME}" || return $(false)
+}
+
 set_font ()
 {
   FONT="$1"
