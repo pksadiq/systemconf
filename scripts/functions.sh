@@ -197,6 +197,15 @@ install_file ()
   say ok "Done"
 }
 
+make_cd ()
+{
+  ALIAS="${1}"
+  ARRAY="$(declare -p CD 2>/dev/null)" || return $(false)
+  for i in ${!CD[@]}
+  do
+    echo "alias cd${i}='cd ${CD[${i}]}'" >> "${ALIAS}"
+  done
+}
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
