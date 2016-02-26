@@ -41,5 +41,5 @@ set_file "s/set-default-font *\".*\"/set-default-font \"${EMACS_FONT%* Medium}-$
 GTK3_CONF="${HOME_DIR}/.config/gtk-3.0/settings.ini"
 IS_DARK=$(get_true_false "$PREFER_DARK")
 [ "${IS_DARK}" ] &&
-  set_file "s/^gtk.*prefer-dark-theme.*/gtk-application-prefer-dark-theme=${IS_DARK}/" "${GTK3_CONF}"
+  sed -i "s/^gtk.*prefer-dark-theme.*/gtk-application-prefer-dark-theme=${IS_DARK}/" "${GTK3_CONF}"
 add_bookmarks
