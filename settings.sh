@@ -64,6 +64,8 @@ PING_IP="8.8.8.8"
 PING_URL="www.google.com"
 
 ### cd aliases ###
+# You can add any number of aliases
+# Eg.: If you have CD[d], you can do 'cdd' to cd to that dir
 declare -A CD
 CD[d]="/run/media/sadiq/Temp/sadiq/Test_1/Projects"
 CD[ds]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
