@@ -211,6 +211,18 @@ make_cd ()
   done
 }
 
+add_bookmarks ()
+{
+  mkdir -p "${HOME}/.config/gtk-3.0" || return $(false)
+  FILE="${HOME}/.config/gtk-3.0/bookmarks"
+  
+  for i in ${BOOKMARKS[*]}
+  do
+    grep "${CD[${i}]}" "${FILE}" > /dev/null && continue
+    echo "file://${CD[${i}]}" >> "${FILE}"
+  done
+}
+
 mycp ()
 {
   SRC="${1}"
