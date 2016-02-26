@@ -206,6 +206,27 @@ make_cd ()
     echo "alias cd${i}='cd ${CD[${i}]}'" >> "${ALIAS}"
   done
 }
+
+mycp ()
+{
+  SRC="${1}"
+  DST="${2}"
+
+  if [ "${OVERWRITE,,}" = "true" ]
+  then
+    CP_FLAG=
+  else
+    CP_FLAG="-n"  # '-n' flag of 'cp' prevents from overwriting files
+  fi
+
+  if [ ! -f "${DST}/$(basename ${SRC})" ]
+  then
+    UPDATE_FILES=("${UPDATE_FILES[@]}" "$(basename ${SRC})")
+  fi
+
+  cp ${CP_FLAG} "${SRC}" "${DST}"
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
