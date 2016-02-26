@@ -79,7 +79,7 @@ BOOKMARKS=('d' 'ds')
 NATURAL_SCROLL="false"
 
 ##### Theme settings #####
-# Themes, possible values: "Adwaita"
+# Themes, possible values: "Adwaita", "Paper"
 GTK_THEME="Adwaita"
 PREFER_DARK="true"
 PREFER_DARK_TERM="true" # Prefer dark theme for GNOME Terminal?
