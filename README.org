@@ -45,8 +45,10 @@
     
 * Configuration files present
   - GNOME Desktop Environment
-    - Font
-    - Theme
+    - Font (configure)
+    - Theme (Download, install and configure)
+    - Icon (Download, install and confgure)
+    - Add Bookmarks to Nautilus (aka. GNOME Files)
   - git
   - Bash
   - GNU Emacs (basic configuration only)
