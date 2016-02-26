@@ -42,7 +42,7 @@ MOKA_ICONS[url]="https://github.com/moka-project/moka-icon-theme/archive/v5.0.11
 MOKA_ICONS[type]="tar.gz"
 MOKA_ICONS[size]="31 MiB"
 MOKA_ICONS[sha1]="23525de99afbbe7eea299642cd792d02db576791"
-MOKA_ICONS[name]="Moka"
+MOKA_ICONS[name]="moka-icon-theme"
 MOKA_ICONS[dir1]="moka-icon-theme-5.0.11/Moka"
 
 # Numix Icon theme
@@ -51,7 +51,7 @@ NUMIX_ICONS[url]="https://github.com/numixproject/numix-icon-theme/archive/e35ff
 NUMIX_ICONS[type]="tar.gz"
 NUMIX_ICONS[size]="1.6 MiB"
 NUMIX_ICONS[sha1]="1b8b91f3dc8d78ff1c20e0fe3fd0fb7f2633dbe4"
-NUMIX_ICONS[name]="Numix"
+NUMIX_ICONS[name]="numix-icon-theme"
 NUMIX_ICONS[dir1]="numix-icon-theme-e35fff81da202dc65c3e9db7b4c342272e30f9e6/Numix"
 NUMIX_ICONS[dir2]="numix-icon-theme-e35fff81da202dc65c3e9db7b4c342272e30f9e6/Numix-Light"
 
@@ -61,7 +61,7 @@ NUMIX_CIRCLE_ICONS[url]="https://github.com/numixproject/numix-icon-theme-circle
 NUMIX_CIRCLE_ICONS[type]="tar.gz"
 NUMIX_CIRCLE_ICONS[size]="1.6 MiB"
 NUMIX_CIRCLE_ICONS[sha1]="87f764d5ce0c93d5547b4c6f3e9ca20f7ac73ea4"
-NUMIX_CIRCLE_ICONS[name]="Numix-Circle"
+NUMIX_CIRCLE_ICONS[name]="numix-icon-theme-circle"
 NUMIX_CIRCLE_ICONS[dir1]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle-Light"
 NUMIX_CIRCLE_ICONS[dir2]="numix-icon-theme-circle-6cccdbcc685fe5a8318a499f3fdd12db431f8973/Numix-Circle"
 
@@ -71,5 +71,5 @@ PAPER_ICONS[url]="https://github.com/snwh/paper-icon-theme/archive/ae82c98cc8c42
 PAPER_ICONS[type]="tar.gz"
 PAPER_ICONS[size]="18.9 MiB"
 PAPER_ICONS[sha1]="962eafb8dfaf95786d34beab099f5192000e1f1b"
-PAPER_ICONS[name]="Paper"
+PAPER_ICONS[name]="paper-icon-theme"
 PAPER_ICONS[dir1]="paper-icon-theme-ae82c98cc8c4248d940fdd27870f146c70cdf228/Paper"
