@@ -227,6 +227,18 @@ mycp ()
   cp ${CP_FLAG} "${SRC}" "${DST}"
 }
 
+is_new_file ()
+{
+  CHECK="${1}"
+  
+  if [[ " ${UPDATE_FILES[*]} " == *" ${CHECK} "* ]]
+  then
+    return $(true)
+  fi
+
+  return $(false)
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
