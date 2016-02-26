@@ -128,7 +128,7 @@ get_file ()
   checksum "${FILE}" "$CHECKSUM" && return $(true)
   [ "${USE_INTERNET,,}" = "true" ] || return $(false)
 
-  wget "${URL}" -O "${FILE}" || return $(false)
+  wget "${URL}" -O "${FILE}" 2>/dev/null || return $(false)
 }
 
 unpack_file ()
