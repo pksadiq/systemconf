@@ -199,6 +199,8 @@ install_file ()
 
 make_cd ()
 {
+  [ "${OVERWRITE,,}" != "true" ] && [ ! $(is_new_file "${FILE}") ] &&
+    return $(false)
   ALIAS="${1}"
   ARRAY="$(declare -p CD 2>/dev/null)" || return $(false)
   for i in ${!CD[@]}
