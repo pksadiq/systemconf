@@ -39,7 +39,8 @@ declare -a UPDATE_FILE # Array to track new files
 . "${SCRIPT_DIR}"/scripts/ui-functions.sh
 
 # Data about themes, fonts, icons, etc
-. "${SCRIPT_DIR}"/scripts/files.sh
+. "${SCRIPT_DIR}"/scripts/icon-files.sh
+. "${SCRIPT_DIR}"/scripts/theme-files.sh
 
 # Copy configured files to appropriate directories
 . "${SCRIPT_DIR}"/scripts/copyconfs.sh
