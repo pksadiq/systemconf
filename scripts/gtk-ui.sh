@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-if is_gtk_theme "${GTK_THEME}"
+if install_themes "${GTK_THEME}"
 then
   $gs ${settings}.interface gtk-theme "${GTK_THEME}"
 fi
