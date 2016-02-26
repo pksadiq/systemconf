@@ -15,39 +15,32 @@
 
 cd "${SCRIPT_DIR}"
 
-if [ "${OVERWRITE,,}" = "true" ]
-then
-  CP_FLAG=
-else
-  CP_FLAG="-n"  # '-n' flag of 'cp' prevents from overwriting files
-fi
-
 if [ -n $(mkdir -p "${HOME}/.bash") 2>/dev/null ]
 then
   touch "${HOME}/.bash/personal"
   cd .bash
-  cp ${CP_FLAG} bashrc "${HOME}/.bash/"
-  cp ${CP_FLAG} aliases "${HOME}/.bash/"
-  cp ${CP_FLAG} functions "${HOME}/.bash/"    
+  mycp bashrc "${HOME}/.bash/"
+  mycp aliases "${HOME}/.bash/"
+  mycp functions "${HOME}/.bash/"
   cd "${SCRIPT_DIR}" # Go back to script dir
 fi
 
 # TODO: Make a loop to copy files. But explicit file copying below
 # informs the user about the files copied
 
-cp ${CP_FLAG} .bashrc "${HOME}"
-cp ${CP_FLAG} .emacs "${HOME}"
-cp ${CP_FLAG} .editorconfig "${HOME}"
-cp ${CP_FLAG} .guile "${HOME}"
-cp ${CP_FLAG} .gitconfig "${HOME}"
-cp ${CP_FLAG} .gitignore "${HOME}"
-cp ${CP_FLAG} .wgetrc "${HOME}"
-cp ${CP_FLAG} .Xmodmap "${HOME}"
+mycp .bashrc "${HOME}"
+mycp .emacs "${HOME}"
+mycp .editorconfig "${HOME}"
+mycp .guile "${HOME}"
+mycp .gitconfig "${HOME}"
+mycp .gitignore "${HOME}"
+mycp .wgetrc "${HOME}"
+mycp .Xmodmap "${HOME}"
 
 # .config Settings
 mkdir -p "${HOME_DIR}/.config/gtk-3.0"
 cd "${SCRIPT_DIR}/.config/gtk-3.0"
-cp ${CP_FLAG} settings.ini "${HOME_DIR}/.config/gtk-3.0"
+mycp settings.ini "${HOME_DIR}/.config/gtk-3.0"
 
 # Copy Templates only if xdg is present
 DIR="$(xdg-user-dir TEMPLATES 2>/dev/null)"
@@ -57,6 +50,6 @@ then
   xdg-user-dirs-update --set TEMPLATES "${DIR}"
   cd "${DIR}"
   touch "Text.txt"
-  cp ${CP_FLAG} "${SCRIPT_DIR}/Templates/Document.odt" "${DIR}"
+  mycp "${SCRIPT_DIR}/Templates/Document.odt" "${DIR}"
   cd "${SCRIPT_DIR}" # Go back to script dir
 fi
