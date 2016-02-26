@@ -1,4 +1,4 @@
-* *Dotfiles*
+* *Systemconf*
   A small collection of my personal configuration files I plan to use frequently.
   
   These configurations shall work on any *recent* GNU/Linux.
@@ -22,7 +22,7 @@
 
   Hopefully this shall be helpful for you too.
 
-* How to Configure my system with these dotfiles?
+* How to Configure my system with systemconf?
 
   - Edit the file =settings.sh=
     - Set the variables with the configuration you wish
