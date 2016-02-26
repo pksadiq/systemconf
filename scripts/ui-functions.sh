@@ -101,6 +101,13 @@ is_icon_theme ()
     return $(false)
 }
 
+install_icons ()
+{
+  is_icon_theme "${1}" && return $(true)
+  ICON="${ICONS[${1}]}"
+  install_file icon "${ICON}" || return $(false)
+}
+
 is_gtk_theme ()
 {
   THEME_NAME="$1"

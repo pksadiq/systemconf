@@ -197,13 +197,6 @@ install_file ()
   say ok "Done"
 }
 
-install_icons ()
-{
-  is_icon_theme "${1}" && return $(true)
-  ICON="${ICONS[${1}]}"
-  install_file icon "${ICON}" || return $(false)
-}
-
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
