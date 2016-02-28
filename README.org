@@ -17,8 +17,8 @@
   systems, which may later be used to automate the installations too.
 
   Currently these are my focuses:
-  - Debian GNU/Linux
-  - GNOME Desktop Environment (3.18+)
+  - Debian GNU/Linux (Stretch)
+  - GNOME Desktop Environment (3.20/22+), which ever is in next Debian.
 
   Hopefully this shall be helpful for you too.
 
