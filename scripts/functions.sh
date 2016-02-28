@@ -283,7 +283,7 @@ set_dist_vars ()
       DIST="fedora"
       PACK="dnf"
       PACK_INSTALL="dnf -C install"
-      PACK_UPDATE="dnf update"
+      PACK_UPDATE="dnf check-update"
       PACK_INFO="dnf -C info"
       ;;
   esac
