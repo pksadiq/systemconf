@@ -288,28 +288,3 @@ set_dist_vars ()
       ;;
   esac
 }
-
-# detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
-is_debian_based ()
-{
-  # ID and ID_LIKE has to be matched, and nothing else begin with
-  # ID, or end with ID now.
-  grep "^ID.*=debian" >/dev/null 2>&1 /etc/os-release
-}
-
-# detect Fedora and derivatives like RHEL, CentOS, etc.
-is_fedora_based ()
-{
-  # Also match "rhel fedora" present in CentOS
-  grep "^ID.*=.*fedora" >/dev/null 2>&1 /etc/os-release
-}
-
-is_arch_based ()
-{
-  grep "^ID.*=arch" >/dev/null 2>&1 /etc/os-release
-}
-
-is_gentoo_based ()
-{
-  grep "^ID.*=gentoo" >/dev/null 2>&1 /etc/os-release
-}
