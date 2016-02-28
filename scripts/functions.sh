@@ -266,6 +266,29 @@ set_file ()
   fi
 }
 
+set_dist_vars ()
+{
+  [ -f /etc/os-release ] || return $(false)
+  CHECK="$(grep ^ID= /etc/os-release)"
+  
+  case "${CHECK}" in
+    *debian*)
+      DIST="debian"
+      PACK="apt-get"
+      PACK_INSTALL="apt-get install"
+      PACK_UPDATE="apt-get update"
+      PACK_INFO="apt-cache info"
+      ;;
+    *fedora*)
+      DIST="fedora"
+      PACK="dnf"
+      PACK_INSTALL="dnf -C install"
+      PACK_UPDATE="dnf update"
+      PACK_INFO="dnf -C info"
+      ;;
+  esac
+}
+
 # detect Debian and derivatives like Ubuntu, GNU/Linux Mint, etc.
 is_debian_based ()
 {
