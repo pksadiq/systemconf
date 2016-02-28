@@ -218,7 +218,7 @@ add_bookmarks ()
   
   for i in ${BOOKMARKS[*]}
   do
-    grep "${CD[${i}]}" "${FILE}" > /dev/null && continue
+    egrep "file://${CD[${i}]}( |$)" "${FILE}" > /dev/null && continue
     echo "file://${CD[${i}]}" >> "${FILE}"
   done
 }
