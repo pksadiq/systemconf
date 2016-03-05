@@ -44,7 +44,7 @@ if [ "${BE_ROOT,,}" = "true" ]
 then
   if [ -z "$(which sudo 2>/dev/null)" ]
   then
-    echo "Error: 'sudo' not found. Can't be root"
+    say fail "Error: 'sudo' not found. Can't be root"
     exit 1
   fi
 
