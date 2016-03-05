@@ -21,6 +21,7 @@ GREEN="\e[01;32m"
 YELLOW="\e[01;33m"
 RESET="\e[0m"
 
+# Custom 'echo' to display colored texts
 say ()
 {
   LEVEL="$1"
@@ -38,6 +39,7 @@ say ()
   echo -e "$COLOR""${MESSAGE}" "${RESET}"
 }
 
+# Exit if 'sudo' not found and set to act as 'root'
 if [ "${BE_ROOT,,}" = "true" ]
 then
   if [ -z "$(which sudo 2>/dev/null)" ]
@@ -67,6 +69,7 @@ is_true_false ()
   esac
 }
 
+# Get numerical true/false, "true" echos "1", and "0" for false
 get_true_false ()
 {
   CHECK="$1"
@@ -84,6 +87,7 @@ get_true_false ()
   return $(true)
 }
 
+# Check if first argument is a number not less than 5
 is_number ()
 {
   NUM_REGEX='^[0-9]+$'
@@ -116,6 +120,7 @@ checksum ()
   return $(false)
 }
 
+# Download the file from internet
 get_file ()
 {
   URL="${1}"
@@ -154,6 +159,7 @@ unpack_file ()
   esac
 }
 
+# Copy files/folders to appropriate system dirs
 install_file ()
 {
   TYPE="${1,,}s"
@@ -197,6 +203,7 @@ install_file ()
   say ok "Done"
 }
 
+# Make 'cd' aliases
 make_cd ()
 {
   ALIAS="${1}"
@@ -211,6 +218,7 @@ make_cd ()
   done
 }
 
+# Add bookmarks to 'nautilus'
 add_bookmarks ()
 {
   mkdir -p "${HOME}/.config/gtk-3.0" || return $(false)
@@ -237,12 +245,14 @@ mycp ()
 
   if [ ! -f "${DST}/$(basename ${SRC})" ]
   then
+    # Mark the files as new files, so as to configure them later
     UPDATE_FILES=("${UPDATE_FILES[@]}" "$(basename ${SRC})")
   fi
 
   cp ${CP_FLAG} "${SRC}" "${DST}"
 }
 
+# Check if the file is newly copied
 is_new_file ()
 {
   CHECK="${1}"
@@ -255,6 +265,7 @@ is_new_file ()
   return $(false)
 }
 
+# Edit file if the file is newly copied
 set_file ()
 {
   CHANGE="${1}"
@@ -266,6 +277,7 @@ set_file ()
   fi
 }
 
+# Set distribution specific tools
 set_dist_vars ()
 {
   [ -f /etc/os-release ] || return $(false)
