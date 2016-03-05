@@ -36,7 +36,6 @@ case "${CAPS_IS_CTRL,,}" in
     ;;
   false)
     $gs ${settings}.input-sources xkb-options "['']"
-    echo "Caps Lock will act as Caps Lock"
 esac
 
 $gs ${settings}.peripherals.touchpad tap-to-click "true"
