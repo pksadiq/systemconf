@@ -58,13 +58,15 @@ then
   # Get the current list of shortcuts
   CUR=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
   CUR=${CUR%\]}
+  KEY='org.gnome.settings-daemon.plugins.media-keys'
+  SUBKEY='/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/'
   # Check if already added
   if [[ ! "${CUR}" = */custom100/* ]]
   then
     [ "${CUR}" != "@as [" ] && CUR="${CUR},"
-    $gs org.gnome.settings-daemon.plugins.media-keys custom-keybindings "${CUR} '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/']"
-    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ name 'GNOME Terminal'
-    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ command 'gnome-terminal'
-    $gs org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100/ binding '<Primary><Alt>t'
+    $gs ${KEY} custom-keybindings "${CUR} '${SUBKEY}']"
+    $gs ${KEY}.custom-keybinding:${SUBKEY} name 'GNOME Terminal'
+    $gs ${KEY}.custom-keybinding:${SUBKEY} command 'gnome-terminal'
+    $gs ${KEY}.custom-keybinding:${SUBKEY} binding '<Primary><Alt>t'
   fi
 fi
