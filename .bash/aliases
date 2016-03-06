@@ -17,7 +17,7 @@ alias grep='grep --color=auto'
 alias sudo='sudo SSH_CLIENT="${SSH_CLIENT}"'
 
 # Invoke the favorite editor
-alias e='emacsclient -c'
+alias e='emacsclient -a "" -c'
 # Invoke git
 alias g='git'
 
