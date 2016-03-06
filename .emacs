@@ -15,8 +15,6 @@
 ;; Let's type y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Though I hate Ubuntu philosophically, Ubuntu fonts are
-;; good and free (both Libre and Gratis).
 ;; Fonts should already be installed before you can use it.
 (set-default-font "Inconsolata-16")
 
