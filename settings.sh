@@ -68,7 +68,7 @@ PING_URL="www.google.com"
 # Eg.: If you have CD[d], you can do 'cdd' to cd to that dir
 declare -A CD
 CD[p]="/run/media/sadiq/Temp/sadiq/Test_1/Projects"
-CD[ps]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
+CD[s]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
 
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
