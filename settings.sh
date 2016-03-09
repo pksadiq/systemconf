@@ -69,6 +69,7 @@ PING_URL="www.google.com"
 declare -A CD
 CD[p]="/run/media/sadiq/Temp/sadiq/Test_1/Projects"
 CD[s]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
+CD[e]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/emacsdotd/.emacs.d"
 
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
