@@ -215,6 +215,7 @@ make_cd ()
   for i in ${!CD[@]}
   do
     echo "alias cd${i}='cd ${CD[${i}]}'" >> "${ALIAS}"
+    echo "cd${i}='${CD[${i}]}'" >>  "${ALIAS}"
   done
 }
 
