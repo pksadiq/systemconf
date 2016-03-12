@@ -214,7 +214,7 @@ make_cd ()
   ARRAY="$(declare -p CD 2>/dev/null)" || return $(false)
   for i in ${!CD[@]}
   do
-    echo "alias cd${i}='cd ${CD[${i}]}'" >> "${ALIAS}"
+    echo "alias cd${i}=\"cd '${CD[${i}]}'\"" >> "${ALIAS}"
     echo "cd${i}='${CD[${i}]}'" >>  "${ALIAS}"
   done
 }
