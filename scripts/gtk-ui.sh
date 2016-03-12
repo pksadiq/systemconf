@@ -49,6 +49,7 @@ set_font "INTERFACE_FONT" ${settings}.interface font-name
 set_font "WINDOW_TITLE_FONT" ${settings}.wm.preferences titlebar-font
 
 # Set Gedit font
+$gs org.gnome.gedit.preferences.editor use-default-font false
 set_font "EMACS_FONT" org.gnome.gedit.preferences.editor editor-font
 # Set GNOME Builder font
 set_font "EMACS_FONT" org.gnome.builder.editor font-name
