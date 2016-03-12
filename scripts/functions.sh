@@ -228,7 +228,7 @@ add_bookmarks ()
   for i in ${BOOKMARKS[*]}
   do
     egrep "file://${CD[${i}]}( |$)" "${FILE}" > /dev/null && continue
-    [ "${CD[${i}]}" ] && echo "file://${CD[${i}]}" >> "${FILE}"
+    [ "${CD[${i}]}" ] && echo "file://${CD[${i}]// /%20}" >> "${FILE}"
   done
 }
 
