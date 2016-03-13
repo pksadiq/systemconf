@@ -13,6 +13,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+### GNU/Linux Distribution specific settings
+# Set variables like package manager
+set_dist_vars
+
 ### GNU Bash Configuration ###
 cd "${HOME_DIR}/.bash"
 set_file "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
