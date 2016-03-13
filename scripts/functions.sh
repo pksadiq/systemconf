@@ -288,14 +288,14 @@ set_dist_vars ()
     *debian*)
       DIST="debian"
       PACK="apt-get"
-      PACK_INSTALL="apt-get install"
+      PACK_INSTALL="apt-get install -y"
       PACK_UPDATE="apt-get update"
       PACK_INFO="apt-cache info"
       ;;
     *fedora*)
       DIST="fedora"
       PACK="dnf"
-      PACK_INSTALL="dnf -C install"
+      PACK_INSTALL="dnf -C install -y"
       PACK_UPDATE="dnf check-update"
       PACK_INFO="dnf -C info"
       ;;
