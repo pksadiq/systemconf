@@ -31,6 +31,8 @@ declare -a UPDATE_FILE # Temp array to track files to be modified using setconf
 
 # Settings that can be configured by the user
 . "${SCRIPT_DIR}"/settings.sh
+# Use custom settings if set
+[ -f "${SCRIPT_DIR}/${SETTINGS_FILE}" ] && . "${SCRIPT_DIR}/${SETTINGS_FILE}"
 
 # Common functions used throughout the script
 . "${SCRIPT_DIR}"/scripts/functions.sh
