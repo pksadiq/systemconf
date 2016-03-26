@@ -76,7 +76,7 @@ CD[e]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/emacsdotd/.emacs.d"
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
 declare -a BOOKMARKS
-BOOKMARKS=('p' 'ps' 'm')
+BOOKMARKS=('p' 's' 'm')
 
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
