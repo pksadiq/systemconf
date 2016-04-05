@@ -16,6 +16,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+gsettings --version > /dev/null 2>&1 || { say fail "$error" ; return 0; }
+
 if install_themes "${GTK_THEME}"
 then
   $gs ${settings}.interface gtk-theme "${GTK_THEME}"

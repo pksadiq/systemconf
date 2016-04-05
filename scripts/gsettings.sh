@@ -18,10 +18,10 @@
 
 gs="gsettings set"
 settings="org.gnome.desktop"
-error="Error: gsettings not found. Not Running GNOME 3?"
+error="gsettings not found. Not configuring GNOME 3"
 
 # Return to the parent script, if `gsettings' not found
-gsettings --version > /dev/null 2>&1 || { echo "$error" ; return 1; }
+gsettings --version > /dev/null 2>&1 || { say fail "$error" ; return 0; }
 
 if [ "${MORE_EMACS,,}" = "true" ]
 then
