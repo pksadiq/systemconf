@@ -24,7 +24,7 @@ set_file "s/^export EDITOR=.*/export EDITOR=${EDITOR}/" bashrc
 [ ${EDITOR} = "emacs" ] && VISUAL="emacs" || VISUAL="gedit"
 set_file "s/^export VISUAL=.*/export VISUAL=${VISUAL}/" bashrc
 set_file "s/^export EMAIL=.*/export EMAIL=\"${EMAIL}\"/" bashrc
-is_battery_present || set_file "s/set_battery_ps1//" bashrc
+is_battery_present || set_file "s/set_battery_ps1;\ //" bashrc
 make_cd aliases
 set_file "s/^PING_IP=.*/export PING_IP=\"${PING_IP}\"/" functions
 set_file "s/^PING_URL=.*/export PING_URL=\"${PING_URL}\"/" functions
