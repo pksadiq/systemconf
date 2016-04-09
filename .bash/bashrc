@@ -1,6 +1,19 @@
 # -*- mode: shell-script; -*-
 
 PROMPT_COMMAND="set_battery_ps1; set_ssh_count_ps1"
+
+# Set PS1 and title
+set_ps1
+set_term_title
+
+if [ "$INSIDE_EMACS" ]
+then
+  set_my_ps1
+  set_term_title
+  MALLOC_PERTURB_=$(($RANDOM % 255 + 1))
+  export MALLOC_PERTURB_
+fi
+
 #### Some nice to have variables
 export LESS="-XFR"
 export MAKEFLAGS="-j $(($(nproc)+1))" # set as "-j $(nproc)" if it suites you

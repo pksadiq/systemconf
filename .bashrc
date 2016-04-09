@@ -44,9 +44,6 @@ then
   . ~/.bash_aliases
 fi
 
-set_ps1
-set_term_title
-
 # Get battery status asynchronously
 get_battery_percent_to_file &
 disown "%get_battery_percent_to_file"
