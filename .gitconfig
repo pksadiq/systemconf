@@ -20,3 +20,6 @@
     mm = merge master
     lo = log --oneline
     ca = commit --amend
+
+[transfer]
+    fsckObjects = true
