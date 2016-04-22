@@ -80,9 +80,9 @@ set_ps1 ()
   # If user is `root' set color as red, else green
   if [ "$UID" -eq 0 ]
   then
-    PS1='\[$(echo -e $STAT)$(echo -e $SSH_COUNT)\e[01;31m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
+    PS1='\[$(echo -e $STAT_COLOR)\]$(echo -e $WARN)\[\e[01;31m\]$(echo -e $SSH_COUNT)\[\e[01;31m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
   else
-    PS1='\[$(echo -e $STAT)$(echo -e $SSH_COUNT)\e[01;32m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
+    PS1='\[$(echo -e $STAT_COLOR)\]$(echo -e $WARN)\[\e[01;31m\]$(echo -e $SSH_COUNT)\[\e[01;32m\]\u@\h\[\e[01;35m\]${REMOTE_PS1}\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
   fi
 
   MY_PS_SET=""
@@ -95,9 +95,9 @@ set_my_ps1 ()
   
   if [ "$UID" -eq 0 ]
   then
-    PS1='\[$(echo -e $STAT)$(echo -e $SSH_COUNT)\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;31m\]#\[\e[0m\] '
+    PS1='\[$(echo -e $STAT_COLOR)\]$(echo -e $WARN)\[\e[01;31m\]$(echo -e $SSH_COUNT)\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;31m\]#\[\e[0m\] '
   else
-    PS1='\[$(echo -e $STAT)$(echo -e $SSH_COUNT)\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;32m\]\$\[\e[0m\] '
+    PS1='\[$(echo -e $STAT_COLOR)\]$(echo -e $WARN)\[\e[01;31m\]$(echo -e $SSH_COUNT)\[\e[01;35m\]${REMOTE_PS1}\[\e[01;34m\]\W\[\e[01;32m\]\$\[\e[0m\] '
   fi
 
   MY_PS_SET="true"
@@ -158,12 +158,15 @@ set_battery_ps1 ()
   [ "${PERCENT}" ] || return 1
   if [ $PERCENT -le 10 ]
   then
-    STAT="$RED"'!'
+    STAT_COLOR="$RED"
+    WARN='!'
   elif [ $PERCENT -le 20 ]
   then
-    STAT="$YELLOW"'!'
+    STAT_COLOR="$YELLOW"'!'
+    WARN='!'
   else
-    STAT=""
+    STAT_COLOR=""
+    WARN=""
   fi
 }
 
@@ -175,7 +178,7 @@ set_ssh_count_ps1 ()
   
   if [ "${NUM}" -ge 1 ]
   then
-    SSH_COUNT="${RED}[${NUM}]"
+    SSH_COUNT="[${NUM}]"
   else
     SSH_COUNT=""
   fi
