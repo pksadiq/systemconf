@@ -174,7 +174,7 @@ set_battery_ps1 ()
     WARN='!'
   elif [ $PERCENT -le 20 ]
   then
-    STAT_COLOR="$YELLOW"'!'
+    STAT_COLOR="$YELLOW"
     WARN='!'
   else
     STAT_COLOR=""
