@@ -17,6 +17,7 @@
 
 [alias]
     cm = checkout master
+    m  = commit -m
     mm = merge master
     lo = log --oneline
     ca = commit --amend
