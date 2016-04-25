@@ -10,6 +10,7 @@ if [ "$INSIDE_EMACS" ]
 then
   set_my_ps1
   set_term_title
+  export MALLOC_CHECK_=3
   MALLOC_PERTURB_=$(($RANDOM % 255 + 1))
   export MALLOC_PERTURB_
 fi
