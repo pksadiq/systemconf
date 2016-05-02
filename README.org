@@ -47,7 +47,7 @@
   - GNOME Desktop Environment
     - Font (configure)
     - Theme (Download, install and configure)
-    - Icon (Download, install and confgure)
+    - Icon (Download, install and configure)
     - Add Bookmarks to Nautilus (aka. GNOME Files)
   - git
   - Bash
