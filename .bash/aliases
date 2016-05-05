@@ -21,6 +21,10 @@ alias e='emacsclient -a "" -c'
 # Invoke git
 alias g='git'
 
+# GCC alias for gtk3+
+alias gcck="gcc `pkg-config --cflags --libs gtk+-3.0` -Wall \
+            -Wno-unused-parameter -g -O2 -fno-omit-frame-pointer"
+
 # I use this when the path is irrelevant,
 # to save lines on shell
 alias eshell="set_my_ps1; set_term_title"
