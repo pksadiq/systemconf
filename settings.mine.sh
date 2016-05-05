@@ -72,6 +72,7 @@ CD[p]="/run/media/sadiq/Temp/sadiq/Test_1/Projects"
 CD[m]="/run/media/sadiq/Main/Manuals"
 CD[s]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
 CD[e]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/emacsdotd/.emacs.d"
+CD[w]="/var/www/html"
 
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
