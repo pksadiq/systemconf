@@ -11,6 +11,7 @@ alias -- -='cd -'
 alias ls='ls --color=auto -BhGF'
 alias ll='ls --color=auto -BhFlA'
 alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Preserve env. variables
 # This will be useful when logging in as root on ssh
@@ -39,6 +40,7 @@ alias mygateway=mygateway
 alias mynetip=mynetip
 alias mypingip=mypingip
 alias mypingnet=mypingnet
+alias mypingurl=mypingnet
 alias mynettest=mynettest
 
 if [ ! -z "$(which colordiff 2>/dev/null)" ]
