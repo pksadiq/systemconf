@@ -18,8 +18,6 @@ alias sudo='sudo SSH_CLIENT="${SSH_CLIENT}"'
 
 # Invoke the favorite editor
 alias e='emacsclient -a "" -c'
-# Invoke git
-alias g='git'
 
 # GCC alias for gtk3+
 alias gcck="gcc `pkg-config --cflags --libs gtk+-3.0` -Wall \
