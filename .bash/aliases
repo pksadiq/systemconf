@@ -22,7 +22,7 @@ alias e='emacsclient -a "" -c'
 
 # GCC alias for gtk3+
 alias gcck="gcc `pkg-config --cflags --libs gtk+-3.0` -Wall \
-            -Wno-unused-parameter -g -O2 -fno-omit-frame-pointer"
+            -Wno-unused-parameter -g -O0 -fno-omit-frame-pointer"
 
 # I use this when the path is irrelevant,
 # to save lines on shell
