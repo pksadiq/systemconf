@@ -129,10 +129,32 @@ set_term_title ()
 
 is_battery_present ()
 {
-  BAT="$(grep -il 'battery' /sys/class/power_supply/*/type 2>/dev/null)" ||
+  if [ "$(which upower 2>/dev/null)" ]
+  then
+    upower -e | grep -i battery >/dev/null && return $(true)
     return $(false)
+  fi
 
-  BAT=$(sed 's/type/capacity/' <<< "$BAT")
+  if [ "$(which acpi 2>/dev/null)" ]
+  then
+    acpi | grep -i battery >/dev/null && return $(true)
+    return $(false)
+  fi
+
+  return $(false)
+}
+
+update_battery_upower ()
+{
+  # Don't consider multiple batteries for now
+  BAT="$(upower -e | grep -i battery | head -n1)"
+
+  upower -i "$BAT" | grep -i "percentage" | egrep -o "[0-9]+"
+}
+
+update_battery_acpi ()
+{
+  acpi | egrep -o "[0-9]+%" | egrep -o "[0-9]+"
 }
 
 get_battery_percent_to_file ()
@@ -155,8 +177,13 @@ get_battery_percent_to_file ()
     # Mutex can be used in shell scripts too!
     if flock -n "$STATUS_FILE" true && [ -z $NEW ]
     then
-      PERCENT="$(grep -h "[0-9]" $BAT | tr '\n' '+')"
-      flock "$STATUS_FILE" bc <<< "${PERCENT%+}" > "$STATUS_FILE"
+      if [ "$(which upower 2>/dev/null)" ]
+      then
+        PERCENT="$(update_battery_upower)"
+      else
+        PERCENT="$(update_battery_acpi)"
+      fi
+      flock "$STATUS_FILE" bc <<< "${PERCENT}" > "$STATUS_FILE"
     fi
   done
 }
@@ -166,7 +193,7 @@ set_battery_ps1 ()
   STATUS_FILE="/dev/shm/bat-status"
   [ -f "$STATUS_FILE" ] || return 1
 
-  PERCENT=$(cat "$STATUS_FILE")
+  PERCENT=$(head -n 1 "$STATUS_FILE")
   [ "${PERCENT}" ] || return 1
   if [ $PERCENT -le 10 ]
   then

@@ -100,10 +100,19 @@ is_number ()
 
 is_battery_present ()
 {
-  BAT="$(grep -il 'battery' /sys/class/power_supply/*/type 2>/dev/null)" ||
+  if [ "$(which upower 2>/dev/null)" ]
+  then
+    upower -e | grep -i battery >/dev/null && return $(true)
     return $(false)
+  fi
 
-  BAT=$(sed 's/type/capacity/' <<< "$BAT")
+  if [ "$(which acpi 2>/dev/null)" ]
+  then
+    acpi | grep -i battery >/dev/null && return $(true)
+    return $(false)
+  fi
+
+  return $(false)
 }
 
 # Calculate sha1sum
