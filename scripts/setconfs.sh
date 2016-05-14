@@ -36,11 +36,6 @@ set_file "s/^[[:blank:]]*name *=.*/    name = $NAME/" .gitconfig
 set_file "s/^[[:blank:]]*email *=.*/    email = $EMAIL/" .gitconfig
 set_file "s/^[[:blank:]]*editor *=.*/    editor = $EDITOR/" .gitconfig
 
-### .emacs Configuration ###
-set_file "s/user-full-name *\".*\"/user-full-name \"${NAME}\"/" .emacs
-set_file "s/user-mail-address *\".*\"/user-mail-address \"${EMAIL}\"/" .emacs
-set_file "s/set-default-font *\".*\"/set-default-font \"${EMACS_FONT%* Medium}-${EMACS_FONT_SIZE}\"/" .emacs
-
 ### Gtk3/GNOME Configuration ###
 GTK3_CONF="${HOME_DIR}/.config/gtk-3.0/settings.ini"
 IS_DARK=$(get_true_false "$PREFER_DARK")

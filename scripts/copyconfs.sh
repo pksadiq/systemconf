@@ -29,7 +29,6 @@ fi
 # informs the user about the files copied
 
 mycp .bashrc "${HOME}"
-mycp .emacs "${HOME}"
 mycp .editorconfig "${HOME}"
 mycp .guile "${HOME}"
 mycp .gitconfig "${HOME}"
