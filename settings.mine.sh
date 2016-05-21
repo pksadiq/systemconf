@@ -18,7 +18,7 @@
 # NOTE: Wherever you can fill "true" or "false", you can use
 # some other value, to keep the current configuration as such.
 
-NAME="Mohammed Sadik"
+NAME="Mohammed Sadiq"
 EMAIL="sadiq@sadiqpk.org"
 
 # Do you wish to overwrite your current config files?
