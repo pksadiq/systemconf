@@ -150,11 +150,27 @@ update_battery_upower ()
   BAT="$(upower -e | grep -i battery | head -n1)"
 
   upower -i "$BAT" | grep -i "percentage" | egrep -o "[0-9]+"
+  
 }
 
 update_battery_acpi ()
 {
   acpi | egrep -o "[0-9]+%" | egrep -o "[0-9]+"
+}
+
+is_charging ()
+{
+  STATUS_FILE="/dev/shm/bat-status"
+  
+  if [ "$(which upower 2>/dev/null)" ]
+  then
+    BAT="$(upower -e | grep -i battery | head -n1)"
+    upower -i "$BAT" | grep -i "state:" | grep -i " charging" >/dev/null &&
+      flock "$STATUS_FILE" echo "charging" >> "$STATUS_FILE"
+  else
+    acpi | grep -i " charging" >/dev/null &&
+      flock "$STATUS_FILE" echo "charging" >> "$STATUS_FILE"
+  fi
 }
 
 get_battery_percent_to_file ()
@@ -184,6 +200,7 @@ get_battery_percent_to_file ()
         PERCENT="$(update_battery_acpi)"
       fi
       flock "$STATUS_FILE" bc <<< "${PERCENT}" > "$STATUS_FILE"
+      is_charging
     fi
   done
 }
@@ -206,6 +223,11 @@ set_battery_ps1 ()
   else
     STAT_COLOR=""
     WARN=""
+  fi
+
+  if [ "$WARN" ]
+  then
+    grep "charging" "$STATUS_FILE" >/dev/null && STAT_COLOR="$GREEN"
   fi
 }
 
