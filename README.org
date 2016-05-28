@@ -51,7 +51,6 @@
     - Add Bookmarks to Nautilus (aka. GNOME Files)
   - git
   - Bash
-  - GNU Emacs (basic configuration only)
   - Editorconfig (ONE config for every editor)
 
     Note: This script may be capable to configure Cinnamon and Mate DEs.
