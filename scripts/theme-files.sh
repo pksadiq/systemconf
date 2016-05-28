@@ -1,4 +1,4 @@
-# Copyright (c) 2016 Mohammed Sadik <sadiq@sadiqpk.org>
+# Copyright (c) 2016 Mohammed Sadiq <sadiq@sadiqpk.org>
 
 # Gtk Theme listing
 declare -A THEMES

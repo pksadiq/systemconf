@@ -1,7 +1,7 @@
 # This file contains functions that are related to UI elements
 # like Theme, icon, etc
 
-# Copyright (c) 2016 Mohammed Sadik <sadiq@sadiqpk.org>
+# Copyright (c) 2016 Mohammed Sadiq <sadiq@sadiqpk.org>
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

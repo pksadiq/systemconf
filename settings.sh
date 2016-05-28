@@ -1,6 +1,6 @@
 # Configuration file to be set by the user
 
-# Copyright (c) 2015, 2016 Mohammed Sadik <sadiq@sadiqpk.org>
+# Copyright (c) 2015, 2016 Mohammed Sadiq <sadiq@sadiqpk.org>
 
 # This file is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 # NOTE: Wherever you can fill "true" or "false", you can use
 # some other value, to keep the current configuration as such.
 
-NAME="Mohammed Sadik"
+NAME="Mohammed Sadiq"
 EMAIL="sadiq@sadiqpk.org"
 
 # Do you wish to overwrite your current config files?
