@@ -10,16 +10,12 @@ if [ "$INSIDE_EMACS" ]
 then
   set_my_ps1
   set_term_title
-  export MALLOC_CHECK_=3
-  MALLOC_PERTURB_=$(($RANDOM % 255 + 1))
-  export MALLOC_PERTURB_
+  mylearnc
 fi
 
 #### Some nice to have variables
 export LESS="-XFR"
 export MAKEFLAGS="-j $(($(nproc)+1))" # set as "-j $(nproc)" if it suites you
-export LDFLAGS="-lm"
-export CFLAGS="-Wall -Wpedantic -ggdb -O0"
 
 # Following configurations are modified via script
 # Don't modify by hand as it may be overwritten

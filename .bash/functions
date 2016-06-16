@@ -268,3 +268,12 @@ mynettest ()
   mypingip
   mypingnet
 }
+
+mylearnc ()
+{
+  export LDFLAGS="-lm"
+  export CFLAGS="-Wall -Wpedantic -ggdb -O0"
+  export MALLOC_CHECK_=3
+  MALLOC_PERTURB_=$(($RANDOM % 255 + 1))
+  export MALLOC_PERTURB_
+}
