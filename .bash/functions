@@ -185,7 +185,7 @@ get_battery_percent_to_file ()
   STATUS_FILE="/dev/shm/bat-status"
   [ -f "$STATUS_FILE" ] || touch "$STATUS_FILE" || return 1
 
-  # Update battery status every ~20 seconds. Number set to insane
+  # Update battery status every ~6 seconds. Number set to insane
   # for grepping out
   while sleep 6.0314159
   do
