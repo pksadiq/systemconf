@@ -107,12 +107,6 @@ WINDOW_TITLE_FONT_SIZE="12"
 INTERFACE_FONT="Cantarell Regular"
 INTERFACE_FONT_SIZE="12"
 
-# WINDOW_TITLE_FONT="Ubuntu Regular"
-# WINDOW_TITLE_FONT_SIZE="11"
-
-# INTERFACE_FONT="Ubuntu Regular"
-# INTERFACE_FONT_SIZE="11"
-
 # Font used for codes, (Eg: Devhelp)
 MONOSPACE_FONT="Inconsolata Medium"
 MONOSPACE_FONT_SIZE="11"
