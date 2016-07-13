@@ -69,8 +69,8 @@ then
     $gs ${KEY}.custom-keybinding:${SUBKEY} command 'gnome-terminal'
     $gs ${KEY}.custom-keybinding:${SUBKEY} binding '<Primary><Alt>t'
   fi
-fi
 
-# Easy bindings for switching workspace
-$gs ${settings}.wm.keybindings switch-to-workspace-down "['<Super>j', '<Control><Alt>Down']"
-$gs ${settings}.wm.keybindings switch-to-workspace-up "['<Super>k', '<Control><Alt>Up']"
+  # Easy bindings for switching workspace
+  $gs ${settings}.wm.keybindings switch-to-workspace-down "['<Super>j', '<Control><Alt>Down']"
+  $gs ${settings}.wm.keybindings switch-to-workspace-up "['<Super>k', '<Control><Alt>Up']"
+fi
