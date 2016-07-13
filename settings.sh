@@ -46,6 +46,8 @@ CAPS_IS_CTRL="false"
 
 # Currently the following are configured:
 # Alt+Ctrl+T = gnome-terminal
+# Super+j (and Ctrl+Alt+↓) =  Switch to workspace down
+# Super+k (and Ctrl+Alt+↑) =  Switch to workspace up
 CUSTOM_SHORTCUTS="true"
 
 # Use internet to download missing files or packages?
