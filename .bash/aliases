@@ -49,7 +49,7 @@ alias mypingnet=mypingnet
 alias mypingurl=mypingnet
 alias mynettest=mynettest
 
-if [ ! -z "$(which colordiff 2>/dev/null)" ]
+if [ "$(which colordiff 2>/dev/null)" ]
 then
   alias diff=colordiff
 fi
