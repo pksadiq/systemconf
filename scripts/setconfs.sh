@@ -34,7 +34,11 @@ is_battery_present || set_file '/ *get_battery_per/d' .bashrc
 ### gitconfig Configuration ###
 set_file "s/^[[:blank:]]*name *=.*/    name = $NAME/" .gitconfig
 set_file "s/^[[:blank:]]*email *=.*/    email = $EMAIL/" .gitconfig
-set_file "s/^[[:blank:]]*editor *=.*/    editor = $EDITOR/" .gitconfig
+# Check for editor before setting
+if [ "$(which $EDITOR 2>/dev/null)" ]
+then
+  set_file "s/^[[:blank:]]*editor *=.*/    editor = $EDITOR/" .gitconfig
+fi
 
 ### Gtk3/GNOME Configuration ###
 GTK3_CONF="${HOME_DIR}/.config/gtk-3.0/settings.ini"
