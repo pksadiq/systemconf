@@ -21,6 +21,8 @@
     mm = merge master
     lo = log --oneline
     ca = commit --amend
+    pu = pull upstream
+    rim = rebase -i master
 
 [transfer]
     fsckObjects = true
