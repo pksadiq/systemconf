@@ -38,3 +38,5 @@ temp/[a-zA-Z]*
 
 ## Guile files
 *.go
+
+.tern-port
