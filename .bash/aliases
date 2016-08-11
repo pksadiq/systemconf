@@ -12,6 +12,8 @@ alias ls='ls --color=auto -BhGF'
 alias ll='ls --color=auto -BhFlA'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
+alias grepn='grep --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=.git -R'
+alias grepr='grep --exclude-dir=.git -R'
 alias grepc='grep --include=*.c --include=*.h -R'
 alias grepui='grep --include=*.ui --include=*.xml -R'
 
