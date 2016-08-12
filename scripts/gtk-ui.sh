@@ -55,6 +55,7 @@ $gs org.gnome.gedit.preferences.editor use-default-font false
 set_font "EMACS_FONT" org.gnome.gedit.preferences.editor editor-font
 # Set GNOME Builder font
 set_font "EMACS_FONT" org.gnome.builder.editor font-name
+set_font "EMACS_FONT" org.gnome.builder.terminal font-name
 # Set Global Monospace font (eg: in Devhelp, etc.)
 set_font "MONOSPACE_FONT" ${settings}.interface monospace-font-name
 
