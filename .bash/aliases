@@ -27,7 +27,7 @@ alias e='emacsclient -a "" -c'
 # GCC alias for gtk3+
 if [ "$(which pkg-config 2>/dev/null)" ]
 then
-  alias gcck="gcc `pkg-config --cflags --libs gtk+-3.0` -Wall \
+  alias gcck="gcc `pkg-config --cflags --libs gtk+-3.0 2>/dev/null` -Wall \
               -Wno-unused-parameter -g -O0 -fno-omit-frame-pointer"
 fi
 
