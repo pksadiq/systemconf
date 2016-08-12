@@ -109,4 +109,4 @@ MONOSPACE_FONT_SIZE="11"
 
 # Font used for Emacs, GNOME Terminal, Gedit etc.
 EMACS_FONT="Inconsolata Medium"
-EMACS_FONT_SIZE="16"
+EMACS_FONT_SIZE="13"
