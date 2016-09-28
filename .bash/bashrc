@@ -6,7 +6,7 @@ PROMPT_COMMAND="set_battery_ps1; set_ssh_count_ps1"
 set_ps1
 set_term_title
 
-if [ "$INSIDE_EMACS" ]
+if [ "$INSIDE_EMACS" ] || [ "$INSIDE_GNOME_BUILDER" ]
 then
   set_my_ps1
   set_term_title
