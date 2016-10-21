@@ -25,12 +25,12 @@ ICONS["Numix-Circle-Light"]=NUMIX_CIRCLE
 ### Icon themes ###
 # Moka Icon theme
 declare -A MOKA_ICONS
-MOKA_ICONS[url]="https://github.com/moka-project/moka-icon-theme/archive/v5.0.11.tar.gz"
+MOKA_ICONS[url]="https://github.com/snwh/moka-icon-theme/archive/v5.3.5.tar.gz"
 MOKA_ICONS[type]="tar.gz"
-MOKA_ICONS[size]="31 MiB"
-MOKA_ICONS[sha1]="23525de99afbbe7eea299642cd792d02db576791"
+MOKA_ICONS[size]="65.1 MiB"
+MOKA_ICONS[sha1]="cf709c68ebed6d06448edd324f443acaf9ddbaf2"
 MOKA_ICONS[name]="moka-icon-theme"
-MOKA_ICONS[dir1]="moka-icon-theme-5.0.11/Moka"
+MOKA_ICONS[dir1]="moka-icon-theme-5.3.5/Moka"
 
 # Numix Icon theme
 declare -A NUMIX_ICONS
