@@ -31,7 +31,7 @@ fi
 
 if [ "TERM_THEME" ]
 then
-  $gs org.gnome.Terminal.Legacy theme-variant "${TERM_THEME,,}"
+  $gs org.gnome.Terminal.Legacy.Settings theme-variant "${TERM_THEME,,}"
 fi
 
 if is_true_false "${PREFER_DARK_IDE}"
