@@ -39,7 +39,6 @@ case "${CAPS_IS_CTRL,,}" in
 esac
 
 $gs ${settings}.peripherals.touchpad tap-to-click "true"
-$gs ${settings}.peripherals.touchpad scroll-method "two-finger-scrolling"
 
 if is_true_false "${NATURAL_SCROLL}"
 then
