@@ -83,11 +83,11 @@ list_themes ()
     do
       if [ -d "$DIR" ]
       then
-	cd "$DIR"
-	if [ -f index.theme ]
-	then
-	  echo "$(basename ${DIR})"
-	fi
+	      cd "$DIR"
+	      if [ -f index.theme ]
+	      then
+	        echo "$(basename ${DIR})"
+	      fi
       fi
     done
   done
