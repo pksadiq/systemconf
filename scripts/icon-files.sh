@@ -35,7 +35,7 @@ MOKA_ICONS[dir1]="moka-icon-theme-${MOKA_ICONS[commit]}/Moka"
 
 # Numix Icon theme
 declare -A NUMIX_ICONS
-NUMIX_ICONS[commit]="e35fff81da202dc65c3e9db7b4c342272e30f9e6"
+NUMIX_ICONS[commit]="e03eb71454c176a98733eafa268ff79995f8159d"
 NUMIX_ICONS[url]="https://github.com/numixproject/numix-icon-theme/archive/${NUMIX_ICONS[commit]}.tar.gz"
 NUMIX_ICONS[type]="tar.gz"
 NUMIX_ICONS[size]="1.6 MiB"
@@ -46,7 +46,7 @@ NUMIX_ICONS[dir2]="numix-icon-theme-${NUMIX_ICONS[commit]}/Numix-Light"
 
 # Numix Circle Icon theme
 declare -A NUMIX_CIRCLE_ICONS
-NUMIX_CIRCLE_ICONS[commit]="6cccdbcc685fe5a8318a499f3fdd12db431f8973"
+NUMIX_CIRCLE_ICONS[commit]="481bc1100f01e25e92deb7facf61436b27f9ca8a"
 NUMIX_CIRCLE_ICONS[url]="https://github.com/numixproject/numix-icon-theme-circle/archive/${NUMIX_CIRCLE_ICONS[commit]}.tar.gz"
 NUMIX_CIRCLE_ICONS[type]="tar.gz"
 NUMIX_CIRCLE_ICONS[size]="1.6 MiB"
@@ -57,7 +57,7 @@ NUMIX_CIRCLE_ICONS[dir2]="numix-icon-theme-circle-NUMIX_CIRCLE_ICONS[commit]/Num
 
 # Paper Icon theme
 declare -A PAPER_ICONS
-PAPER_ICONS[commit]="ae82c98cc8c4248d940fdd27870f146c70cdf228"
+PAPER_ICONS[commit]="d624f27208f093e4448900b16660ab081d9d7b3f"
 PAPER_ICONS[url]="https://github.com/snwh/paper-icon-theme/archive/${PAPER_ICONS[commit]}.tar.gz"
 PAPER_ICONS[type]="tar.gz"
 PAPER_ICONS[size]="18.9 MiB"
