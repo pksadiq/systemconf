@@ -90,7 +90,7 @@ NATURAL_SCROLL="false"
 # Themes, possible values: "Adwaita", "Paper"
 GTK_THEME="Adwaita"
 PREFER_DARK="true"
-PREFER_DARK_TERM="true" # Prefer dark theme for GNOME Terminal?
+TERM_THEME="dark" # Possible: 'dark' 'light' 'system'
 PREFER_DARK_IDE="true" # Prefer dark theme for GNOME Builder? Gedit?
 
 # The main icons used

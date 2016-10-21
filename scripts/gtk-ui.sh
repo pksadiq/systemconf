@@ -18,8 +18,10 @@
 
 gsettings --version > /dev/null 2>&1 || { say fail "$error" ; return 0; }
 
+
 if install_themes "${GTK_THEME}"
 then
+  exit
   $gs ${settings}.interface gtk-theme "${GTK_THEME}"
 fi
 
@@ -28,9 +30,9 @@ then
   $gs ${settings}.interface icon-theme "${ICON_THEME}"
 fi
 
-if is_true_false "${PREFER_DARK_TERM}"
+if [ "TERM_THEME" ]
 then
-  $gs org.gnome.Terminal.Legacy.Settings dark-theme "${PREFER_DARK_TERM,,}"
+  $gs org.gnome.Terminal.Legacy theme-variant "${TERM_THEME,,}"
 fi
 
 if is_true_false "${PREFER_DARK_IDE}"
