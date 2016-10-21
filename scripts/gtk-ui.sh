@@ -21,7 +21,6 @@ gsettings --version > /dev/null 2>&1 || { say fail "$error" ; return 0; }
 
 if install_themes "${GTK_THEME}"
 then
-  exit
   $gs ${settings}.interface gtk-theme "${GTK_THEME}"
 fi
 
