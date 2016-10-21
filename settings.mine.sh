@@ -104,10 +104,10 @@ LOGO_TEXT="www.sadiqpk.org"
 ##### Fonts #####
 # Font on  title bar
 WINDOW_TITLE_FONT="Cantarell Bold"
-WINDOW_TITLE_FONT_SIZE="12"
+WINDOW_TITLE_FONT_SIZE="11"
 
 INTERFACE_FONT="Cantarell Regular"
-INTERFACE_FONT_SIZE="12"
+INTERFACE_FONT_SIZE="11"
 
 # Font used for codes, (Eg: Devhelp)
 MONOSPACE_FONT="Inconsolata Medium"
