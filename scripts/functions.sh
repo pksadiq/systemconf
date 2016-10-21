@@ -135,6 +135,7 @@ get_file ()
   URL="${1}"
   FILE="${2}"
   CHECKSUM="${3}"
+  SIZE="${4}"
   
   cd "${SCRIPT_DIR}/temp"
   
@@ -142,6 +143,8 @@ get_file ()
   checksum "${FILE}" "$CHECKSUM" && return $(true)
   [ "${USE_INTERNET,,}" = "true" ] || return $(false)
 
+  echo -n Downloading "$FILE", Size:
+  say ok "${SIZE}"
   wget "${URL}" -O "${FILE}"  --header="Accept: text/html" \
        --user-agent="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0" \
     || return $(false)
@@ -188,9 +191,10 @@ install_file ()
   
   URL="${ARRAY[url]}"
   FILE="${ARRAY[name]}.${ARRAY[type]}"
+  SIZE="${ARRAY[size]}"
   CHECKSUM="${ARRAY[sha1]}"
-
-  get_file "$URL" "$FILE" "$CHECKSUM"
+  
+  get_file "$URL" "$FILE" "$CHECKSUM" "$SIZE"
   unpack_file  "$FILE" || return $(false)
   ${DO_SUDO} mkdir -p "${INSTALL_DIR}/${TYPE}"
   echo -n "Installing ${TYPE}: "
