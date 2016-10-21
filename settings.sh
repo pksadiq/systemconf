@@ -69,8 +69,8 @@ PING_URL="www.google.com"
 # You can add any number of aliases
 # Eg.: If you have CD[d], you can do 'cdd' to cd to that dir
 declare -A CD
-CD[m]="/run/media/sadiq/Main/Manuals"
-CD[s]="/run/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
+CD[m]="/media/sadiq/Main/Manuals"
+CD[s]="/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
 
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
