@@ -80,7 +80,7 @@ CD[a]="/var/cache/apt/archives"
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
 declare -a BOOKMARKS
-BOOKMARKS=('p' 's' 'm' 'w' 'c' 'h' 'a')
+BOOKMARKS=('s' 'm' 'w' 'c' 'h')
 
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
