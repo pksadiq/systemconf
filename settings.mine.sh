@@ -69,11 +69,10 @@ PING_URL="www.google.com"
 # You can add any number of aliases
 # Eg.: If you have CD[d], you can do 'cdd' to cd to that dir
 declare -A CD
-CD[p]="/media/sadiq/Temp/sadiq/Test_1/Projects"
 CD[m]="/media/sadiq/Main/Manuals"
-CD[c]="/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
+CD[c]="/media/sadiq/Main/Software/src/personal/systemconf"
 CD[s]="/media/sadiq/Main/Software/src/"
-CD[e]="/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/emacsdotd/.emacs.d"
+CD[e]="/media/sadiq/Main/Software/src/personal/emacsdotd"
 CD[h]="/var/www/html"
 CD[w]="/media/sadiq/Work/new"
 CD[a]="/var/cache/apt/archives"
@@ -81,7 +80,7 @@ CD[a]="/var/cache/apt/archives"
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
 declare -a BOOKMARKS
-BOOKMARKS=('p' 's' 'm' 'w' 'c')
+BOOKMARKS=('p' 's' 'm' 'w' 'c' 'h' 'a')
 
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
