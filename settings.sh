@@ -70,12 +70,12 @@ PING_URL="www.google.com"
 # Eg.: If you have CD[d], you can do 'cdd' to cd to that dir
 declare -A CD
 CD[m]="/media/sadiq/Main/Manuals"
-CD[s]="/media/sadiq/Temp/sadiq/Test_1/Projects/Personal/systemconf"
+CD[h]="/var/www/html"
 
 # Add Bookmarks to Nautilus (GNOME Files). Add shortcodes from
 # above CD
 declare -a BOOKMARKS
-BOOKMARKS=('s' 'm')
+BOOKMARKS=('m' 'h')
 
 # Scroll as on touch screen.
 NATURAL_SCROLL="false"
